@@ -1,0 +1,112 @@
+\hypertarget{class_engine}{}\doxysection{Engine Class Reference}
+\label{class_engine}\index{Engine@{Engine}}
+
+
+{\ttfamily \#include $<$Engine.\+hpp$>$}
+
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{class_engine_aa425192c63c4e258588db980ddf18d0d}{Init}} ()
+\item 
+void \mbox{\hyperlink{class_engine_a24477c7a3628abbaadb7593f7c0f783a}{Update}} (float dt)
+\item 
+void \mbox{\hyperlink{class_engine_acde70aed0043e2e2091d0bb6cce8e3c1}{Render}} ()
+\item 
+void \mbox{\hyperlink{class_engine_afcc24ae0a6e81fae05468edf14a86327}{Input}} (bool \&running)
+\item 
+void \mbox{\hyperlink{class_engine_adcacda15ea7fe19fac794b438fc37501}{Loop}} ()
+\item 
+void \mbox{\hyperlink{class_engine_a3dbd2c0a65e642baa7eaa97caa6e4e64}{Shutdown}} ()
+\item 
+void \mbox{\hyperlink{class_engine_afea17204729d7df191db242282a23a86}{Initialize\+Graphics\+Subsystem}} ()
+\item 
+bool \mbox{\hyperlink{class_engine_a0b5e03749a1057d17474a19f0c945ba5}{Inform\+Delay}} (float dt)
+\item 
+\mbox{\Hypertarget{class_engine_a2ba39a12d173306513643db6ddee852b}\label{class_engine_a2ba39a12d173306513643db6ddee852b}} 
+void \mbox{\hyperlink{class_engine_a2ba39a12d173306513643db6ddee852b}{Create\+Supply}} ()
+\begin{DoxyCompactList}\small\item\em Create supply on map. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_engine_a48094c06984ae881c216d797911e955d}\label{class_engine_a48094c06984ae881c216d797911e955d}} 
+void \mbox{\hyperlink{class_engine_a48094c06984ae881c216d797911e955d}{Create\+Hero}} (\mbox{\hyperlink{class_config}{Config}} \&config)
+\begin{DoxyCompactList}\small\item\em Create hero on map. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_engine_accd9e573b62a8da5cac36ba2d95af77e}\label{class_engine_accd9e573b62a8da5cac36ba2d95af77e}} 
+void \mbox{\hyperlink{class_engine_accd9e573b62a8da5cac36ba2d95af77e}{Create\+Flag}} ()
+\begin{DoxyCompactList}\small\item\em Create flag on map. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_engine_af0f5c35e91621d18045c21c680d12d97}\label{class_engine_af0f5c35e91621d18045c21c680d12d97}} 
+void \mbox{\hyperlink{class_engine_af0f5c35e91621d18045c21c680d12d97}{Load\+Level}} (int level)
+\begin{DoxyCompactList}\small\item\em load assigned level \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+The main game engine. 
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_engine_a0b5e03749a1057d17474a19f0c945ba5}\label{class_engine_a0b5e03749a1057d17474a19f0c945ba5}} 
+\index{Engine@{Engine}!InformDelay@{InformDelay}}
+\index{InformDelay@{InformDelay}!Engine@{Engine}}
+\doxysubsubsection{\texorpdfstring{InformDelay()}{InformDelay()}}
+{\footnotesize\ttfamily bool Engine\+::\+Inform\+Delay (\begin{DoxyParamCaption}\item[{float}]{dt }\end{DoxyParamCaption})}
+
+Call this function if you need to show some information 
+\begin{DoxyParams}{Parameters}
+{\em dt} & deltatime \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+if delay completed 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_engine_aa425192c63c4e258588db980ddf18d0d}\label{class_engine_aa425192c63c4e258588db980ddf18d0d}} 
+\index{Engine@{Engine}!Init@{Init}}
+\index{Init@{Init}!Engine@{Engine}}
+\doxysubsubsection{\texorpdfstring{Init()}{Init()}}
+{\footnotesize\ttfamily void Engine\+::\+Init (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Launch the engine. \mbox{\Hypertarget{class_engine_afea17204729d7df191db242282a23a86}\label{class_engine_afea17204729d7df191db242282a23a86}} 
+\index{Engine@{Engine}!InitializeGraphicsSubsystem@{InitializeGraphicsSubsystem}}
+\index{InitializeGraphicsSubsystem@{InitializeGraphicsSubsystem}!Engine@{Engine}}
+\doxysubsubsection{\texorpdfstring{InitializeGraphicsSubsystem()}{InitializeGraphicsSubsystem()}}
+{\footnotesize\ttfamily void Engine\+::\+Initialize\+Graphics\+Subsystem (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Request to startup the graphics subsystem. \mbox{\Hypertarget{class_engine_afcc24ae0a6e81fae05468edf14a86327}\label{class_engine_afcc24ae0a6e81fae05468edf14a86327}} 
+\index{Engine@{Engine}!Input@{Input}}
+\index{Input@{Input}!Engine@{Engine}}
+\doxysubsubsection{\texorpdfstring{Input()}{Input()}}
+{\footnotesize\ttfamily void Engine\+::\+Input (\begin{DoxyParamCaption}\item[{bool \&}]{running }\end{DoxyParamCaption})}
+
+Process the keyboard input.
+
+
+\begin{DoxyParams}{Parameters}
+{\em running} & the status of the main loop. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_engine_adcacda15ea7fe19fac794b438fc37501}\label{class_engine_adcacda15ea7fe19fac794b438fc37501}} 
+\index{Engine@{Engine}!Loop@{Loop}}
+\index{Loop@{Loop}!Engine@{Engine}}
+\doxysubsubsection{\texorpdfstring{Loop()}{Loop()}}
+{\footnotesize\ttfamily void Engine\+::\+Loop (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Main loop of the game. \mbox{\Hypertarget{class_engine_acde70aed0043e2e2091d0bb6cce8e3c1}\label{class_engine_acde70aed0043e2e2091d0bb6cce8e3c1}} 
+\index{Engine@{Engine}!Render@{Render}}
+\index{Render@{Render}!Engine@{Engine}}
+\doxysubsubsection{\texorpdfstring{Render()}{Render()}}
+{\footnotesize\ttfamily void Engine\+::\+Render (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Render the game. \mbox{\Hypertarget{class_engine_a3dbd2c0a65e642baa7eaa97caa6e4e64}\label{class_engine_a3dbd2c0a65e642baa7eaa97caa6e4e64}} 
+\index{Engine@{Engine}!Shutdown@{Shutdown}}
+\index{Shutdown@{Shutdown}!Engine@{Engine}}
+\doxysubsubsection{\texorpdfstring{Shutdown()}{Shutdown()}}
+{\footnotesize\ttfamily void Engine\+::\+Shutdown (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Terminate the engine. \mbox{\Hypertarget{class_engine_a24477c7a3628abbaadb7593f7c0f783a}\label{class_engine_a24477c7a3628abbaadb7593f7c0f783a}} 
+\index{Engine@{Engine}!Update@{Update}}
+\index{Update@{Update}!Engine@{Engine}}
+\doxysubsubsection{\texorpdfstring{Update()}{Update()}}
+{\footnotesize\ttfamily void Engine\+::\+Update (\begin{DoxyParamCaption}\item[{float}]{dt }\end{DoxyParamCaption})}
+
+Update the game by elapsed time. 
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+include/\mbox{\hyperlink{_engine_8hpp}{Engine.\+hpp}}\item 
+src/\mbox{\hyperlink{_engine_8cpp}{Engine.\+cpp}}\end{DoxyCompactItemize}

@@ -1,0 +1,156 @@
+\hypertarget{class_tile}{}\doxysection{Tile Class Reference}
+\label{class_tile}\index{Tile@{Tile}}
+
+
+{\ttfamily \#include $<$Tile.\+hpp$>$}
+
+Inheritance diagram for Tile\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_tile}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_tile_a97fa6425cf8c226c34e67e8c7d5e83dc}\label{class_tile_a97fa6425cf8c226c34e67e8c7d5e83dc}} 
+\mbox{\hyperlink{class_tile_a97fa6425cf8c226c34e67e8c7d5e83dc}{Tile}} ()=default
+\begin{DoxyCompactList}\small\item\em Default constructor. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_tile_a6630b73b2d463fa13c834502c777b133}{Tile}} (const \mbox{\hyperlink{struct_vector2_d}{Vector2D}} \&position, int width, int height, const std\+::string \&texture, int type)
+\begin{DoxyCompactList}\small\item\em Constructor. \end{DoxyCompactList}\item 
+const int \& \mbox{\hyperlink{class_tile_aec9ed01aa34cde3a692cd24a076c636b}{Get\+Type}} () const
+\begin{DoxyCompactList}\small\item\em Get the type of the tile. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_tile_a903d7dc0724d7762531e16520e1a519d}{Is\+Static}} () override
+\begin{DoxyCompactList}\small\item\em Tiles are always static. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_tile_abb4dbc9f977df654816e61f1c0a3c352}{Is\+Collidable}} () override
+\begin{DoxyCompactList}\small\item\em Returns if the tile is collidable. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_tile_aa6238499fc524ec673b47929d6856028}{Render}} (SDL\+\_\+\+Renderer $\ast$renderer, const \mbox{\hyperlink{class_camera}{Camera}} \&camera) override
+\begin{DoxyCompactList}\small\item\em Render the game object into renderer\textquotesingle{}s back buffer. \end{DoxyCompactList}\item 
+Object\+Type \mbox{\hyperlink{class_tile_a31789cb9a5174b37c503d5bcc44b58c2}{Get\+Object\+Type}} () const override
+\begin{DoxyCompactList}\small\item\em Returns the type information of the object. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_tile_a78f023acbb3fe73e883c275ce9e17b22}\label{class_tile_a78f023acbb3fe73e883c275ce9e17b22}} 
+int {\bfseries type\+\_\+} \{ -\/1 \}
+\end{DoxyCompactItemize}
+\doxysubsection*{Additional Inherited Members}
+
+
+\doxysubsection{Detailed Description}
+A tile represents the minimum unit in the game. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_tile_a6630b73b2d463fa13c834502c777b133}\label{class_tile_a6630b73b2d463fa13c834502c777b133}} 
+\index{Tile@{Tile}!Tile@{Tile}}
+\index{Tile@{Tile}!Tile@{Tile}}
+\doxysubsubsection{\texorpdfstring{Tile()}{Tile()}}
+{\footnotesize\ttfamily Tile\+::\+Tile (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{struct_vector2_d}{Vector2D}} \&}]{position,  }\item[{int}]{width,  }\item[{int}]{height,  }\item[{const std\+::string \&}]{texture,  }\item[{int}]{type }\end{DoxyParamCaption})}
+
+
+
+Constructor. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em position} & The position of the tile \\
+\hline
+\mbox{\texttt{ in}}  & {\em texture} & The file name of the texture used by the tile \\
+\hline
+\mbox{\texttt{ in}}  & {\em type} & The type of the tile \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_tile_a31789cb9a5174b37c503d5bcc44b58c2}\label{class_tile_a31789cb9a5174b37c503d5bcc44b58c2}} 
+\index{Tile@{Tile}!GetObjectType@{GetObjectType}}
+\index{GetObjectType@{GetObjectType}!Tile@{Tile}}
+\doxysubsubsection{\texorpdfstring{GetObjectType()}{GetObjectType()}}
+{\footnotesize\ttfamily Game\+Object\+::\+Object\+Type Tile\+::\+Get\+Object\+Type (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Returns the type information of the object. 
+
+Each subclass should return a value from the enum Object\+Type. \begin{DoxyReturn}{Returns}
+type of the object 
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{class_game_object_a59f50b3b97a1831c1ff770546d13a7f1}{Game\+Object}}.
+
+\mbox{\Hypertarget{class_tile_aec9ed01aa34cde3a692cd24a076c636b}\label{class_tile_aec9ed01aa34cde3a692cd24a076c636b}} 
+\index{Tile@{Tile}!GetType@{GetType}}
+\index{GetType@{GetType}!Tile@{Tile}}
+\doxysubsubsection{\texorpdfstring{GetType()}{GetType()}}
+{\footnotesize\ttfamily const int \& Tile\+::\+Get\+Type (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Get the type of the tile. 
+
+\begin{DoxyReturn}{Returns}
+The type of the tile 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_tile_abb4dbc9f977df654816e61f1c0a3c352}\label{class_tile_abb4dbc9f977df654816e61f1c0a3c352}} 
+\index{Tile@{Tile}!IsCollidable@{IsCollidable}}
+\index{IsCollidable@{IsCollidable}!Tile@{Tile}}
+\doxysubsubsection{\texorpdfstring{IsCollidable()}{IsCollidable()}}
+{\footnotesize\ttfamily bool Tile\+::\+Is\+Collidable (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Returns if the tile is collidable. 
+
+\begin{DoxyReturn}{Returns}
+If the tile is collidable 
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{class_game_object_a5d521bf5582a2cda79a3b0c9bd1392c8}{Game\+Object}}.
+
+\mbox{\Hypertarget{class_tile_a903d7dc0724d7762531e16520e1a519d}\label{class_tile_a903d7dc0724d7762531e16520e1a519d}} 
+\index{Tile@{Tile}!IsStatic@{IsStatic}}
+\index{IsStatic@{IsStatic}!Tile@{Tile}}
+\doxysubsubsection{\texorpdfstring{IsStatic()}{IsStatic()}}
+{\footnotesize\ttfamily bool Tile\+::\+Is\+Static (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Tiles are always static. 
+
+\begin{DoxyReturn}{Returns}
+true 
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{class_game_object_a8ba290adb7d33ef1bd85863f85709202}{Game\+Object}}.
+
+\mbox{\Hypertarget{class_tile_aa6238499fc524ec673b47929d6856028}\label{class_tile_aa6238499fc524ec673b47929d6856028}} 
+\index{Tile@{Tile}!Render@{Render}}
+\index{Render@{Render}!Tile@{Tile}}
+\doxysubsubsection{\texorpdfstring{Render()}{Render()}}
+{\footnotesize\ttfamily void Tile\+::\+Render (\begin{DoxyParamCaption}\item[{SDL\+\_\+\+Renderer $\ast$}]{renderer,  }\item[{const \mbox{\hyperlink{class_camera}{Camera}} \&}]{camera }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Render the game object into renderer\textquotesingle{}s back buffer. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em renderer} & renderer \\
+\hline
+\mbox{\texttt{ in}}  & {\em camera} & camera \\
+\hline
+\end{DoxyParams}
+
+
+Implements \mbox{\hyperlink{class_game_object_ab013426388a171d6e5318704eb5ef2c8}{Game\+Object}}.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+include/\mbox{\hyperlink{_tile_8hpp}{Tile.\+hpp}}\item 
+src/\mbox{\hyperlink{_tile_8cpp}{Tile.\+cpp}}\end{DoxyCompactItemize}

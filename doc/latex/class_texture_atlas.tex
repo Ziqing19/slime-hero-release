@@ -1,0 +1,91 @@
+\hypertarget{class_texture_atlas}{}\doxysection{Texture\+Atlas Class Reference}
+\label{class_texture_atlas}\index{TextureAtlas@{TextureAtlas}}
+
+
+The class represents a texture atlas(or sprite sheet)  
+
+
+
+
+{\ttfamily \#include $<$texture\+\_\+atlas.\+hpp$>$}
+
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_texture_atlas_a6ebfdd8d6969d7b1799cb750f71cf308}\label{class_texture_atlas_a6ebfdd8d6969d7b1799cb750f71cf308}} 
+\mbox{\hyperlink{class_texture_atlas_a6ebfdd8d6969d7b1799cb750f71cf308}{Texture\+Atlas}} ()=default
+\begin{DoxyCompactList}\small\item\em Default constructor. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_texture_atlas_a24e35f6cc7c9af7a3d7c95dd78c1cdce}{Load}} (SDL\+\_\+\+Renderer $\ast$renderer, const std\+::string \&texture\+\_\+path)
+\begin{DoxyCompactList}\small\item\em Loads texutre. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_texture_atlas_aed47504c1211eacc876b643e766365d1}{$\sim$\+Texture\+Atlas}} ()
+\begin{DoxyCompactList}\small\item\em Destructor. \end{DoxyCompactList}\item 
+SDL\+\_\+\+Texture $\ast$ \mbox{\hyperlink{class_texture_atlas_a401416edfd80f94405ac23b2aa7ed08e}{Get\+Texture}} ()
+\begin{DoxyCompactList}\small\item\em Gets the texture loaded by the atlas. \end{DoxyCompactList}\item 
+SDL\+\_\+\+Rect \mbox{\hyperlink{class_texture_atlas_aac070dc765c0410191d23521f4c800b4}{Get\+Source\+Rect}} (int id)
+\begin{DoxyCompactList}\small\item\em Gets the texture tile specified by tile id. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+The class represents a texture atlas(or sprite sheet) 
+
+\mbox{\hyperlink{class_this}{This}} class provides a convenient way to retrieve a texture tile from a texture atlas. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_texture_atlas_aed47504c1211eacc876b643e766365d1}\label{class_texture_atlas_aed47504c1211eacc876b643e766365d1}} 
+\index{TextureAtlas@{TextureAtlas}!````~TextureAtlas@{$\sim$TextureAtlas}}
+\index{````~TextureAtlas@{$\sim$TextureAtlas}!TextureAtlas@{TextureAtlas}}
+\doxysubsubsection{\texorpdfstring{$\sim$TextureAtlas()}{~TextureAtlas()}}
+{\footnotesize\ttfamily Texture\+Atlas\+::$\sim$\+Texture\+Atlas (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Destructor. 
+
+Release resouces held by the atlas 
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_texture_atlas_aac070dc765c0410191d23521f4c800b4}\label{class_texture_atlas_aac070dc765c0410191d23521f4c800b4}} 
+\index{TextureAtlas@{TextureAtlas}!GetSourceRect@{GetSourceRect}}
+\index{GetSourceRect@{GetSourceRect}!TextureAtlas@{TextureAtlas}}
+\doxysubsubsection{\texorpdfstring{GetSourceRect()}{GetSourceRect()}}
+{\footnotesize\ttfamily SDL\+\_\+\+Rect Texture\+Atlas\+::\+Get\+Source\+Rect (\begin{DoxyParamCaption}\item[{int}]{id }\end{DoxyParamCaption})}
+
+
+
+Gets the texture tile specified by tile id. 
+
+\begin{DoxyReturn}{Returns}
+The texture tile. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_texture_atlas_a401416edfd80f94405ac23b2aa7ed08e}\label{class_texture_atlas_a401416edfd80f94405ac23b2aa7ed08e}} 
+\index{TextureAtlas@{TextureAtlas}!GetTexture@{GetTexture}}
+\index{GetTexture@{GetTexture}!TextureAtlas@{TextureAtlas}}
+\doxysubsubsection{\texorpdfstring{GetTexture()}{GetTexture()}}
+{\footnotesize\ttfamily SDL\+\_\+\+Texture $\ast$ Texture\+Atlas\+::\+Get\+Texture (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Gets the texture loaded by the atlas. 
+
+\begin{DoxyReturn}{Returns}
+The texture loaded by the atlas 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_texture_atlas_a24e35f6cc7c9af7a3d7c95dd78c1cdce}\label{class_texture_atlas_a24e35f6cc7c9af7a3d7c95dd78c1cdce}} 
+\index{TextureAtlas@{TextureAtlas}!Load@{Load}}
+\index{Load@{Load}!TextureAtlas@{TextureAtlas}}
+\doxysubsubsection{\texorpdfstring{Load()}{Load()}}
+{\footnotesize\ttfamily bool Texture\+Atlas\+::\+Load (\begin{DoxyParamCaption}\item[{SDL\+\_\+\+Renderer $\ast$}]{renderer,  }\item[{const std\+::string \&}]{texture\+\_\+path }\end{DoxyParamCaption})}
+
+
+
+Loads texutre. 
+
+If the loading succeeds, it return true. Otherwise it return false. \begin{DoxyReturn}{Returns}
+True when loading texture succeeds. 
+\end{DoxyReturn}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+include/texture\+\_\+atlas.\+hpp\item 
+src/texture\+\_\+atlas.\+cpp\end{DoxyCompactItemize}

@@ -1,0 +1,260 @@
+\hypertarget{class_physics_engine}{}\doxysection{Physics\+Engine Class Reference}
+\label{class_physics_engine}\index{PhysicsEngine@{PhysicsEngine}}
+
+
+\mbox{\hyperlink{class_physics_engine}{Physics\+Engine}} simulates a physical world.  
+
+
+
+
+{\ttfamily \#include $<$physics\+\_\+engine.\+hpp$>$}
+
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_physics_engine_ae323fe119f294a4ffb42852b38b02e43}\label{class_physics_engine_ae323fe119f294a4ffb42852b38b02e43}} 
+\mbox{\hyperlink{class_physics_engine_ae323fe119f294a4ffb42852b38b02e43}{Physics\+Engine}} ()=default
+\begin{DoxyCompactList}\small\item\em Default constructor. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_physics_engine_a56de96d2b2034c17bc7829914417d0a8}{Set\+Map}} (\mbox{\hyperlink{class_tile_map}{Tile\+Map}} $\ast$tile\+\_\+map)
+\begin{DoxyCompactList}\small\item\em Sets the map of current level into the engine. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_physics_engine_aeacbe18825f9b36e67247fcb4b4f6194}{Add\+Sprite}} (\mbox{\hyperlink{class_sprite}{Sprite}} $\ast$sprite)
+\begin{DoxyCompactList}\small\item\em Adds a sprite into the engine. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_physics_engine_a9a5053aaa172bb9a6db78e1e78ccfd56}{Remove\+Sprite}} (\mbox{\hyperlink{class_sprite}{Sprite}} $\ast$sprite)
+\begin{DoxyCompactList}\small\item\em Removes a sprite from the engine. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_physics_engine_abf02febab83df70a9e849d899a62fe42}{Clear\+Sprites}} ()
+\begin{DoxyCompactList}\small\item\em Clears all sprites in the engine. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_physics_engine_ab32e3ef471a6b9e115e735af5bdad89d}{Update}} (float duration)
+\begin{DoxyCompactList}\small\item\em Updates the state of everything in the engine into the next frame. \end{DoxyCompactList}\item 
+std\+::vector$<$ \mbox{\hyperlink{struct_contact}{Contact}} $>$ \& \mbox{\hyperlink{class_physics_engine_a5b391ad7cb2644ec82de3f167ccce6fd}{Get\+Contact\+List}} ()
+\begin{DoxyCompactList}\small\item\em Gets a list of contacts detected by the engine. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_physics_engine_aff9fcd24a116e29c5331a3f3a07182ac}{Set\+Gravity}} (const \mbox{\hyperlink{struct_vector2_d}{Vector2D}} \&gravity)
+\begin{DoxyCompactList}\small\item\em Sets the gravity of the engine. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_physics_engine_a32d8f7b9a52b0145f9f98b28c98a8a9c}{Add\+Supply}} (\mbox{\hyperlink{class_sprite}{Sprite}} $\ast$supply)
+\begin{DoxyCompactList}\small\item\em Adds a supply to physical world. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_physics_engine_ae04b6e174f015554a1a6e8a7dc3446da}{Add\+Destination}} (\mbox{\hyperlink{class_sprite}{Sprite}} $\ast$destination)
+\begin{DoxyCompactList}\small\item\em Adds a destination to physical world. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_physics_engine_a9cf2cd43b8887683ba1687dd44112107}{Remove\+Supply}} (\mbox{\hyperlink{class_sprite}{Sprite}} $\ast$supply)
+\begin{DoxyCompactList}\small\item\em Removes a supply from the physical world. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_physics_engine_a1b9e4fa9d1cf3f6540f662b83a3f18b1}{Remove\+Destination}} (\mbox{\hyperlink{class_sprite}{Sprite}} $\ast$destination)
+\begin{DoxyCompactList}\small\item\em Removes a destination from the physical world. \end{DoxyCompactList}\item 
+std\+::vector$<$ \mbox{\hyperlink{struct_contact}{Contact}} $>$ \& \mbox{\hyperlink{class_physics_engine_a1f92062f6de1fa13afa19f9e8e0ec4c6}{Get\+Supply\+Contact\+Vector}} ()
+\begin{DoxyCompactList}\small\item\em Returns a contact vector. Each contact in the vector happens between hero and a supply. \end{DoxyCompactList}\item 
+std\+::vector$<$ \mbox{\hyperlink{struct_contact}{Contact}} $>$ \& \mbox{\hyperlink{class_physics_engine_afcd9a9027f49fbf00562eb6db52a1c2e}{Get\+Destination\+Contact\+Vector}} ()
+\begin{DoxyCompactList}\small\item\em Returns a contact vector. Each contact in the vector happens between hero and a destination. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_physics_engine_a8a4d4b8805aa5861c5d88aad86fa0803}\label{class_physics_engine_a8a4d4b8805aa5861c5d88aad86fa0803}} 
+void \mbox{\hyperlink{class_physics_engine_a8a4d4b8805aa5861c5d88aad86fa0803}{Clear}} ()
+\begin{DoxyCompactList}\small\item\em Clears all stuff added or set to the world. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_physics_engine_a7e10a37a38241a2fb68015a8be849165}{Hero\+Collide\+Events}} (\mbox{\hyperlink{class_hero}{Hero}} \&hero, std\+::list$<$ \mbox{\hyperlink{class_sprite}{Sprite}} $\ast$ $>$ \&split\+Hero\+\_\+)
+\item 
+\mbox{\Hypertarget{class_physics_engine_a2c651416c28e197028487520b6fc3bf0}\label{class_physics_engine_a2c651416c28e197028487520b6fc3bf0}} 
+void {\bfseries Set\+Player} (\mbox{\hyperlink{class_hero}{Hero}} \&player)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+\mbox{\hyperlink{class_physics_engine}{Physics\+Engine}} simulates a physical world. 
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_physics_engine_ae04b6e174f015554a1a6e8a7dc3446da}\label{class_physics_engine_ae04b6e174f015554a1a6e8a7dc3446da}} 
+\index{PhysicsEngine@{PhysicsEngine}!AddDestination@{AddDestination}}
+\index{AddDestination@{AddDestination}!PhysicsEngine@{PhysicsEngine}}
+\doxysubsubsection{\texorpdfstring{AddDestination()}{AddDestination()}}
+{\footnotesize\ttfamily void Physics\+Engine\+::\+Add\+Destination (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_sprite}{Sprite}} $\ast$}]{destination }\end{DoxyParamCaption})}
+
+
+
+Adds a destination to physical world. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em destination} & \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_physics_engine_aeacbe18825f9b36e67247fcb4b4f6194}\label{class_physics_engine_aeacbe18825f9b36e67247fcb4b4f6194}} 
+\index{PhysicsEngine@{PhysicsEngine}!AddSprite@{AddSprite}}
+\index{AddSprite@{AddSprite}!PhysicsEngine@{PhysicsEngine}}
+\doxysubsubsection{\texorpdfstring{AddSprite()}{AddSprite()}}
+{\footnotesize\ttfamily void Physics\+Engine\+::\+Add\+Sprite (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_sprite}{Sprite}} $\ast$}]{sprite }\end{DoxyParamCaption})}
+
+
+
+Adds a sprite into the engine. 
+
+Adding a sprite into the engine allows the engine to simulate physical effects on the sprite. The simulation may modify the state of the sprite. 
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em sprite} & The sprite to be added. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_physics_engine_a32d8f7b9a52b0145f9f98b28c98a8a9c}\label{class_physics_engine_a32d8f7b9a52b0145f9f98b28c98a8a9c}} 
+\index{PhysicsEngine@{PhysicsEngine}!AddSupply@{AddSupply}}
+\index{AddSupply@{AddSupply}!PhysicsEngine@{PhysicsEngine}}
+\doxysubsubsection{\texorpdfstring{AddSupply()}{AddSupply()}}
+{\footnotesize\ttfamily void Physics\+Engine\+::\+Add\+Supply (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_sprite}{Sprite}} $\ast$}]{supply }\end{DoxyParamCaption})}
+
+
+
+Adds a supply to physical world. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em supply} & \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_physics_engine_abf02febab83df70a9e849d899a62fe42}\label{class_physics_engine_abf02febab83df70a9e849d899a62fe42}} 
+\index{PhysicsEngine@{PhysicsEngine}!ClearSprites@{ClearSprites}}
+\index{ClearSprites@{ClearSprites}!PhysicsEngine@{PhysicsEngine}}
+\doxysubsubsection{\texorpdfstring{ClearSprites()}{ClearSprites()}}
+{\footnotesize\ttfamily void Physics\+Engine\+::\+Clear\+Sprites (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Clears all sprites in the engine. 
+
+\mbox{\hyperlink{class_this}{This}} method is usually called when a level is finished. \mbox{\Hypertarget{class_physics_engine_a5b391ad7cb2644ec82de3f167ccce6fd}\label{class_physics_engine_a5b391ad7cb2644ec82de3f167ccce6fd}} 
+\index{PhysicsEngine@{PhysicsEngine}!GetContactList@{GetContactList}}
+\index{GetContactList@{GetContactList}!PhysicsEngine@{PhysicsEngine}}
+\doxysubsubsection{\texorpdfstring{GetContactList()}{GetContactList()}}
+{\footnotesize\ttfamily std\+::vector$<$ \mbox{\hyperlink{struct_contact}{Contact}} $>$ \& Physics\+Engine\+::\+Get\+Contact\+List (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Gets a list of contacts detected by the engine. 
+
+Everytime the Updates method is called, the engine may detects some collisions. The engine resolves the collisions and stores the contact information. Users can retrieve these informations by this method. \begin{DoxyReturn}{Returns}
+A list of contacts 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_physics_engine_afcd9a9027f49fbf00562eb6db52a1c2e}\label{class_physics_engine_afcd9a9027f49fbf00562eb6db52a1c2e}} 
+\index{PhysicsEngine@{PhysicsEngine}!GetDestinationContactVector@{GetDestinationContactVector}}
+\index{GetDestinationContactVector@{GetDestinationContactVector}!PhysicsEngine@{PhysicsEngine}}
+\doxysubsubsection{\texorpdfstring{GetDestinationContactVector()}{GetDestinationContactVector()}}
+{\footnotesize\ttfamily std\+::vector$<$ \mbox{\hyperlink{struct_contact}{Contact}} $>$ \& Physics\+Engine\+::\+Get\+Destination\+Contact\+Vector (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Returns a contact vector. Each contact in the vector happens between hero and a destination. 
+
+\begin{DoxyReturn}{Returns}
+contact vector 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_physics_engine_a1f92062f6de1fa13afa19f9e8e0ec4c6}\label{class_physics_engine_a1f92062f6de1fa13afa19f9e8e0ec4c6}} 
+\index{PhysicsEngine@{PhysicsEngine}!GetSupplyContactVector@{GetSupplyContactVector}}
+\index{GetSupplyContactVector@{GetSupplyContactVector}!PhysicsEngine@{PhysicsEngine}}
+\doxysubsubsection{\texorpdfstring{GetSupplyContactVector()}{GetSupplyContactVector()}}
+{\footnotesize\ttfamily std\+::vector$<$ \mbox{\hyperlink{struct_contact}{Contact}} $>$ \& Physics\+Engine\+::\+Get\+Supply\+Contact\+Vector (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Returns a contact vector. Each contact in the vector happens between hero and a supply. 
+
+\begin{DoxyReturn}{Returns}
+contact vector 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_physics_engine_a7e10a37a38241a2fb68015a8be849165}\label{class_physics_engine_a7e10a37a38241a2fb68015a8be849165}} 
+\index{PhysicsEngine@{PhysicsEngine}!HeroCollideEvents@{HeroCollideEvents}}
+\index{HeroCollideEvents@{HeroCollideEvents}!PhysicsEngine@{PhysicsEngine}}
+\doxysubsubsection{\texorpdfstring{HeroCollideEvents()}{HeroCollideEvents()}}
+{\footnotesize\ttfamily void Physics\+Engine\+::\+Hero\+Collide\+Events (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_hero}{Hero}} \&}]{hero,  }\item[{std\+::list$<$ \mbox{\hyperlink{class_sprite}{Sprite}} $\ast$ $>$ \&}]{split\+Hero\+\_\+ }\end{DoxyParamCaption})}
+
+Deal with hero collide 
+\begin{DoxyParams}{Parameters}
+{\em hero} & current player \\
+\hline
+{\em split\+Hero\+\_\+} & splited slimes \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_physics_engine_a1b9e4fa9d1cf3f6540f662b83a3f18b1}\label{class_physics_engine_a1b9e4fa9d1cf3f6540f662b83a3f18b1}} 
+\index{PhysicsEngine@{PhysicsEngine}!RemoveDestination@{RemoveDestination}}
+\index{RemoveDestination@{RemoveDestination}!PhysicsEngine@{PhysicsEngine}}
+\doxysubsubsection{\texorpdfstring{RemoveDestination()}{RemoveDestination()}}
+{\footnotesize\ttfamily void Physics\+Engine\+::\+Remove\+Destination (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_sprite}{Sprite}} $\ast$}]{destination }\end{DoxyParamCaption})}
+
+
+
+Removes a destination from the physical world. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em destination} & \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_physics_engine_a9a5053aaa172bb9a6db78e1e78ccfd56}\label{class_physics_engine_a9a5053aaa172bb9a6db78e1e78ccfd56}} 
+\index{PhysicsEngine@{PhysicsEngine}!RemoveSprite@{RemoveSprite}}
+\index{RemoveSprite@{RemoveSprite}!PhysicsEngine@{PhysicsEngine}}
+\doxysubsubsection{\texorpdfstring{RemoveSprite()}{RemoveSprite()}}
+{\footnotesize\ttfamily void Physics\+Engine\+::\+Remove\+Sprite (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_sprite}{Sprite}} $\ast$}]{sprite }\end{DoxyParamCaption})}
+
+
+
+Removes a sprite from the engine. 
+
+Removing a sprite from the engine stops the engine performing physical computation on it. 
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em sprite} & The sprite to be removed. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_physics_engine_a9cf2cd43b8887683ba1687dd44112107}\label{class_physics_engine_a9cf2cd43b8887683ba1687dd44112107}} 
+\index{PhysicsEngine@{PhysicsEngine}!RemoveSupply@{RemoveSupply}}
+\index{RemoveSupply@{RemoveSupply}!PhysicsEngine@{PhysicsEngine}}
+\doxysubsubsection{\texorpdfstring{RemoveSupply()}{RemoveSupply()}}
+{\footnotesize\ttfamily void Physics\+Engine\+::\+Remove\+Supply (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_sprite}{Sprite}} $\ast$}]{supply }\end{DoxyParamCaption})}
+
+
+
+Removes a supply from the physical world. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em supply} & \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_physics_engine_aff9fcd24a116e29c5331a3f3a07182ac}\label{class_physics_engine_aff9fcd24a116e29c5331a3f3a07182ac}} 
+\index{PhysicsEngine@{PhysicsEngine}!SetGravity@{SetGravity}}
+\index{SetGravity@{SetGravity}!PhysicsEngine@{PhysicsEngine}}
+\doxysubsubsection{\texorpdfstring{SetGravity()}{SetGravity()}}
+{\footnotesize\ttfamily void Physics\+Engine\+::\+Set\+Gravity (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{struct_vector2_d}{Vector2D}} \&}]{gravity }\end{DoxyParamCaption})}
+
+
+
+Sets the gravity of the engine. 
+
+The gravity is used to compute falling of objects in the engine. 
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em gravity} & The gravity \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_physics_engine_a56de96d2b2034c17bc7829914417d0a8}\label{class_physics_engine_a56de96d2b2034c17bc7829914417d0a8}} 
+\index{PhysicsEngine@{PhysicsEngine}!SetMap@{SetMap}}
+\index{SetMap@{SetMap}!PhysicsEngine@{PhysicsEngine}}
+\doxysubsubsection{\texorpdfstring{SetMap()}{SetMap()}}
+{\footnotesize\ttfamily void Physics\+Engine\+::\+Set\+Map (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_tile_map}{Tile\+Map}} $\ast$}]{tile\+\_\+map }\end{DoxyParamCaption})}
+
+
+
+Sets the map of current level into the engine. 
+
+The engine uses this map to detect collision and ensures that sprites don\textquotesingle{}t fall out of the map. 
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em tile\+\_\+map} & The map of current level. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_physics_engine_ab32e3ef471a6b9e115e735af5bdad89d}\label{class_physics_engine_ab32e3ef471a6b9e115e735af5bdad89d}} 
+\index{PhysicsEngine@{PhysicsEngine}!Update@{Update}}
+\index{Update@{Update}!PhysicsEngine@{PhysicsEngine}}
+\doxysubsubsection{\texorpdfstring{Update()}{Update()}}
+{\footnotesize\ttfamily void Physics\+Engine\+::\+Update (\begin{DoxyParamCaption}\item[{float}]{duration }\end{DoxyParamCaption})}
+
+
+
+Updates the state of everything in the engine into the next frame. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em duration} & The duration since the last frame. \\
+\hline
+\end{DoxyParams}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+include/physics\+\_\+engine.\+hpp\item 
+src/physics\+\_\+engine.\+cpp\end{DoxyCompactItemize}

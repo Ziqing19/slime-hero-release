@@ -1,0 +1,58 @@
+\hypertarget{class_json_reader}{}\doxysection{Json\+Reader Class Reference}
+\label{class_json_reader}\index{JsonReader@{JsonReader}}
+\doxysubsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static void \mbox{\hyperlink{class_json_reader_ae107897dcfb6a2a9c521b027cdafe74f}{Read\+Json\+File}} (int buffer\+\_\+size, const std\+::string \&json\+\_\+file\+\_\+path, std\+::function$<$ void(\mbox{\hyperlink{document_8h_ac6ea5b168e3fe8c7fa532450fc9391f7}{rapidjson\+::\+Document}} \&)$>$ callback)
+\begin{DoxyCompactList}\small\item\em Opens a json file and uses callback function to process it. \end{DoxyCompactList}\item 
+static void \mbox{\hyperlink{class_json_reader_a03a96797bc9bce47a45faf16bfa84189}{Read\+Json\+File}} (const std\+::string \&json\+\_\+file\+\_\+path, std\+::function$<$ void(\mbox{\hyperlink{document_8h_ac6ea5b168e3fe8c7fa532450fc9391f7}{rapidjson\+::\+Document}} \&)$>$ callback)
+\begin{DoxyCompactList}\small\item\em Opens a json file and uses callback function to process it. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+utility class for reading json files.
+
+There is a slight difference between reading json files on Windows and other platforms. \mbox{\hyperlink{class_this}{This}} util class provides a uniform API. 
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_json_reader_a03a96797bc9bce47a45faf16bfa84189}\label{class_json_reader_a03a96797bc9bce47a45faf16bfa84189}} 
+\index{JsonReader@{JsonReader}!ReadJsonFile@{ReadJsonFile}}
+\index{ReadJsonFile@{ReadJsonFile}!JsonReader@{JsonReader}}
+\doxysubsubsection{\texorpdfstring{ReadJsonFile()}{ReadJsonFile()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily static void Json\+Reader\+::\+Read\+Json\+File (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{json\+\_\+file\+\_\+path,  }\item[{std\+::function$<$ void(\mbox{\hyperlink{document_8h_ac6ea5b168e3fe8c7fa532450fc9391f7}{rapidjson\+::\+Document}} \&)$>$}]{callback }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}
+
+
+
+Opens a json file and uses callback function to process it. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em json\+\_\+file\+\_\+path} & Path of the json file \\
+\hline
+\mbox{\texttt{ in}}  & {\em callback} & Callback function used to process the json file. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_json_reader_ae107897dcfb6a2a9c521b027cdafe74f}\label{class_json_reader_ae107897dcfb6a2a9c521b027cdafe74f}} 
+\index{JsonReader@{JsonReader}!ReadJsonFile@{ReadJsonFile}}
+\index{ReadJsonFile@{ReadJsonFile}!JsonReader@{JsonReader}}
+\doxysubsubsection{\texorpdfstring{ReadJsonFile()}{ReadJsonFile()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily static void Json\+Reader\+::\+Read\+Json\+File (\begin{DoxyParamCaption}\item[{int}]{buffer\+\_\+size,  }\item[{const std\+::string \&}]{json\+\_\+file\+\_\+path,  }\item[{std\+::function$<$ void(\mbox{\hyperlink{document_8h_ac6ea5b168e3fe8c7fa532450fc9391f7}{rapidjson\+::\+Document}} \&)$>$}]{callback }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}
+
+
+
+Opens a json file and uses callback function to process it. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em buffer\+\_\+size} & Buffer size \\
+\hline
+\mbox{\texttt{ in}}  & {\em json\+\_\+file\+\_\+path} & Path of the json file \\
+\hline
+\mbox{\texttt{ in}}  & {\em callback} & Callback function used to process the json file. \\
+\hline
+\end{DoxyParams}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+include/json\+\_\+reader.\+hpp\end{DoxyCompactItemize}

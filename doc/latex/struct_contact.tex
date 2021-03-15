@@ -1,0 +1,40 @@
+\hypertarget{struct_contact}{}\doxysection{Contact Struct Reference}
+\label{struct_contact}\index{Contact@{Contact}}
+
+
+\mbox{\hyperlink{struct_contact}{Contact}} contains collision information between two game objects.  
+
+
+
+
+{\ttfamily \#include $<$contact.\+hpp$>$}
+
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{struct_contact_afd036655664d19f0c3a766699cb2a9ed}\label{struct_contact_afd036655664d19f0c3a766699cb2a9ed}} 
+bool {\bfseries operator==} (const \mbox{\hyperlink{struct_contact}{Contact}} \&another) const
+\item 
+\mbox{\Hypertarget{struct_contact_abe3fb7a18d134a9f4bf76aa1c874f37e}\label{struct_contact_abe3fb7a18d134a9f4bf76aa1c874f37e}} 
+size\+\_\+t {\bfseries operator()} (const \mbox{\hyperlink{struct_contact}{Contact}} \&contact) const noexcept
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{struct_contact_a094cc9bc2333481dfa568e1a1f7272b9}\label{struct_contact_a094cc9bc2333481dfa568e1a1f7272b9}} 
+\mbox{\hyperlink{class_game_object}{Game\+Object}} $\ast$ {\bfseries object1} \{ nullptr \}
+\item 
+\mbox{\Hypertarget{struct_contact_a3d31cf245951a135aff64bee94cae459}\label{struct_contact_a3d31cf245951a135aff64bee94cae459}} 
+\mbox{\hyperlink{class_game_object}{Game\+Object}} $\ast$ {\bfseries object2} \{ nullptr \}
+\item 
+\mbox{\Hypertarget{struct_contact_a921c2039d26f4f40ad7ac58907fa9ffd}\label{struct_contact_a921c2039d26f4f40ad7ac58907fa9ffd}} 
+\mbox{\hyperlink{struct_vector2_d}{Vector2D}} {\bfseries normal} \{ 0.f, 0.f \}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+\mbox{\hyperlink{struct_contact}{Contact}} contains collision information between two game objects. 
+
+The documentation for this struct was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+include/contact.\+hpp\end{DoxyCompactItemize}

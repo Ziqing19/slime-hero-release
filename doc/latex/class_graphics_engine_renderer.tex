@@ -1,0 +1,102 @@
+\hypertarget{class_graphics_engine_renderer}{}\doxysection{Graphics\+Engine\+Renderer Class Reference}
+\label{class_graphics_engine_renderer}\index{GraphicsEngineRenderer@{GraphicsEngineRenderer}}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{class_graphics_engine_renderer_af6d14aa822afc65e5d63bb0d6f230088}{Init}} (int width, int height)
+\item 
+void \mbox{\hyperlink{class_graphics_engine_renderer_aed0e39a565c412cf16fa3085a18436c4}{Shutdown}} ()
+\item 
+void \mbox{\hyperlink{class_graphics_engine_renderer_a9a9925c4e07e02d352816b73396fd2e1}{Set\+Renderer\+Color}} (int r, int g, int b, int a)
+\item 
+void \mbox{\hyperlink{class_graphics_engine_renderer_ad1b9e1c88fd4320c9f37ee663772a56b}{Clear\+Renderer}} ()
+\item 
+void \mbox{\hyperlink{class_graphics_engine_renderer_a6d1a7f485ab3103d51a1bdf15720d435}{Render}} ()
+\item 
+SDL\+\_\+\+Window $\ast$ \mbox{\hyperlink{class_graphics_engine_renderer_aa88bba4b1c141eefbd155f963f3afdce}{Get\+Window}} ()
+\item 
+SDL\+\_\+\+Renderer $\ast$ \mbox{\hyperlink{class_graphics_engine_renderer_ac103d343df007edf3ebaa66d6f60fa6d}{Get\+Renderer}} ()
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_graphics_engine_renderer_ad1b9e1c88fd4320c9f37ee663772a56b}\label{class_graphics_engine_renderer_ad1b9e1c88fd4320c9f37ee663772a56b}} 
+\index{GraphicsEngineRenderer@{GraphicsEngineRenderer}!ClearRenderer@{ClearRenderer}}
+\index{ClearRenderer@{ClearRenderer}!GraphicsEngineRenderer@{GraphicsEngineRenderer}}
+\doxysubsubsection{\texorpdfstring{ClearRenderer()}{ClearRenderer()}}
+{\footnotesize\ttfamily void Graphics\+Engine\+Renderer\+::\+Clear\+Renderer (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Clear the screen. \mbox{\Hypertarget{class_graphics_engine_renderer_ac103d343df007edf3ebaa66d6f60fa6d}\label{class_graphics_engine_renderer_ac103d343df007edf3ebaa66d6f60fa6d}} 
+\index{GraphicsEngineRenderer@{GraphicsEngineRenderer}!GetRenderer@{GetRenderer}}
+\index{GetRenderer@{GetRenderer}!GraphicsEngineRenderer@{GraphicsEngineRenderer}}
+\doxysubsubsection{\texorpdfstring{GetRenderer()}{GetRenderer()}}
+{\footnotesize\ttfamily SDL\+\_\+\+Renderer $\ast$ Graphics\+Engine\+Renderer\+::\+Get\+Renderer (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Get the renderer pointer
+
+\begin{DoxyReturn}{Returns}
+renderer pointer 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_graphics_engine_renderer_aa88bba4b1c141eefbd155f963f3afdce}\label{class_graphics_engine_renderer_aa88bba4b1c141eefbd155f963f3afdce}} 
+\index{GraphicsEngineRenderer@{GraphicsEngineRenderer}!GetWindow@{GetWindow}}
+\index{GetWindow@{GetWindow}!GraphicsEngineRenderer@{GraphicsEngineRenderer}}
+\doxysubsubsection{\texorpdfstring{GetWindow()}{GetWindow()}}
+{\footnotesize\ttfamily SDL\+\_\+\+Window $\ast$ Graphics\+Engine\+Renderer\+::\+Get\+Window (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Get the window pointer
+
+\begin{DoxyReturn}{Returns}
+window pointer 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_graphics_engine_renderer_af6d14aa822afc65e5d63bb0d6f230088}\label{class_graphics_engine_renderer_af6d14aa822afc65e5d63bb0d6f230088}} 
+\index{GraphicsEngineRenderer@{GraphicsEngineRenderer}!Init@{Init}}
+\index{Init@{Init}!GraphicsEngineRenderer@{GraphicsEngineRenderer}}
+\doxysubsubsection{\texorpdfstring{Init()}{Init()}}
+{\footnotesize\ttfamily void Graphics\+Engine\+Renderer\+::\+Init (\begin{DoxyParamCaption}\item[{int}]{width,  }\item[{int}]{height }\end{DoxyParamCaption})}
+
+Initialize the engine.
+
+
+\begin{DoxyParams}{Parameters}
+{\em width} & screen width \\
+\hline
+{\em height} & screen height \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_graphics_engine_renderer_a6d1a7f485ab3103d51a1bdf15720d435}\label{class_graphics_engine_renderer_a6d1a7f485ab3103d51a1bdf15720d435}} 
+\index{GraphicsEngineRenderer@{GraphicsEngineRenderer}!Render@{Render}}
+\index{Render@{Render}!GraphicsEngineRenderer@{GraphicsEngineRenderer}}
+\doxysubsubsection{\texorpdfstring{Render()}{Render()}}
+{\footnotesize\ttfamily void Graphics\+Engine\+Renderer\+::\+Render (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Render to the screen. \mbox{\Hypertarget{class_graphics_engine_renderer_a9a9925c4e07e02d352816b73396fd2e1}\label{class_graphics_engine_renderer_a9a9925c4e07e02d352816b73396fd2e1}} 
+\index{GraphicsEngineRenderer@{GraphicsEngineRenderer}!SetRendererColor@{SetRendererColor}}
+\index{SetRendererColor@{SetRendererColor}!GraphicsEngineRenderer@{GraphicsEngineRenderer}}
+\doxysubsubsection{\texorpdfstring{SetRendererColor()}{SetRendererColor()}}
+{\footnotesize\ttfamily void Graphics\+Engine\+Renderer\+::\+Set\+Renderer\+Color (\begin{DoxyParamCaption}\item[{int}]{r,  }\item[{int}]{g,  }\item[{int}]{b,  }\item[{int}]{a }\end{DoxyParamCaption})}
+
+Set renderer color
+
+
+\begin{DoxyParams}{Parameters}
+{\em r} & Red \\
+\hline
+{\em g} & Green \\
+\hline
+{\em b} & Blue \\
+\hline
+{\em a} & Alpha \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_graphics_engine_renderer_aed0e39a565c412cf16fa3085a18436c4}\label{class_graphics_engine_renderer_aed0e39a565c412cf16fa3085a18436c4}} 
+\index{GraphicsEngineRenderer@{GraphicsEngineRenderer}!Shutdown@{Shutdown}}
+\index{Shutdown@{Shutdown}!GraphicsEngineRenderer@{GraphicsEngineRenderer}}
+\doxysubsubsection{\texorpdfstring{Shutdown()}{Shutdown()}}
+{\footnotesize\ttfamily void Graphics\+Engine\+Renderer\+::\+Shutdown (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Shutdown the engine. 
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+include/graphics\+\_\+engine\+\_\+renderer.\+hpp\item 
+src/graphics\+\_\+engine\+\_\+renderer.\+cpp\end{DoxyCompactItemize}

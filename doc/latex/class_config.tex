@@ -1,0 +1,181 @@
+\hypertarget{class_config}{}\doxysection{Config Class Reference}
+\label{class_config}\index{Config@{Config}}
+
+
+\mbox{\hyperlink{class_this}{This}} class is a singleton and is responsible for reading global configurations from file.  
+
+
+
+
+{\ttfamily \#include $<$config.\+hpp$>$}
+
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+int \mbox{\hyperlink{class_config_a5e57a83c8d814657b8aabec73b936d30}{Get\+Window\+Width}} () const
+\item 
+int \mbox{\hyperlink{class_config_a07f02bf2aac8643b951649165379c2f6}{Get\+Window\+Height}} () const
+\item 
+int \mbox{\hyperlink{class_config_a1f10544f001c41bd6f77dcb7af375cc3}{Get\+Hero\+Width}} () const
+\begin{DoxyCompactList}\small\item\em Returns the width of a hero. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{class_config_ae46343c0c79df1ab68c3762b080d30f2}{Get\+Hero\+Height}} () const
+\begin{DoxyCompactList}\small\item\em Returns the height of a hero. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{class_config_ad95e9402236047395f58aa2215360023}{Get\+Enemy\+Width}} () const
+\begin{DoxyCompactList}\small\item\em Returns the width of a hero. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{class_config_a2f6b1ca9eabdbd276a066a36d893f496}{Get\+Enemy\+Height}} () const
+\begin{DoxyCompactList}\small\item\em Returns the height of a hero. \end{DoxyCompactList}\item 
+const std\+::string \& \mbox{\hyperlink{class_config_a0439a455254373c5159ffead2a6f7dd5}{Get\+Audio\+Directory}} () const
+\item 
+const std\+::string \& \mbox{\hyperlink{class_config_a139d445a52e7c86a472c53cc9ae824e6}{Get\+Image\+Directory}} () const
+\item 
+const std\+::string \& \mbox{\hyperlink{class_config_a1585491f54d8ad0066e06ac36a63871c}{Get\+Text\+Directory}} () const
+\item 
+const std\+::string \& \mbox{\hyperlink{class_config_abcd658bed1c0dbdb9ed80c9e377db4b8}{Get\+Map\+Directory}} () const
+\item 
+const std\+::string \& \mbox{\hyperlink{class_config_af6ddb192a0a02ec98f45b925b2173552}{Get\+Language\+Code}} () const
+\item 
+bool \mbox{\hyperlink{class_config_a3abc7c5e2f923d3bb197b84179d597e7}{Init}} ()
+\end{DoxyCompactItemize}
+\doxysubsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static \mbox{\hyperlink{class_config}{Config}} \& \mbox{\hyperlink{class_config_ac9ed02f5b8683a8c445495420eb9501e}{Get\+Instance}} ()
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+\mbox{\hyperlink{class_this}{This}} class is a singleton and is responsible for reading global configurations from file. 
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_config_a0439a455254373c5159ffead2a6f7dd5}\label{class_config_a0439a455254373c5159ffead2a6f7dd5}} 
+\index{Config@{Config}!GetAudioDirectory@{GetAudioDirectory}}
+\index{GetAudioDirectory@{GetAudioDirectory}!Config@{Config}}
+\doxysubsubsection{\texorpdfstring{GetAudioDirectory()}{GetAudioDirectory()}}
+{\footnotesize\ttfamily const std\+::string\& Config\+::\+Get\+Audio\+Directory (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+Returns the directory stores audio files. \begin{DoxyReturn}{Returns}
+the directory stores audio files. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_config_a2f6b1ca9eabdbd276a066a36d893f496}\label{class_config_a2f6b1ca9eabdbd276a066a36d893f496}} 
+\index{Config@{Config}!GetEnemyHeight@{GetEnemyHeight}}
+\index{GetEnemyHeight@{GetEnemyHeight}!Config@{Config}}
+\doxysubsubsection{\texorpdfstring{GetEnemyHeight()}{GetEnemyHeight()}}
+{\footnotesize\ttfamily int Config\+::\+Get\+Enemy\+Height (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Returns the height of a hero. 
+
+\begin{DoxyReturn}{Returns}
+the height of a hero. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_config_ad95e9402236047395f58aa2215360023}\label{class_config_ad95e9402236047395f58aa2215360023}} 
+\index{Config@{Config}!GetEnemyWidth@{GetEnemyWidth}}
+\index{GetEnemyWidth@{GetEnemyWidth}!Config@{Config}}
+\doxysubsubsection{\texorpdfstring{GetEnemyWidth()}{GetEnemyWidth()}}
+{\footnotesize\ttfamily int Config\+::\+Get\+Enemy\+Width (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Returns the width of a hero. 
+
+\begin{DoxyReturn}{Returns}
+the width of a hero. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_config_ae46343c0c79df1ab68c3762b080d30f2}\label{class_config_ae46343c0c79df1ab68c3762b080d30f2}} 
+\index{Config@{Config}!GetHeroHeight@{GetHeroHeight}}
+\index{GetHeroHeight@{GetHeroHeight}!Config@{Config}}
+\doxysubsubsection{\texorpdfstring{GetHeroHeight()}{GetHeroHeight()}}
+{\footnotesize\ttfamily int Config\+::\+Get\+Hero\+Height (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Returns the height of a hero. 
+
+\begin{DoxyReturn}{Returns}
+the height of a hero. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_config_a1f10544f001c41bd6f77dcb7af375cc3}\label{class_config_a1f10544f001c41bd6f77dcb7af375cc3}} 
+\index{Config@{Config}!GetHeroWidth@{GetHeroWidth}}
+\index{GetHeroWidth@{GetHeroWidth}!Config@{Config}}
+\doxysubsubsection{\texorpdfstring{GetHeroWidth()}{GetHeroWidth()}}
+{\footnotesize\ttfamily int Config\+::\+Get\+Hero\+Width (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Returns the width of a hero. 
+
+\begin{DoxyReturn}{Returns}
+the width of a hero. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_config_a139d445a52e7c86a472c53cc9ae824e6}\label{class_config_a139d445a52e7c86a472c53cc9ae824e6}} 
+\index{Config@{Config}!GetImageDirectory@{GetImageDirectory}}
+\index{GetImageDirectory@{GetImageDirectory}!Config@{Config}}
+\doxysubsubsection{\texorpdfstring{GetImageDirectory()}{GetImageDirectory()}}
+{\footnotesize\ttfamily const std\+::string\& Config\+::\+Get\+Image\+Directory (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+Returns the directory stores image files. \begin{DoxyReturn}{Returns}
+the directory stores image files. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_config_ac9ed02f5b8683a8c445495420eb9501e}\label{class_config_ac9ed02f5b8683a8c445495420eb9501e}} 
+\index{Config@{Config}!GetInstance@{GetInstance}}
+\index{GetInstance@{GetInstance}!Config@{Config}}
+\doxysubsubsection{\texorpdfstring{GetInstance()}{GetInstance()}}
+{\footnotesize\ttfamily static \mbox{\hyperlink{class_config}{Config}}\& Config\+::\+Get\+Instance (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}
+
+Get the singleton. \mbox{\Hypertarget{class_config_af6ddb192a0a02ec98f45b925b2173552}\label{class_config_af6ddb192a0a02ec98f45b925b2173552}} 
+\index{Config@{Config}!GetLanguageCode@{GetLanguageCode}}
+\index{GetLanguageCode@{GetLanguageCode}!Config@{Config}}
+\doxysubsubsection{\texorpdfstring{GetLanguageCode()}{GetLanguageCode()}}
+{\footnotesize\ttfamily const std\+::string\& Config\+::\+Get\+Language\+Code (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+Returns the language code. \begin{DoxyReturn}{Returns}
+the language code 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_config_abcd658bed1c0dbdb9ed80c9e377db4b8}\label{class_config_abcd658bed1c0dbdb9ed80c9e377db4b8}} 
+\index{Config@{Config}!GetMapDirectory@{GetMapDirectory}}
+\index{GetMapDirectory@{GetMapDirectory}!Config@{Config}}
+\doxysubsubsection{\texorpdfstring{GetMapDirectory()}{GetMapDirectory()}}
+{\footnotesize\ttfamily const std\+::string\& Config\+::\+Get\+Map\+Directory (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+Returns the directory stores map files. \begin{DoxyReturn}{Returns}
+the directory stores map files 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_config_a1585491f54d8ad0066e06ac36a63871c}\label{class_config_a1585491f54d8ad0066e06ac36a63871c}} 
+\index{Config@{Config}!GetTextDirectory@{GetTextDirectory}}
+\index{GetTextDirectory@{GetTextDirectory}!Config@{Config}}
+\doxysubsubsection{\texorpdfstring{GetTextDirectory()}{GetTextDirectory()}}
+{\footnotesize\ttfamily const std\+::string\& Config\+::\+Get\+Text\+Directory (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+Returns the directory stores text files. \begin{DoxyReturn}{Returns}
+the directory stores text files. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_config_a07f02bf2aac8643b951649165379c2f6}\label{class_config_a07f02bf2aac8643b951649165379c2f6}} 
+\index{Config@{Config}!GetWindowHeight@{GetWindowHeight}}
+\index{GetWindowHeight@{GetWindowHeight}!Config@{Config}}
+\doxysubsubsection{\texorpdfstring{GetWindowHeight()}{GetWindowHeight()}}
+{\footnotesize\ttfamily int Config\+::\+Get\+Window\+Height (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+Returns the height of the window. \begin{DoxyReturn}{Returns}
+the height 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_config_a5e57a83c8d814657b8aabec73b936d30}\label{class_config_a5e57a83c8d814657b8aabec73b936d30}} 
+\index{Config@{Config}!GetWindowWidth@{GetWindowWidth}}
+\index{GetWindowWidth@{GetWindowWidth}!Config@{Config}}
+\doxysubsubsection{\texorpdfstring{GetWindowWidth()}{GetWindowWidth()}}
+{\footnotesize\ttfamily int Config\+::\+Get\+Window\+Width (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+Returns the width of the window. \begin{DoxyReturn}{Returns}
+the width 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_config_a3abc7c5e2f923d3bb197b84179d597e7}\label{class_config_a3abc7c5e2f923d3bb197b84179d597e7}} 
+\index{Config@{Config}!Init@{Init}}
+\index{Init@{Init}!Config@{Config}}
+\doxysubsubsection{\texorpdfstring{Init()}{Init()}}
+{\footnotesize\ttfamily bool Config\+::\+Init (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Read global configurations from files. 
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+include/config.\+hpp\end{DoxyCompactItemize}

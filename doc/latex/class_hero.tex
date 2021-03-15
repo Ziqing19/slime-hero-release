@@ -1,0 +1,204 @@
+\hypertarget{class_hero}{}\doxysection{Hero Class Reference}
+\label{class_hero}\index{Hero@{Hero}}
+
+
+{\ttfamily \#include $<$Hero.\+hpp$>$}
+
+Inheritance diagram for Hero\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=3.000000cm]{class_hero}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_hero_aa26493e3d73721f35bd47ac7ff56d653}\label{class_hero_aa26493e3d73721f35bd47ac7ff56d653}} 
+{\bfseries Hero} (const \mbox{\hyperlink{struct_vector2_d}{Vector2D}} \&position, const \mbox{\hyperlink{struct_vector2_d}{Vector2D}} \&velocity, int width, int height, const std\+::string \&texture, bool is\+Controlled)
+\item 
+void \mbox{\hyperlink{class_hero_af1c6702354c53703b37c385236c490a1}{Update}} (float dt, std\+::list$<$ \mbox{\hyperlink{class_sprite}{Sprite}} $\ast$ $>$ \&hero\+Splited\+\_\+, \mbox{\hyperlink{class_text_field}{Text\+Field}} $\ast$state\+Text) override
+\item 
+void \mbox{\hyperlink{class_hero_a0416d0ed6e2e3e1299dc8bd01788a58f}{Update}} (float dt) override
+\item 
+void \mbox{\hyperlink{class_hero_ab6066abc558f63e68e293d407d768ea1}{Set\+Anime}} (Animation anime)
+\item 
+void \mbox{\hyperlink{class_hero_a36f0acae415ec04f03bacde22d940286}{Handle\+Keyboard\+Input}} (const SDL\+\_\+\+Keyboard\+Event \&event)
+\item 
+void \mbox{\hyperlink{class_hero_aba34886d3b1799d0e03ac5b666cad6d4}{Jump}} (float velocity)
+\item 
+void \mbox{\hyperlink{class_hero_acab014aae61a290fbc083f5e9a0dccb1}{Split}} (std\+::list$<$ \mbox{\hyperlink{class_sprite}{Sprite}} $\ast$ $>$ \&hero\+Splited\+\_\+)
+\item 
+void \mbox{\hyperlink{class_hero_a7ccb668b53009a6948b75af8666a82f8}{Change\+Attribute}} (bool change\+Dir)
+\item 
+Hero\+Attributes \mbox{\hyperlink{class_hero_a47c4669f5d474e0df44dbecb110c216f}{Get\+Attribute}} ()
+\item 
+Game\+Object\+::\+Object\+Type \mbox{\hyperlink{class_hero_af74b94a4d436cf900d79f72aa8e74c17}{Get\+Object\+Type}} () const override
+\begin{DoxyCompactList}\small\item\em Returns the type information of the object. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_hero_ab20b12c37f8adaffb7d7cff4cb0c6764}\label{class_hero_ab20b12c37f8adaffb7d7cff4cb0c6764}} 
+void {\bfseries Set\+Map} (\mbox{\hyperlink{class_tile_map}{Tile\+Map}} $\ast$map)
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_hero_afa2b6d4817493adcc81f7478c00a2ec8}\label{class_hero_afa2b6d4817493adcc81f7478c00a2ec8}} 
+bool {\bfseries died} = false
+\end{DoxyCompactItemize}
+\doxysubsection*{Additional Inherited Members}
+
+
+\doxysubsection{Detailed Description}
+\mbox{\hyperlink{class_this}{This}} class defines the hero that player controls. 
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_hero_a7ccb668b53009a6948b75af8666a82f8}\label{class_hero_a7ccb668b53009a6948b75af8666a82f8}} 
+\index{Hero@{Hero}!ChangeAttribute@{ChangeAttribute}}
+\index{ChangeAttribute@{ChangeAttribute}!Hero@{Hero}}
+\doxysubsubsection{\texorpdfstring{ChangeAttribute()}{ChangeAttribute()}}
+{\footnotesize\ttfamily void Hero\+::\+Change\+Attribute (\begin{DoxyParamCaption}\item[{bool}]{change\+Dir }\end{DoxyParamCaption})}
+
+Change attributes $<$ Horizontal acceleration(on ground)
+
+$<$ Horizontal resistance(on ground)
+
+$<$ Horizontal velocity upper limit(on ground)
+
+$<$ Horizontal acceleration(in the air)
+
+$<$ Horitonal resistance(in the air)
+
+$<$jump speed
+
+$<$ Horizontal acceleration(on ground)
+
+$<$ Horizontal resistance(on ground)
+
+$<$ Horizontal velocity upper limit(on ground)
+
+$<$ Horizontal acceleration(in the air)
+
+$<$ Horitonal resistance(in the air)
+
+$<$jump speed
+
+$<$ Horizontal acceleration(on ground)
+
+$<$ Horizontal resistance(on ground)
+
+$<$ Horizontal velocity upper limit(on ground)
+
+$<$ Horizontal acceleration(in the air)
+
+$<$ Horitonal resistance(in the air)
+
+$<$jump speed
+
+$<$ Horizontal acceleration(on ground)
+
+$<$ Horizontal resistance(on ground)
+
+$<$ Horizontal velocity upper limit(on ground)
+
+$<$ Horizontal acceleration(in the air)
+
+$<$ Horitonal resistance(in the air)
+
+$<$jump speed\mbox{\Hypertarget{class_hero_a47c4669f5d474e0df44dbecb110c216f}\label{class_hero_a47c4669f5d474e0df44dbecb110c216f}} 
+\index{Hero@{Hero}!GetAttribute@{GetAttribute}}
+\index{GetAttribute@{GetAttribute}!Hero@{Hero}}
+\doxysubsubsection{\texorpdfstring{GetAttribute()}{GetAttribute()}}
+{\footnotesize\ttfamily Hero\+Attributes Hero\+::\+Get\+Attribute (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Get attributes \mbox{\Hypertarget{class_hero_af74b94a4d436cf900d79f72aa8e74c17}\label{class_hero_af74b94a4d436cf900d79f72aa8e74c17}} 
+\index{Hero@{Hero}!GetObjectType@{GetObjectType}}
+\index{GetObjectType@{GetObjectType}!Hero@{Hero}}
+\doxysubsubsection{\texorpdfstring{GetObjectType()}{GetObjectType()}}
+{\footnotesize\ttfamily Game\+Object\+::\+Object\+Type Hero\+::\+Get\+Object\+Type (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Returns the type information of the object. 
+
+Each subclass should return a value from the enum Object\+Type. \begin{DoxyReturn}{Returns}
+type of the object 
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{class_game_object_a59f50b3b97a1831c1ff770546d13a7f1}{Game\+Object}}.
+
+\mbox{\Hypertarget{class_hero_a36f0acae415ec04f03bacde22d940286}\label{class_hero_a36f0acae415ec04f03bacde22d940286}} 
+\index{Hero@{Hero}!HandleKeyboardInput@{HandleKeyboardInput}}
+\index{HandleKeyboardInput@{HandleKeyboardInput}!Hero@{Hero}}
+\doxysubsubsection{\texorpdfstring{HandleKeyboardInput()}{HandleKeyboardInput()}}
+{\footnotesize\ttfamily void Hero\+::\+Handle\+Keyboard\+Input (\begin{DoxyParamCaption}\item[{const SDL\+\_\+\+Keyboard\+Event \&}]{event }\end{DoxyParamCaption})}
+
+Handle input 
+\begin{DoxyParams}{Parameters}
+{\em event} & SDL event \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_hero_aba34886d3b1799d0e03ac5b666cad6d4}\label{class_hero_aba34886d3b1799d0e03ac5b666cad6d4}} 
+\index{Hero@{Hero}!Jump@{Jump}}
+\index{Jump@{Jump}!Hero@{Hero}}
+\doxysubsubsection{\texorpdfstring{Jump()}{Jump()}}
+{\footnotesize\ttfamily void Hero\+::\+Jump (\begin{DoxyParamCaption}\item[{float}]{velocity }\end{DoxyParamCaption})}
+
+\mbox{\hyperlink{class_hero}{Hero}} jump 
+\begin{DoxyParams}{Parameters}
+{\em velocity} & jump initial velocity \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_hero_ab6066abc558f63e68e293d407d768ea1}\label{class_hero_ab6066abc558f63e68e293d407d768ea1}} 
+\index{Hero@{Hero}!SetAnime@{SetAnime}}
+\index{SetAnime@{SetAnime}!Hero@{Hero}}
+\doxysubsubsection{\texorpdfstring{SetAnime()}{SetAnime()}}
+{\footnotesize\ttfamily void Hero\+::\+Set\+Anime (\begin{DoxyParamCaption}\item[{Animation}]{anime }\end{DoxyParamCaption})}
+
+Set animation 
+\begin{DoxyParams}{Parameters}
+{\em anime} & enum of animations \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_hero_acab014aae61a290fbc083f5e9a0dccb1}\label{class_hero_acab014aae61a290fbc083f5e9a0dccb1}} 
+\index{Hero@{Hero}!Split@{Split}}
+\index{Split@{Split}!Hero@{Hero}}
+\doxysubsubsection{\texorpdfstring{Split()}{Split()}}
+{\footnotesize\ttfamily void Hero\+::\+Split (\begin{DoxyParamCaption}\item[{std\+::list$<$ \mbox{\hyperlink{class_sprite}{Sprite}} $\ast$ $>$ \&}]{hero\+Splited\+\_\+ }\end{DoxyParamCaption})}
+
+Split the hero \mbox{\Hypertarget{class_hero_a0416d0ed6e2e3e1299dc8bd01788a58f}\label{class_hero_a0416d0ed6e2e3e1299dc8bd01788a58f}} 
+\index{Hero@{Hero}!Update@{Update}}
+\index{Update@{Update}!Hero@{Hero}}
+\doxysubsubsection{\texorpdfstring{Update()}{Update()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily void Hero\+::\+Update (\begin{DoxyParamCaption}\item[{float}]{dt }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+Update the sprite by elapsed time.
+
+
+\begin{DoxyParams}{Parameters}
+{\em dt} & time elapsed \\
+\hline
+\end{DoxyParams}
+
+
+Implements \mbox{\hyperlink{class_sprite_ab21212cacf5a761b8536a168e233bbda}{Sprite}}.
+
+\mbox{\Hypertarget{class_hero_af1c6702354c53703b37c385236c490a1}\label{class_hero_af1c6702354c53703b37c385236c490a1}} 
+\index{Hero@{Hero}!Update@{Update}}
+\index{Update@{Update}!Hero@{Hero}}
+\doxysubsubsection{\texorpdfstring{Update()}{Update()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily void Hero\+::\+Update (\begin{DoxyParamCaption}\item[{float}]{dt,  }\item[{std\+::list$<$ \mbox{\hyperlink{class_sprite}{Sprite}} $\ast$ $>$ \&}]{hero\+Splited\+\_\+,  }\item[{\mbox{\hyperlink{class_text_field}{Text\+Field}} $\ast$}]{state\+Text }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+Update the sprite by elapsed time. 
+\begin{DoxyParams}{Parameters}
+{\em dt} & time elapsed \\
+\hline
+\end{DoxyParams}
+
+
+Implements \mbox{\hyperlink{class_sprite}{Sprite}}.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+include/\mbox{\hyperlink{_hero_8hpp}{Hero.\+hpp}}\item 
+src/\mbox{\hyperlink{_hero_8cpp}{Hero.\+cpp}}\end{DoxyCompactItemize}

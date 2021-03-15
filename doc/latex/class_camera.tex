@@ -1,0 +1,108 @@
+\hypertarget{class_camera}{}\doxysection{Camera Class Reference}
+\label{class_camera}\index{Camera@{Camera}}
+
+
+\mbox{\hyperlink{class_this}{This}} class represents cameras in game.  
+
+
+
+
+{\ttfamily \#include $<$camera.\+hpp$>$}
+
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_camera_ae23af4d7cab430c77d537621cdd16b3f}\label{class_camera_ae23af4d7cab430c77d537621cdd16b3f}} 
+\mbox{\hyperlink{class_camera_ae23af4d7cab430c77d537621cdd16b3f}{Camera}} ()=default
+\begin{DoxyCompactList}\small\item\em Default constructor. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_camera_a9c377f119cc1b6de9153ee05a8b55fdf}{Camera}} (int x, int y, int width, int height)
+\begin{DoxyCompactList}\small\item\em Constructor. Build a camera with position and size. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_camera_aee53789953975e9a16fec77f54a728ae}{Update}} (const \mbox{\hyperlink{struct_vector2_d}{Vector2D}} \&hero\+\_\+position)
+\begin{DoxyCompactList}\small\item\em Updates the size position of the camera based on the hero\textquotesingle{}s position. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_camera_a9c169d211a7284478e336fb082bf1bbe}{Set\+Map\+Size}} (int width, int height)
+\begin{DoxyCompactList}\small\item\em Updates the size of current map. \end{DoxyCompactList}\item 
+const SDL\+\_\+\+Rect \& \mbox{\hyperlink{class_camera_aa7bb748b59f2cedeebb05223364cc820}{Get\+Viewport}} () const
+\begin{DoxyCompactList}\small\item\em Get the viewport of the camera. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+\mbox{\hyperlink{class_this}{This}} class represents cameras in game. 
+
+The size of a map may be larger than the size of window. We use a camera to render part of the map. \mbox{\hyperlink{class_camera}{Camera}} follows the position of hero. It tries to render the hero at the center of the screen horizontally and one thirds from the bottom of screen vertically. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_camera_a9c377f119cc1b6de9153ee05a8b55fdf}\label{class_camera_a9c377f119cc1b6de9153ee05a8b55fdf}} 
+\index{Camera@{Camera}!Camera@{Camera}}
+\index{Camera@{Camera}!Camera@{Camera}}
+\doxysubsubsection{\texorpdfstring{Camera()}{Camera()}}
+{\footnotesize\ttfamily Camera\+::\+Camera (\begin{DoxyParamCaption}\item[{int}]{x,  }\item[{int}]{y,  }\item[{int}]{width,  }\item[{int}]{height }\end{DoxyParamCaption})}
+
+
+
+Constructor. Build a camera with position and size. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em x} & The x coordinate of the camera. \\
+\hline
+\mbox{\texttt{ in}}  & {\em y} & The y coordinate of the camera. \\
+\hline
+\mbox{\texttt{ in}}  & {\em width} & The width of the camera. \\
+\hline
+\mbox{\texttt{ in}}  & {\em height} & The height of the camera. \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_camera_aa7bb748b59f2cedeebb05223364cc820}\label{class_camera_aa7bb748b59f2cedeebb05223364cc820}} 
+\index{Camera@{Camera}!GetViewport@{GetViewport}}
+\index{GetViewport@{GetViewport}!Camera@{Camera}}
+\doxysubsubsection{\texorpdfstring{GetViewport()}{GetViewport()}}
+{\footnotesize\ttfamily const SDL\+\_\+\+Rect \& Camera\+::\+Get\+Viewport (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Get the viewport of the camera. 
+
+\begin{DoxyReturn}{Returns}
+The view port of the camera. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_camera_a9c169d211a7284478e336fb082bf1bbe}\label{class_camera_a9c169d211a7284478e336fb082bf1bbe}} 
+\index{Camera@{Camera}!SetMapSize@{SetMapSize}}
+\index{SetMapSize@{SetMapSize}!Camera@{Camera}}
+\doxysubsubsection{\texorpdfstring{SetMapSize()}{SetMapSize()}}
+{\footnotesize\ttfamily void Camera\+::\+Set\+Map\+Size (\begin{DoxyParamCaption}\item[{int}]{width,  }\item[{int}]{height }\end{DoxyParamCaption})}
+
+
+
+Updates the size of current map. 
+
+Updates the size of the map into the camera. It ensures that the camera does not render any outside the map. Usually, when a new map is created, system should call this method to inform the camera. 
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em width} & The width of the map in pixels. \\
+\hline
+\mbox{\texttt{ in}}  & {\em height} & The height of the map in pixels. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_camera_aee53789953975e9a16fec77f54a728ae}\label{class_camera_aee53789953975e9a16fec77f54a728ae}} 
+\index{Camera@{Camera}!Update@{Update}}
+\index{Update@{Update}!Camera@{Camera}}
+\doxysubsubsection{\texorpdfstring{Update()}{Update()}}
+{\footnotesize\ttfamily void Camera\+::\+Update (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{struct_vector2_d}{Vector2D}} \&}]{hero\+\_\+position }\end{DoxyParamCaption})}
+
+
+
+Updates the size position of the camera based on the hero\textquotesingle{}s position. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em hero\+\_\+position} & The hero\textquotesingle{}s position \\
+\hline
+\end{DoxyParams}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+include/camera.\+hpp\item 
+src/camera.\+cpp\end{DoxyCompactItemize}

@@ -71,7 +71,7 @@
         </div>
         <div class="row justify-content-center mt-4">
             <div class="col-12 col-md-10 video-block">
-                <div class="video-wrapper"><iframe class="mbr-embedded-video" src="https://www.youtube.com/embed/gZNBjeu25HA?rel=0&amp;amp;showinfo=0&amp;autoplay=0&amp;loop=0" width="800" height="600" frameborder="0" allowfullscreen></iframe></div>
+                <div class="video-wrapper"><iframe class="mbr-embedded-video" src="https://www.youtube.com/embed/RoVgKK_IpSc?rel=0&amp;amp;showinfo=0&amp;autoplay=0&amp;loop=0" width="800" height="600" frameborder="0" allowfullscreen></iframe></div>
                 <p class="mbr-text pt-2 mbr-fonts-style display-4"><br>Junfeng Zhou&nbsp; &nbsp; Wu Lyu&nbsp; &nbsp; Yibo Zhao&nbsp; &nbsp; Ziqing Mao<br><br>CS5850 - Building Game Engines - Assignment 2<br></p>
             </div>
         </div>
@@ -143,10 +143,7 @@
                     <div class="card-box align-center">
                         <h4 class="card-title mbr-fonts-style mb-4 display-2">
                             <strong>How To Play</strong></h4>
-                        <p class="mbr-text mbr-fonts-style mb-4 display-7">
-                            Mobirise is a free offline app for Windows and Mac to easily create small/medium websites,
-                            landing pages, online resumes and portfolios. 2500+ beautiful website blocks, templates and
-                            themes help you to start easily.</p>
+                        
                         
                     </div>
                 </div>
@@ -234,7 +231,7 @@
                 <ul class="nav nav-tabs mb-4" role="tablist">
                     <li class="nav-item first mbr-fonts-style"><a class="nav-link mbr-fonts-style show active display-7" role="tab" data-toggle="tab" href="#tabs1-d_tab0" aria-selected="true"><strong>Windows</strong></a></li>
                     <li class="nav-item"><a class="nav-link mbr-fonts-style active display-7" role="tab" data-toggle="tab" href="#tabs1-d_tab1" aria-selected="true"><strong>Mac</strong></a></li>
-                    
+                    <li class="nav-item"><a class="nav-link mbr-fonts-style active display-7" role="tab" data-toggle="tab" href="#tabs1-d_tab2" aria-selected="true"><strong>Linux</strong>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;</a></li>
                     
                     
                     
@@ -244,7 +241,7 @@
                         <div class="row">
                             <div class="col-md-12">
                                 <p class="mbr-text mbr-fonts-style display-7">
-                                    <a href="https://www.google.com" class="text-primary" target="_blank">slime_hero_win_x64_v1.0.zip</a></p>
+                                    <a href="https://ziqing19.github.io/slime-hero-release/slime_hero_win_x64_v1.0.zip" class="text-primary" target="_blank">slime_hero_win_x64_v1.0.zip</a></p>
                             </div>
                         </div>
                     </div>
@@ -252,11 +249,19 @@
                         <div class="row">
                             <div class="col-md-12">
                                 <p class="mbr-text mbr-fonts-style display-7">
-                                    <a href="http://google.com" class="text-primary" target="_blank">slime_hero_v1.0.dmg</a><br></p>
+                                    <a href="https://ziqing19.github.io/slime-hero-release/slime_hero_MacOS_v1.0.zip" class="text-primary" target="_blank">slime_hero_MacOS_v1.0.zip</a><br></p>
                             </div>
                         </div>
                     </div>
-                    
+                    <div id="tab3" class="tab-pane" role="tabpanel">
+                        <div class="row">
+                            <div class="col-md-12">
+                                <p class="mbr-text mbr-fonts-style display-7">
+                                    <a href="https://ziqing19.github.io/slime-hero-release/release/slime-hero-linux-x64.zip" class="text-primary">slime-hero-linux-x64.zip</a>
+                                </p>
+                            </div>
+                        </div>
+                    </div>
                     
                     
                     
@@ -344,7 +349,7 @@
                     <h3 class="mbr-section-title mbr-fonts-style mb-4 display-5">
                         <strong>Go Further</strong></h3>
                 <ul class="list mbr-fonts-style display-7">
-                    <li><strong>This is a post mortem of the game project.</strong></li><li>Most of the barricades are about the physical engine. It is only when you try to implement your own engine, you will find the difficulty of simulating the real world. Unlike the Breakout game, which only includes collision between two objects, there are multiple movable objects in the Platformer game. The hero, enemies, supplies, and sometime the ammo needs to participate in the physical world. Thus there might be two or more collision happen in one update. Furthermore, there might be a collision among three objects. Here the order of collision really matters, which brings more challenge to the design of the physical engine.</li><li>In order to solve that, we divided the update of the physical world into multiple steps: 1. we did a pre-update of position changes according to the elapsed time regardless of the collision. 2. we looked up the collision that happened in this state, and saved the objects involved in the collision as well as the information into a vector. 3. we solved the collision by assigning reflection direction to the colliding objects and stored the information into a contact list. The contact list would be exposed to outer scope for querying the collision.</li><li>Separate objects in physics engine and game object in game engine. The physics engine uses fields to store a object's status of last frame and current frame. Most part of these fields are not useful for the game engine. We can create physics objects maintained by the physics engine instead of putting all those fields in game objects.</li><li>Apply same naming convention to all files. To make source codes and program work in all platform, we should follow a file naming convention. Use lowercase letters, number, underscore(_) and hyphen(-).</li><li>Luckily in this project, we prepared early to discuss the infrastructure of the project about the extending relationships and so on. Thus we could do our own job early and uninterruptedly. However, the job assignments were unbalanced as we underestimated the physical engine design, which led to a mess in the subsequent works. The physics was so unstable that it became hard to evaluate the enemy AI performance, hero movement, level reset and so on. And it was too late for the rest members to participate into the physics development. We would take this into consideration in the next project.</li>
+                    <li><strong>This is a post mortem of the game project.</strong></li><li>Most of the barricades are about the physical engine. It is only when you try to implement your own engine, you will find the difficulty of simulating the real world. Unlike the Breakout game, which only includes collision between two objects, there are multiple movable objects in the Platformer game. The hero, enemies, supplies, and sometime the ammo needs to participate in the physical world. Thus there might be two or more collision happen in one update. Furthermore, there might be a collision among three objects. Here the order of collision really matters, which brings more challenge to the design of the physical engine.</li><li>In order to solve that, we divided the update of the physical world into multiple steps: 1. we did a pre-update of position changes according to the elapsed time regardless of the collision. 2. we looked up the collision that happened in this state, and saved the objects involved in the collision as well as the information into a vector. 3. we solved the collision by assigning reflection direction to the colliding objects and stored the information into a contact list. The contact list would be exposed to outer scope for querying the collision.</li><li>Separate objects in physics engine and game object in game engine. The physics engine uses fields to store a object's status of last frame and current frame. Most part of these fields are not useful for the game engine. We can create physics objects maintained by the physics engine instead of putting all those fields in game objects.</li><li>Apply same naming convention to all files. To make source codes and program work in all platform, we should follow a file naming convention. Use lowercase letters, number, underscore(_) and hyphen(-).</li><li>We didn't implement the component pattern in this program. Actually, when we are introduced to this pattern, we have already constructed some part of our architecture. As a result, we have to use complex inheritance relationships to implement engine functionality, especially for the physics engine, which leads to the introduction of a large number of additional parameters and functions.</li><li>Luckily in this project, we prepared early to discuss the infrastructure of the project about the extending relationships and so on. Thus we could do our own job early and uninterruptedly. However, the job assignments were unbalanced as we underestimated the physical engine design, which led to a mess in the subsequent works. The physics was so unstable that it became hard to evaluate the enemy AI performance, hero movement, level reset and so on. And it was too late for the rest members to participate into the physics development. We would take this into consideration in the next project.</li>
                 </ul>
             </div>
         </div>
@@ -366,7 +371,7 @@
             </div>
         </div>
     </div>
-</section><section style="background-color: #fff; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Helvetica Neue', Arial, sans-serif; color:#aaa; font-size:12px; padding: 0; align-items: center; display: flex;"><a href="https://mobirise.site/y" style="flex: 1 1; height: 3rem; padding-left: 1rem;"></a><p style="flex: 0 0 auto; margin:0; padding-right:1rem;">Develop a free site - <a href="https://mobirise.site/v" style="color:#aaa;">More here</a></p></section><script src="assets/web/assets/jquery/jquery.min.js"></script>  <script src="assets/popper/popper.min.js"></script>  <script src="assets/tether/tether.min.js"></script>  <script src="assets/bootstrap/js/bootstrap.min.js"></script>  <script src="assets/smoothscroll/smooth-scroll.js"></script>  <script src="assets/dropdown/js/nav-dropdown.js"></script>  <script src="assets/dropdown/js/navbar-dropdown.js"></script>  <script src="assets/touchswipe/jquery.touch-swipe.min.js"></script>  <script src="assets/playervimeo/vimeo_player.js"></script>  <script src="assets/mbr-tabs/mbr-tabs.js"></script>  <script src="assets/parallax/jarallax.min.js"></script>  <script src="assets/theme/js/script.js"></script>  
+</section><section style="background-color: #fff; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Helvetica Neue', Arial, sans-serif; color:#aaa; font-size:12px; padding: 0; align-items: center; display: flex; display: none"><a href="https://mobirise.site/c" style="flex: 1 1; height: 3rem; padding-left: 1rem;"></a><p style="flex: 0 0 auto; margin:0; padding-right:1rem;">Built with <a href="https://mobirise.site/b" style="color:#aaa;">Mobirise</a> site templates</p></section><script src="assets/web/assets/jquery/jquery.min.js"></script>  <script src="assets/popper/popper.min.js"></script>  <script src="assets/tether/tether.min.js"></script>  <script src="assets/bootstrap/js/bootstrap.min.js"></script>  <script src="assets/smoothscroll/smooth-scroll.js"></script>  <script src="assets/dropdown/js/nav-dropdown.js"></script>  <script src="assets/dropdown/js/navbar-dropdown.js"></script>  <script src="assets/touchswipe/jquery.touch-swipe.min.js"></script>  <script src="assets/playervimeo/vimeo_player.js"></script>  <script src="assets/mbr-tabs/mbr-tabs.js"></script>  <script src="assets/parallax/jarallax.min.js"></script>  <script src="assets/theme/js/script.js"></script>  
   
   
 </body>

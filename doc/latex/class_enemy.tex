@@ -1,0 +1,158 @@
+\hypertarget{class_enemy}{}\doxysection{Enemy Class Reference}
+\label{class_enemy}\index{Enemy@{Enemy}}
+
+
+{\ttfamily \#include $<$Enemy.\+hpp$>$}
+
+Inheritance diagram for Enemy\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=3.000000cm]{class_enemy}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_enemy_a59634e3504b1234afadf9df5a1044a78}{Enemy}} ()=default
+\item 
+\mbox{\hyperlink{class_enemy_a636768c5012da46dbc33f8413affc2d7}{Enemy}} (const \mbox{\hyperlink{struct_vector2_d}{Vector2D}} \&position, const \mbox{\hyperlink{struct_vector2_d}{Vector2D}} \&velocity, int width, int height, const std\+::string \&texture)
+\item 
+void \mbox{\hyperlink{class_enemy_a9c05c6b4f2551348971f3e110a91f3c3}{Update}} (float dt) override
+\item 
+void \mbox{\hyperlink{class_enemy_ade0ed2d20680ca059dd562c4b36b31e3}{Update}} (float dt, std\+::list$<$ \mbox{\hyperlink{class_sprite}{Sprite}} $\ast$ $>$ \&hero\+Splited\+\_\+, \mbox{\hyperlink{class_text_field}{Text\+Field}} $\ast$state\+Text) override
+\item 
+Game\+Object\+::\+Object\+Type \mbox{\hyperlink{class_enemy_abc4ae0d17285be004eeb2127cacfa2c6}{Get\+Object\+Type}} () const override
+\item 
+float \mbox{\hyperlink{class_enemy_ac1d699ba43009ebbdbde29180a2de431}{Get\+Distance}} () const
+\item 
+\mbox{\hyperlink{_enemy_8hpp_af180d5347fbc3e4de2d711db313d8461}{Enemy\+Status}} \mbox{\hyperlink{class_enemy_ae979adddfb00647ea4614f61700e023c}{Get\+Status}} () const
+\item 
+void \mbox{\hyperlink{class_enemy_aa01a1c40c682cc7c36995f26533bcb56}{Init}} ()
+\item 
+void \mbox{\hyperlink{class_enemy_a66c2d2a2f2ae9a8658ec05ce2fba1b81}{Kill}} ()
+\item 
+void \mbox{\hyperlink{class_enemy_a6575312ac56efd3671d48ac3565cf78b}{Set\+Status}} (\mbox{\hyperlink{_enemy_8hpp_af180d5347fbc3e4de2d711db313d8461}{Enemy\+Status}} status)
+\end{DoxyCompactItemize}
+\doxysubsection*{Additional Inherited Members}
+
+
+\doxysubsection{Detailed Description}
+\mbox{\hyperlink{class_this}{This}} class defines an enemy. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_enemy_a59634e3504b1234afadf9df5a1044a78}\label{class_enemy_a59634e3504b1234afadf9df5a1044a78}} 
+\index{Enemy@{Enemy}!Enemy@{Enemy}}
+\index{Enemy@{Enemy}!Enemy@{Enemy}}
+\doxysubsubsection{\texorpdfstring{Enemy()}{Enemy()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily Enemy\+::\+Enemy (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [default]}}
+
+Default constructor \mbox{\Hypertarget{class_enemy_a636768c5012da46dbc33f8413affc2d7}\label{class_enemy_a636768c5012da46dbc33f8413affc2d7}} 
+\index{Enemy@{Enemy}!Enemy@{Enemy}}
+\index{Enemy@{Enemy}!Enemy@{Enemy}}
+\doxysubsubsection{\texorpdfstring{Enemy()}{Enemy()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily Enemy\+::\+Enemy (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{struct_vector2_d}{Vector2D}} \&}]{position,  }\item[{const \mbox{\hyperlink{struct_vector2_d}{Vector2D}} \&}]{velocity,  }\item[{int}]{width,  }\item[{int}]{height,  }\item[{const std\+::string \&}]{texture }\end{DoxyParamCaption})}
+
+Implement the constructor of a game object
+
+
+\begin{DoxyParams}{Parameters}
+{\em position} & initial position \\
+\hline
+{\em velocity} & initial velocity \\
+\hline
+{\em width} & object width \\
+\hline
+{\em height} & object height \\
+\hline
+{\em texture} & enemy texture \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_enemy_ac1d699ba43009ebbdbde29180a2de431}\label{class_enemy_ac1d699ba43009ebbdbde29180a2de431}} 
+\index{Enemy@{Enemy}!GetDistance@{GetDistance}}
+\index{GetDistance@{GetDistance}!Enemy@{Enemy}}
+\doxysubsubsection{\texorpdfstring{GetDistance()}{GetDistance()}}
+{\footnotesize\ttfamily float Enemy\+::\+Get\+Distance (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+Get the horizontal distance between start position and current position
+
+\begin{DoxyReturn}{Returns}
+distance 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_enemy_abc4ae0d17285be004eeb2127cacfa2c6}\label{class_enemy_abc4ae0d17285be004eeb2127cacfa2c6}} 
+\index{Enemy@{Enemy}!GetObjectType@{GetObjectType}}
+\index{GetObjectType@{GetObjectType}!Enemy@{Enemy}}
+\doxysubsubsection{\texorpdfstring{GetObjectType()}{GetObjectType()}}
+{\footnotesize\ttfamily Game\+Object\+::\+Object\+Type Enemy\+::\+Get\+Object\+Type (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+Get the Object type of the enemy
+
+\begin{DoxyReturn}{Returns}
+
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{class_game_object_a59f50b3b97a1831c1ff770546d13a7f1}{Game\+Object}}.
+
+\mbox{\Hypertarget{class_enemy_ae979adddfb00647ea4614f61700e023c}\label{class_enemy_ae979adddfb00647ea4614f61700e023c}} 
+\index{Enemy@{Enemy}!GetStatus@{GetStatus}}
+\index{GetStatus@{GetStatus}!Enemy@{Enemy}}
+\doxysubsubsection{\texorpdfstring{GetStatus()}{GetStatus()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{_enemy_8hpp_af180d5347fbc3e4de2d711db313d8461}{Enemy\+Status}} Enemy\+::\+Get\+Status (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+Tell if the enemy is active.
+
+\begin{DoxyReturn}{Returns}
+if it is active 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_enemy_aa01a1c40c682cc7c36995f26533bcb56}\label{class_enemy_aa01a1c40c682cc7c36995f26533bcb56}} 
+\index{Enemy@{Enemy}!Init@{Init}}
+\index{Init@{Init}!Enemy@{Enemy}}
+\doxysubsubsection{\texorpdfstring{Init()}{Init()}}
+{\footnotesize\ttfamily void Enemy\+::\+Init (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Initiate the enemy. \mbox{\Hypertarget{class_enemy_a66c2d2a2f2ae9a8658ec05ce2fba1b81}\label{class_enemy_a66c2d2a2f2ae9a8658ec05ce2fba1b81}} 
+\index{Enemy@{Enemy}!Kill@{Kill}}
+\index{Kill@{Kill}!Enemy@{Enemy}}
+\doxysubsubsection{\texorpdfstring{Kill()}{Kill()}}
+{\footnotesize\ttfamily void Enemy\+::\+Kill (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Kill the enemy and set the status to PENDING \mbox{\Hypertarget{class_enemy_a6575312ac56efd3671d48ac3565cf78b}\label{class_enemy_a6575312ac56efd3671d48ac3565cf78b}} 
+\index{Enemy@{Enemy}!SetStatus@{SetStatus}}
+\index{SetStatus@{SetStatus}!Enemy@{Enemy}}
+\doxysubsubsection{\texorpdfstring{SetStatus()}{SetStatus()}}
+{\footnotesize\ttfamily void Enemy\+::\+Set\+Status (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{_enemy_8hpp_af180d5347fbc3e4de2d711db313d8461}{Enemy\+Status}}}]{status }\end{DoxyParamCaption})}
+
+Set enemy status. \mbox{\Hypertarget{class_enemy_a9c05c6b4f2551348971f3e110a91f3c3}\label{class_enemy_a9c05c6b4f2551348971f3e110a91f3c3}} 
+\index{Enemy@{Enemy}!Update@{Update}}
+\index{Update@{Update}!Enemy@{Enemy}}
+\doxysubsubsection{\texorpdfstring{Update()}{Update()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily void Enemy\+::\+Update (\begin{DoxyParamCaption}\item[{float}]{dt }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+Update the sprite by elapsed time. 
+\begin{DoxyParams}{Parameters}
+{\em dt} & time elapsed \\
+\hline
+\end{DoxyParams}
+
+
+Implements \mbox{\hyperlink{class_sprite_ab21212cacf5a761b8536a168e233bbda}{Sprite}}.
+
+\mbox{\Hypertarget{class_enemy_ade0ed2d20680ca059dd562c4b36b31e3}\label{class_enemy_ade0ed2d20680ca059dd562c4b36b31e3}} 
+\index{Enemy@{Enemy}!Update@{Update}}
+\index{Update@{Update}!Enemy@{Enemy}}
+\doxysubsubsection{\texorpdfstring{Update()}{Update()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily void Enemy\+::\+Update (\begin{DoxyParamCaption}\item[{float}]{dt,  }\item[{std\+::list$<$ \mbox{\hyperlink{class_sprite}{Sprite}} $\ast$ $>$ \&}]{hero\+Splited\+\_\+,  }\item[{\mbox{\hyperlink{class_text_field}{Text\+Field}} $\ast$}]{state\+Text }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [override]}, {\ttfamily [virtual]}}
+
+A trivial update method 
+
+Implements \mbox{\hyperlink{class_sprite}{Sprite}}.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+include/\mbox{\hyperlink{_enemy_8hpp}{Enemy.\+hpp}}\item 
+src/\mbox{\hyperlink{_enemy_8cpp}{Enemy.\+cpp}}\end{DoxyCompactItemize}

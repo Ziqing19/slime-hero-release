@@ -1,0 +1,105 @@
+\hypertarget{class_flag}{}\doxysection{Flag Class Reference}
+\label{class_flag}\index{Flag@{Flag}}
+
+
+\mbox{\hyperlink{class_flag}{Flag}} marks the destination of a level.  
+
+
+
+
+{\ttfamily \#include $<$Flag.\+hpp$>$}
+
+Inheritance diagram for Flag\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=3.000000cm]{class_flag}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_flag_a50b074239c14091f2a0dc1f52f9ed230}\label{class_flag_a50b074239c14091f2a0dc1f52f9ed230}} 
+\mbox{\hyperlink{class_flag_a50b074239c14091f2a0dc1f52f9ed230}{Flag}} ()
+\begin{DoxyCompactList}\small\item\em Default constructor. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_flag_ac3f18740f61ecd14de202501c548dabe}{Flag}} (const \mbox{\hyperlink{struct_vector2_d}{Vector2D}} \&position, const \mbox{\hyperlink{struct_vector2_d}{Vector2D}} \&velocity, int width, int height, const std\+::string \&texture)
+\begin{DoxyCompactList}\small\item\em Constructor. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{class_flag_a9ca0df18a44fcd1997e05601836dfa7f}{Update}} (float dt) override
+\item 
+\mbox{\Hypertarget{class_flag_aafd426906411f3f24730e36bcdff060c}\label{class_flag_aafd426906411f3f24730e36bcdff060c}} 
+virtual void {\bfseries Update} (float dt, std\+::list$<$ \mbox{\hyperlink{class_sprite}{Sprite}} $\ast$ $>$ \&hero\+Splited\+\_\+, \mbox{\hyperlink{class_text_field}{Text\+Field}} $\ast$state\+Text) override
+\item 
+Game\+Object\+::\+Object\+Type \mbox{\hyperlink{class_flag_a699f59d591bf2264ede3d23c924b093f}{Get\+Object\+Type}} () const override
+\begin{DoxyCompactList}\small\item\em Returns the type information of the object. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Additional Inherited Members}
+
+
+\doxysubsection{Detailed Description}
+\mbox{\hyperlink{class_flag}{Flag}} marks the destination of a level. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_flag_ac3f18740f61ecd14de202501c548dabe}\label{class_flag_ac3f18740f61ecd14de202501c548dabe}} 
+\index{Flag@{Flag}!Flag@{Flag}}
+\index{Flag@{Flag}!Flag@{Flag}}
+\doxysubsubsection{\texorpdfstring{Flag()}{Flag()}}
+{\footnotesize\ttfamily Flag\+::\+Flag (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{struct_vector2_d}{Vector2D}} \&}]{position,  }\item[{const \mbox{\hyperlink{struct_vector2_d}{Vector2D}} \&}]{velocity,  }\item[{int}]{width,  }\item[{int}]{height,  }\item[{const std\+::string \&}]{texture }\end{DoxyParamCaption})}
+
+
+
+Constructor. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em position} & The position of the flag \\
+\hline
+\mbox{\texttt{ in}}  & {\em velocity} & The velocity of the flag. it should be zero \\
+\hline
+\mbox{\texttt{ in}}  & {\em width} & The width of the flag \\
+\hline
+\mbox{\texttt{ in}}  & {\em height} & The height of the flag \\
+\hline
+\mbox{\texttt{ in}}  & {\em texture} & texture \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_flag_a699f59d591bf2264ede3d23c924b093f}\label{class_flag_a699f59d591bf2264ede3d23c924b093f}} 
+\index{Flag@{Flag}!GetObjectType@{GetObjectType}}
+\index{GetObjectType@{GetObjectType}!Flag@{Flag}}
+\doxysubsubsection{\texorpdfstring{GetObjectType()}{GetObjectType()}}
+{\footnotesize\ttfamily Game\+Object\+::\+Object\+Type Flag\+::\+Get\+Object\+Type (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Returns the type information of the object. 
+
+Each subclass should return a value from the enum Object\+Type. \begin{DoxyReturn}{Returns}
+type of the object 
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{class_game_object_a59f50b3b97a1831c1ff770546d13a7f1}{Game\+Object}}.
+
+\mbox{\Hypertarget{class_flag_a9ca0df18a44fcd1997e05601836dfa7f}\label{class_flag_a9ca0df18a44fcd1997e05601836dfa7f}} 
+\index{Flag@{Flag}!Update@{Update}}
+\index{Update@{Update}!Flag@{Flag}}
+\doxysubsubsection{\texorpdfstring{Update()}{Update()}}
+{\footnotesize\ttfamily void Flag\+::\+Update (\begin{DoxyParamCaption}\item[{float}]{dt }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+Update the sprite by elapsed time.
+
+
+\begin{DoxyParams}{Parameters}
+{\em dt} & time elapsed \\
+\hline
+\end{DoxyParams}
+
+
+Implements \mbox{\hyperlink{class_sprite_ab21212cacf5a761b8536a168e233bbda}{Sprite}}.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+include/Flag.\+hpp\item 
+src/Flag.\+cpp\end{DoxyCompactItemize}

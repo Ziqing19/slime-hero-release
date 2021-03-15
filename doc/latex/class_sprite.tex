@@ -1,0 +1,299 @@
+\hypertarget{class_sprite}{}\doxysection{Sprite Class Reference}
+\label{class_sprite}\index{Sprite@{Sprite}}
+
+
+{\ttfamily \#include $<$Sprite.\+hpp$>$}
+
+Inheritance diagram for Sprite\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=3.000000cm]{class_sprite}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_sprite_ae0b2cf0f5fbbe2aaa3af18ef40015a0d}\label{class_sprite_ae0b2cf0f5fbbe2aaa3af18ef40015a0d}} 
+{\bfseries Sprite} (const \mbox{\hyperlink{struct_vector2_d}{Vector2D}} \&position, const \mbox{\hyperlink{struct_vector2_d}{Vector2D}} \&velocity, int width, int height, const std\+::string \&texture)
+\item 
+virtual void \mbox{\hyperlink{class_sprite_ab21212cacf5a761b8536a168e233bbda}{Update}} (float dt)=0
+\item 
+\mbox{\Hypertarget{class_sprite_ac666921c20d341732ae25cf6f3c5082a}\label{class_sprite_ac666921c20d341732ae25cf6f3c5082a}} 
+virtual void {\bfseries Update} (float dt, std\+::list$<$ \mbox{\hyperlink{class_sprite}{Sprite}} $\ast$ $>$ \&hero\+Splited\+\_\+, \mbox{\hyperlink{class_text_field}{Text\+Field}} $\ast$state\+Text)=0
+\item 
+bool \mbox{\hyperlink{class_sprite_ae21a1e6d8c7c9851daa43c37c15fa73f}{Is\+Static}} () override
+\begin{DoxyCompactList}\small\item\em Returns if a game object is static. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_sprite_aa697e33dd224e8d5cd2028f8b5e0b214}{Is\+Collidable}} () override
+\begin{DoxyCompactList}\small\item\em Returns if this object is collidable. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_sprite_ab4a07fa150b132b89fa17e7931b506aa}{Render}} (SDL\+\_\+\+Renderer $\ast$renderer, const \mbox{\hyperlink{class_camera}{Camera}} \&camera) override
+\begin{DoxyCompactList}\small\item\em Render the game object into renderer\textquotesingle{}s back buffer. \end{DoxyCompactList}\item 
+float \mbox{\hyperlink{class_sprite_a66bba35c876bffa6db652e9ecae1619d}{Get\+Ground\+Acceleration}} ()
+\begin{DoxyCompactList}\small\item\em Gets acceleration when sprite is standing on something. \end{DoxyCompactList}\item 
+float \mbox{\hyperlink{class_sprite_a0823c466a2dccd2d89340cda6838089c}{Get\+Ground\+Resistance}} ()
+\begin{DoxyCompactList}\small\item\em Gets resistance when sprite is standing on something. \end{DoxyCompactList}\item 
+float \mbox{\hyperlink{class_sprite_a7d4373194a0247b0cce8d4179af98035}{Get\+Ground\+Limit}} ()
+\begin{DoxyCompactList}\small\item\em Gets the maximum x speed when sprite is standing on something. \end{DoxyCompactList}\item 
+float \mbox{\hyperlink{class_sprite_a5f7e4a35b7ec20c6801aa047d07bd561}{Get\+Air\+Move\+Acceleration}} ()
+\begin{DoxyCompactList}\small\item\em Gets the acceleration when the sprite is jumping or falling. \end{DoxyCompactList}\item 
+float \mbox{\hyperlink{class_sprite_a914a154a2d116ec11a4c9f3a323ba6fc}{Get\+Air\+Move\+Resistance}} ()
+\begin{DoxyCompactList}\small\item\em Gets the resistance when the sprite is jumping or falling. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_sprite_af93f124b02820dbe441d0ffd1c12c9c7}{Set\+Last\+Stand}} (bool value)
+\begin{DoxyCompactList}\small\item\em Sets if the sprite stood on the ground in the last frame. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_sprite_a474b37a7a9e16b7e28ec1c62dc27bc0e}{Set\+Stand}} (bool value)
+\begin{DoxyCompactList}\small\item\em Sets if the sprite stood on the ground in current frame. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_sprite_a309d6cf94cc1df4755f1be6b7002f3d0}{Get\+Last\+Stand}} ()
+\begin{DoxyCompactList}\small\item\em If the sprite stood on the ground in the last frame. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_sprite_a9338a37cf088eff3bd1b272dbe52504b}{Get\+Stand}} ()
+\begin{DoxyCompactList}\small\item\em If the sprite is standing on the ground. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_sprite_ab05858755173ccbaca32658c93238109}\label{class_sprite_ab05858755173ccbaca32658c93238109}} 
+\mbox{\hyperlink{_sprite_8hpp_a224b9163917ac32fc95a60d8c1eec3aa}{Direction}} {\bfseries direction\+\_\+} = Direction\+::\+None
+\item 
+\mbox{\Hypertarget{class_sprite_afec69f44bac46076b4cfa144426cabff}\label{class_sprite_afec69f44bac46076b4cfa144426cabff}} 
+float {\bfseries speed\+\_\+} = 0
+\item 
+\mbox{\Hypertarget{class_sprite_a089d2b0d370248f5f4817c85a214490a}\label{class_sprite_a089d2b0d370248f5f4817c85a214490a}} 
+int \mbox{\hyperlink{class_sprite_a089d2b0d370248f5f4817c85a214490a}{current\+Frame\+\_\+}} \{0\}
+\begin{DoxyCompactList}\small\item\em decide the frame from the sprite sheet \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_sprite_a4328bfdd98ee110020a9fa91c307eb14}\label{class_sprite_a4328bfdd98ee110020a9fa91c307eb14}} 
+float \mbox{\hyperlink{class_sprite_a4328bfdd98ee110020a9fa91c307eb14}{ground\+Acc}} = 0.\+001875f
+\begin{DoxyCompactList}\small\item\em Horizontal acceleration(on ground) \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_sprite_a0cbda8d89931d4aefe03df6aba1f4d3e}\label{class_sprite_a0cbda8d89931d4aefe03df6aba1f4d3e}} 
+float \mbox{\hyperlink{class_sprite_a0cbda8d89931d4aefe03df6aba1f4d3e}{ground\+Resistance}} = 0.\+001f
+\begin{DoxyCompactList}\small\item\em Horizontal resistance(on ground) \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_sprite_a5198e3055b6af9797e377374aebfc6bc}\label{class_sprite_a5198e3055b6af9797e377374aebfc6bc}} 
+float \mbox{\hyperlink{class_sprite_a5198e3055b6af9797e377374aebfc6bc}{ground\+Limit}} = 0.\+4f
+\begin{DoxyCompactList}\small\item\em Horizontal velocity upper limit(on ground) \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_sprite_a41f80abeed3d5bbb9b6cc05922015417}\label{class_sprite_a41f80abeed3d5bbb9b6cc05922015417}} 
+float \mbox{\hyperlink{class_sprite_a41f80abeed3d5bbb9b6cc05922015417}{air\+Move\+Acc}} = 0.\+001f
+\begin{DoxyCompactList}\small\item\em Horizontal acceleration(in the air) \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_sprite_a97bfc3eb0eee2a6d9ae86727ec5be6fd}\label{class_sprite_a97bfc3eb0eee2a6d9ae86727ec5be6fd}} 
+float \mbox{\hyperlink{class_sprite_a97bfc3eb0eee2a6d9ae86727ec5be6fd}{air\+Move\+Resistance}} = 0.\+00025f
+\begin{DoxyCompactList}\small\item\em Horitonal resistance(in the air) \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_sprite_ad248ef28ecf46cc9dbf7e879e951ba5a}\label{class_sprite_ad248ef28ecf46cc9dbf7e879e951ba5a}} 
+float \mbox{\hyperlink{class_sprite_ad248ef28ecf46cc9dbf7e879e951ba5a}{jump\+Speed}} = 0.\+7f
+\begin{DoxyCompactList}\small\item\em jump speed \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_sprite_a875b0495eabd044bb4ae337e53fb6022}\label{class_sprite_a875b0495eabd044bb4ae337e53fb6022}} 
+float {\bfseries ground\+\_\+acceleration\+\_\+} \{ 0.f \}
+\item 
+\mbox{\Hypertarget{class_sprite_a764a7458ccd5efa67e2b567b8013b749}\label{class_sprite_a764a7458ccd5efa67e2b567b8013b749}} 
+float {\bfseries air\+\_\+move\+\_\+acceleration\+\_\+} \{ 0.f \}
+\item 
+\mbox{\Hypertarget{class_sprite_a6ae22fd545caa86ff4695eaa9b88160a}\label{class_sprite_a6ae22fd545caa86ff4695eaa9b88160a}} 
+bool {\bfseries last\+\_\+stand\+\_\+} \{ false \}
+\item 
+\mbox{\Hypertarget{class_sprite_ac4e55481bc51071b13d72769c8f95dc6}\label{class_sprite_ac4e55481bc51071b13d72769c8f95dc6}} 
+bool {\bfseries stand\+\_\+} \{ false \}
+\end{DoxyCompactItemize}
+\doxysubsection*{Additional Inherited Members}
+
+
+\doxysubsection{Detailed Description}
+A sprite defines all movable objects. 
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_sprite_a5f7e4a35b7ec20c6801aa047d07bd561}\label{class_sprite_a5f7e4a35b7ec20c6801aa047d07bd561}} 
+\index{Sprite@{Sprite}!GetAirMoveAcceleration@{GetAirMoveAcceleration}}
+\index{GetAirMoveAcceleration@{GetAirMoveAcceleration}!Sprite@{Sprite}}
+\doxysubsubsection{\texorpdfstring{GetAirMoveAcceleration()}{GetAirMoveAcceleration()}}
+{\footnotesize\ttfamily float Sprite\+::\+Get\+Air\+Move\+Acceleration (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Gets the acceleration when the sprite is jumping or falling. 
+
+\begin{DoxyReturn}{Returns}
+acceleration 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_sprite_a914a154a2d116ec11a4c9f3a323ba6fc}\label{class_sprite_a914a154a2d116ec11a4c9f3a323ba6fc}} 
+\index{Sprite@{Sprite}!GetAirMoveResistance@{GetAirMoveResistance}}
+\index{GetAirMoveResistance@{GetAirMoveResistance}!Sprite@{Sprite}}
+\doxysubsubsection{\texorpdfstring{GetAirMoveResistance()}{GetAirMoveResistance()}}
+{\footnotesize\ttfamily float Sprite\+::\+Get\+Air\+Move\+Resistance (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Gets the resistance when the sprite is jumping or falling. 
+
+\begin{DoxyReturn}{Returns}
+resistance 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_sprite_a66bba35c876bffa6db652e9ecae1619d}\label{class_sprite_a66bba35c876bffa6db652e9ecae1619d}} 
+\index{Sprite@{Sprite}!GetGroundAcceleration@{GetGroundAcceleration}}
+\index{GetGroundAcceleration@{GetGroundAcceleration}!Sprite@{Sprite}}
+\doxysubsubsection{\texorpdfstring{GetGroundAcceleration()}{GetGroundAcceleration()}}
+{\footnotesize\ttfamily float Sprite\+::\+Get\+Ground\+Acceleration (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Gets acceleration when sprite is standing on something. 
+
+\begin{DoxyReturn}{Returns}
+acceleration 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_sprite_a7d4373194a0247b0cce8d4179af98035}\label{class_sprite_a7d4373194a0247b0cce8d4179af98035}} 
+\index{Sprite@{Sprite}!GetGroundLimit@{GetGroundLimit}}
+\index{GetGroundLimit@{GetGroundLimit}!Sprite@{Sprite}}
+\doxysubsubsection{\texorpdfstring{GetGroundLimit()}{GetGroundLimit()}}
+{\footnotesize\ttfamily float Sprite\+::\+Get\+Ground\+Limit (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Gets the maximum x speed when sprite is standing on something. 
+
+\begin{DoxyReturn}{Returns}
+x speed limit 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_sprite_a0823c466a2dccd2d89340cda6838089c}\label{class_sprite_a0823c466a2dccd2d89340cda6838089c}} 
+\index{Sprite@{Sprite}!GetGroundResistance@{GetGroundResistance}}
+\index{GetGroundResistance@{GetGroundResistance}!Sprite@{Sprite}}
+\doxysubsubsection{\texorpdfstring{GetGroundResistance()}{GetGroundResistance()}}
+{\footnotesize\ttfamily float Sprite\+::\+Get\+Ground\+Resistance (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Gets resistance when sprite is standing on something. 
+
+\begin{DoxyReturn}{Returns}
+resistance 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_sprite_a309d6cf94cc1df4755f1be6b7002f3d0}\label{class_sprite_a309d6cf94cc1df4755f1be6b7002f3d0}} 
+\index{Sprite@{Sprite}!GetLastStand@{GetLastStand}}
+\index{GetLastStand@{GetLastStand}!Sprite@{Sprite}}
+\doxysubsubsection{\texorpdfstring{GetLastStand()}{GetLastStand()}}
+{\footnotesize\ttfamily bool Sprite\+::\+Get\+Last\+Stand (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+If the sprite stood on the ground in the last frame. 
+
+\begin{DoxyReturn}{Returns}
+true if the sprite stood on the ground in the last frame. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_sprite_a9338a37cf088eff3bd1b272dbe52504b}\label{class_sprite_a9338a37cf088eff3bd1b272dbe52504b}} 
+\index{Sprite@{Sprite}!GetStand@{GetStand}}
+\index{GetStand@{GetStand}!Sprite@{Sprite}}
+\doxysubsubsection{\texorpdfstring{GetStand()}{GetStand()}}
+{\footnotesize\ttfamily bool Sprite\+::\+Get\+Stand (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+If the sprite is standing on the ground. 
+
+At the begining of each frame, this method returns the value of the frame. After physcis engine\textquotesingle{}s computation, this method returns whether or not this sprite is standing on something. \begin{DoxyReturn}{Returns}
+true if the sprite stood on the ground in the current frame. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_sprite_aa697e33dd224e8d5cd2028f8b5e0b214}\label{class_sprite_aa697e33dd224e8d5cd2028f8b5e0b214}} 
+\index{Sprite@{Sprite}!IsCollidable@{IsCollidable}}
+\index{IsCollidable@{IsCollidable}!Sprite@{Sprite}}
+\doxysubsubsection{\texorpdfstring{IsCollidable()}{IsCollidable()}}
+{\footnotesize\ttfamily bool Sprite\+::\+Is\+Collidable (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Returns if this object is collidable. 
+
+A collidable object will be used to detect collision in physical engine.
+
+\begin{DoxyReturn}{Returns}
+If the game object is collideable 
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{class_game_object_a5d521bf5582a2cda79a3b0c9bd1392c8}{Game\+Object}}.
+
+\mbox{\Hypertarget{class_sprite_ae21a1e6d8c7c9851daa43c37c15fa73f}\label{class_sprite_ae21a1e6d8c7c9851daa43c37c15fa73f}} 
+\index{Sprite@{Sprite}!IsStatic@{IsStatic}}
+\index{IsStatic@{IsStatic}!Sprite@{Sprite}}
+\doxysubsubsection{\texorpdfstring{IsStatic()}{IsStatic()}}
+{\footnotesize\ttfamily bool Sprite\+::\+Is\+Static (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Returns if a game object is static. 
+
+A static game object means its velocity is always 0 and its position will not be updated.
+
+\begin{DoxyReturn}{Returns}
+If the game object is static 
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{class_game_object_a8ba290adb7d33ef1bd85863f85709202}{Game\+Object}}.
+
+\mbox{\Hypertarget{class_sprite_ab4a07fa150b132b89fa17e7931b506aa}\label{class_sprite_ab4a07fa150b132b89fa17e7931b506aa}} 
+\index{Sprite@{Sprite}!Render@{Render}}
+\index{Render@{Render}!Sprite@{Sprite}}
+\doxysubsubsection{\texorpdfstring{Render()}{Render()}}
+{\footnotesize\ttfamily void Sprite\+::\+Render (\begin{DoxyParamCaption}\item[{SDL\+\_\+\+Renderer $\ast$}]{renderer,  }\item[{const \mbox{\hyperlink{class_camera}{Camera}} \&}]{camera }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Render the game object into renderer\textquotesingle{}s back buffer. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em renderer} & renderer \\
+\hline
+\mbox{\texttt{ in}}  & {\em camera} & camera \\
+\hline
+\end{DoxyParams}
+
+
+Implements \mbox{\hyperlink{class_game_object_ab013426388a171d6e5318704eb5ef2c8}{Game\+Object}}.
+
+\mbox{\Hypertarget{class_sprite_af93f124b02820dbe441d0ffd1c12c9c7}\label{class_sprite_af93f124b02820dbe441d0ffd1c12c9c7}} 
+\index{Sprite@{Sprite}!SetLastStand@{SetLastStand}}
+\index{SetLastStand@{SetLastStand}!Sprite@{Sprite}}
+\doxysubsubsection{\texorpdfstring{SetLastStand()}{SetLastStand()}}
+{\footnotesize\ttfamily void Sprite\+::\+Set\+Last\+Stand (\begin{DoxyParamCaption}\item[{bool}]{value }\end{DoxyParamCaption})}
+
+
+
+Sets if the sprite stood on the ground in the last frame. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em value} & if the sprite stood on the ground in the last frame \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_sprite_a474b37a7a9e16b7e28ec1c62dc27bc0e}\label{class_sprite_a474b37a7a9e16b7e28ec1c62dc27bc0e}} 
+\index{Sprite@{Sprite}!SetStand@{SetStand}}
+\index{SetStand@{SetStand}!Sprite@{Sprite}}
+\doxysubsubsection{\texorpdfstring{SetStand()}{SetStand()}}
+{\footnotesize\ttfamily void Sprite\+::\+Set\+Stand (\begin{DoxyParamCaption}\item[{bool}]{value }\end{DoxyParamCaption})}
+
+
+
+Sets if the sprite stood on the ground in current frame. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em value} & if the sprite stood on the ground in current frame \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_sprite_ab21212cacf5a761b8536a168e233bbda}\label{class_sprite_ab21212cacf5a761b8536a168e233bbda}} 
+\index{Sprite@{Sprite}!Update@{Update}}
+\index{Update@{Update}!Sprite@{Sprite}}
+\doxysubsubsection{\texorpdfstring{Update()}{Update()}}
+{\footnotesize\ttfamily virtual void Sprite\+::\+Update (\begin{DoxyParamCaption}\item[{float}]{dt }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+Update the sprite by elapsed time.
+
+
+\begin{DoxyParams}{Parameters}
+{\em dt} & time elapsed \\
+\hline
+\end{DoxyParams}
+
+
+Implemented in \mbox{\hyperlink{class_hero_a0416d0ed6e2e3e1299dc8bd01788a58f}{Hero}}, \mbox{\hyperlink{class_flag_a9ca0df18a44fcd1997e05601836dfa7f}{Flag}}, and \mbox{\hyperlink{class_enemy_a9c05c6b4f2551348971f3e110a91f3c3}{Enemy}}.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+include/\mbox{\hyperlink{_sprite_8hpp}{Sprite.\+hpp}}\item 
+src/\mbox{\hyperlink{_sprite_8cpp}{Sprite.\+cpp}}\end{DoxyCompactItemize}

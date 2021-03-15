@@ -1,0 +1,442 @@
+\hypertarget{class_generic_pointer}{}\doxysection{Generic\+Pointer$<$ Value\+Type, Allocator $>$ Class Template Reference}
+\label{class_generic_pointer}\index{GenericPointer$<$ ValueType, Allocator $>$@{GenericPointer$<$ ValueType, Allocator $>$}}
+
+
+Represents a JSON Pointer. Use Pointer for \mbox{\hyperlink{struct_u_t_f8}{UTF8}} encoding and default allocator.  
+
+
+
+
+{\ttfamily \#include $<$pointer.\+h$>$}
+
+\doxysubsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+struct \mbox{\hyperlink{struct_generic_pointer_1_1_token}{Token}}
+\begin{DoxyCompactList}\small\item\em A token is the basic units of internal representation. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_generic_pointer_a4b802da797a7a0b615fd9611cedb7c3b}\label{class_generic_pointer_a4b802da797a7a0b615fd9611cedb7c3b}} 
+typedef Value\+Type\+::\+Encoding\+Type \mbox{\hyperlink{class_generic_pointer_a4b802da797a7a0b615fd9611cedb7c3b}{Encoding\+Type}}
+\begin{DoxyCompactList}\small\item\em Encoding type from Value. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_generic_pointer_ab292356c11b4015c98d21b966b11f285}\label{class_generic_pointer_ab292356c11b4015c98d21b966b11f285}} 
+typedef Value\+Type\+::\+Ch \mbox{\hyperlink{class_generic_pointer_ab292356c11b4015c98d21b966b11f285}{Ch}}
+\begin{DoxyCompactList}\small\item\em Character type from Value. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions}
+\begin{Indent}\textbf{ Constructors and destructor.}\par
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_generic_pointer_a5d85b7dc82719643e8f7adccd5a74fbe}\label{class_generic_pointer_a5d85b7dc82719643e8f7adccd5a74fbe}} 
+\mbox{\hyperlink{class_generic_pointer_a5d85b7dc82719643e8f7adccd5a74fbe}{Generic\+Pointer}} (\mbox{\hyperlink{classrapidjson_1_1_allocator}{Allocator}} $\ast$allocator=0)
+\begin{DoxyCompactList}\small\item\em Default constructor. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_generic_pointer_a4ad549b8a826c3c2dedf03fcc07be9b0}{Generic\+Pointer}} (const \mbox{\hyperlink{class_generic_pointer_ab292356c11b4015c98d21b966b11f285}{Ch}} $\ast$source, \mbox{\hyperlink{classrapidjson_1_1_allocator}{Allocator}} $\ast$allocator=0)
+\begin{DoxyCompactList}\small\item\em Constructor that parses a string or URI fragment representation. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_generic_pointer_a9c05684ea95306aac7626e70cb3946cc}{Generic\+Pointer}} (const \mbox{\hyperlink{class_generic_pointer_ab292356c11b4015c98d21b966b11f285}{Ch}} $\ast$source, size\+\_\+t length, \mbox{\hyperlink{classrapidjson_1_1_allocator}{Allocator}} $\ast$allocator=0)
+\begin{DoxyCompactList}\small\item\em Constructor that parses a string or URI fragment representation, with length of the source string. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_generic_pointer_a524a9921eff68f389a817a20ca7f1d84}{Generic\+Pointer}} (const \mbox{\hyperlink{struct_generic_pointer_1_1_token}{Token}} $\ast$tokens, size\+\_\+t token\+Count)
+\begin{DoxyCompactList}\small\item\em Constructor with user-\/supplied tokens. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_generic_pointer_a18d671bb793c6b843d5496b2b130cb70}\label{class_generic_pointer_a18d671bb793c6b843d5496b2b130cb70}} 
+\mbox{\hyperlink{class_generic_pointer_a18d671bb793c6b843d5496b2b130cb70}{Generic\+Pointer}} (const \mbox{\hyperlink{class_generic_pointer}{Generic\+Pointer}} \&rhs, \mbox{\hyperlink{classrapidjson_1_1_allocator}{Allocator}} $\ast$allocator=0)
+\begin{DoxyCompactList}\small\item\em Copy constructor. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_generic_pointer_acf3eb2f7c4ebf9256f638aafa17534cb}\label{class_generic_pointer_acf3eb2f7c4ebf9256f638aafa17534cb}} 
+\mbox{\hyperlink{class_generic_pointer_acf3eb2f7c4ebf9256f638aafa17534cb}{$\sim$\+Generic\+Pointer}} ()
+\begin{DoxyCompactList}\small\item\em Destructor. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_generic_pointer_a1d0174a6e72daa4024da9e08ce1e7951}\label{class_generic_pointer_a1d0174a6e72daa4024da9e08ce1e7951}} 
+\mbox{\hyperlink{class_generic_pointer}{Generic\+Pointer}} \& \mbox{\hyperlink{class_generic_pointer_a1d0174a6e72daa4024da9e08ce1e7951}{operator=}} (const \mbox{\hyperlink{class_generic_pointer}{Generic\+Pointer}} \&rhs)
+\begin{DoxyCompactList}\small\item\em Assignment operator. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\end{Indent}
+\doxysubsection*{Append token}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_generic_pointer_aeb61ba8e67260b43090791eeca8b90e0}\label{class_generic_pointer_aeb61ba8e67260b43090791eeca8b90e0}} 
+\mbox{\hyperlink{classrapidjson_1_1_allocator}{Allocator}} $\ast$ {\bfseries allocator}
+\item 
+\mbox{\Hypertarget{class_generic_pointer_a646e2825228e0d8331e3a49d7382202b}\label{class_generic_pointer_a646e2825228e0d8331e3a49d7382202b}} 
+\mbox{\hyperlink{classrapidjson_1_1_allocator}{Allocator}} stack\+Allocator stack\+Allocator \& {\bfseries document}
+\item 
+\mbox{\hyperlink{classrapidjson_1_1_allocator}{Allocator}} stack\+Allocator stack\+Allocator T default\+Value {\bfseries const}
+\item 
+\mbox{\hyperlink{class_generic_pointer}{Generic\+Pointer}} \mbox{\hyperlink{class_generic_pointer_aa8f86c0f330807f337351a95ae254b78}{Append}} (const \mbox{\hyperlink{struct_generic_pointer_1_1_token}{Token}} \&token, \mbox{\hyperlink{classrapidjson_1_1_allocator}{Allocator}} $\ast$allocator=0) const
+\begin{DoxyCompactList}\small\item\em Append a token and return a new Pointer. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_generic_pointer}{Generic\+Pointer}} \mbox{\hyperlink{class_generic_pointer_a9f8a1711f5b8e0d951c25c6c65326f77}{Append}} (const \mbox{\hyperlink{class_generic_pointer_ab292356c11b4015c98d21b966b11f285}{Ch}} $\ast$name, \mbox{\hyperlink{rapidjson_8h_a5ed6e6e67250fadbd041127e6386dcb5}{Size\+Type}} length, \mbox{\hyperlink{classrapidjson_1_1_allocator}{Allocator}} $\ast$allocator=0) const
+\begin{DoxyCompactList}\small\item\em Append a name token with length, and return a new Pointer. \end{DoxyCompactList}\item 
+{\footnotesize template$<$typename T $>$ }\\\mbox{\hyperlink{class_generic_pointer_aaf4d7d852098878d24188d134182d42f}{RAPIDJSON\+\_\+\+DISABLEIF\+\_\+\+RETURN}} ((internal\+::\+Not\+Expr$<$ internal\+::\+Is\+Same$<$ typename internal\+::\+Remove\+Const$<$ T $>$\+::\mbox{\hyperlink{rapidjson_8h_a1d1cfd8ffb84e947f82999c682b666a7}{Type}}, \mbox{\hyperlink{class_generic_pointer_ab292356c11b4015c98d21b966b11f285}{Ch}} $>$ $>$),(\mbox{\hyperlink{class_generic_pointer}{Generic\+Pointer}})) \mbox{\hyperlink{class_generic_pointer_aa8f86c0f330807f337351a95ae254b78}{Append}}(T $\ast$name
+\begin{DoxyCompactList}\small\item\em Append a name token without length, and return a new Pointer. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_generic_pointer_aebf325c6fde06adfc4d959b507d7f170}\label{class_generic_pointer_aebf325c6fde06adfc4d959b507d7f170}} 
+\mbox{\hyperlink{classrapidjson_1_1_allocator}{Allocator}} stack\+Allocator {\bfseries RAPIDJSON\+\_\+\+DISABLEIF\+\_\+\+RETURN} ((internal\+::\+Or\+Expr$<$ internal\+::\+Is\+Pointer$<$ T $>$, \mbox{\hyperlink{structinternal_1_1_is_generic_value}{internal\+::\+Is\+Generic\+Value}}$<$ T $>$ $>$),(Value\+Type \&)) Get\+With\+Default(\mbox{\hyperlink{class_generic_document}{Generic\+Document}}$<$ \mbox{\hyperlink{class_generic_pointer_a4b802da797a7a0b615fd9611cedb7c3b}{Encoding\+Type}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Set a value}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_generic_pointer_a08ef35da0ea9a51d8265a360f0c34540}\label{class_generic_pointer_a08ef35da0ea9a51d8265a360f0c34540}} 
+T {\bfseries value}
+\item 
+T Value\+Type\+::\+Allocator\+Type \&allocator {\bfseries const}
+\item 
+\mbox{\Hypertarget{class_generic_pointer_afd073c4e3be53fd7ec08aec9f75fbaa9}\label{class_generic_pointer_afd073c4e3be53fd7ec08aec9f75fbaa9}} 
+stack\+Allocator \& {\bfseries document}
+\item 
+stack\+Allocator T value {\bfseries const}
+\item 
+Value\+Type \& \mbox{\hyperlink{class_generic_pointer_a71476d125a276b62a246990da1bd3468}{Set}} (Value\+Type \&root, Value\+Type \&value, typename Value\+Type\+::\+Allocator\+Type \&allocator) const
+\begin{DoxyCompactList}\small\item\em Set a value in a subtree, with move semantics. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_generic_pointer_a61c0e9695cb0c96d465c8e1c21bd48fa}\label{class_generic_pointer_a61c0e9695cb0c96d465c8e1c21bd48fa}} 
+Value\+Type \& \mbox{\hyperlink{class_generic_pointer_a61c0e9695cb0c96d465c8e1c21bd48fa}{Set}} (Value\+Type \&root, const Value\+Type \&value, typename Value\+Type\+::\+Allocator\+Type \&allocator) const
+\begin{DoxyCompactList}\small\item\em Set a value in a subtree, with copy semantics. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_generic_pointer_a37ea2d2b205d3642d1e615b8b866666b}\label{class_generic_pointer_a37ea2d2b205d3642d1e615b8b866666b}} 
+Value\+Type \& \mbox{\hyperlink{class_generic_pointer_a37ea2d2b205d3642d1e615b8b866666b}{Set}} (Value\+Type \&root, const \mbox{\hyperlink{class_generic_pointer_ab292356c11b4015c98d21b966b11f285}{Ch}} $\ast$value, typename Value\+Type\+::\+Allocator\+Type \&allocator) const
+\begin{DoxyCompactList}\small\item\em Set a null-\/terminated string in a subtree. \end{DoxyCompactList}\item 
+{\footnotesize template$<$typename T $>$ }\\\mbox{\hyperlink{class_generic_pointer_a914bbdd96e2a248e035b8ebd68526369}{RAPIDJSON\+\_\+\+DISABLEIF\+\_\+\+RETURN}} ((internal\+::\+Or\+Expr$<$ internal\+::\+Is\+Pointer$<$ T $>$, \mbox{\hyperlink{structinternal_1_1_is_generic_value}{internal\+::\+Is\+Generic\+Value}}$<$ T $>$ $>$),(Value\+Type \&)) \mbox{\hyperlink{class_generic_pointer_a71476d125a276b62a246990da1bd3468}{Set}}(Value\+Type \&root
+\begin{DoxyCompactList}\small\item\em Set a primitive value in a subtree. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_generic_pointer_aeec3daf051dfa8b8fbf23ea4f9a238e4}\label{class_generic_pointer_aeec3daf051dfa8b8fbf23ea4f9a238e4}} 
+{\footnotesize template$<$typename stack\+Allocator $>$ }\\Value\+Type \& \mbox{\hyperlink{class_generic_pointer_aeec3daf051dfa8b8fbf23ea4f9a238e4}{Set}} (\mbox{\hyperlink{class_generic_document}{Generic\+Document}}$<$ \mbox{\hyperlink{class_generic_pointer_a4b802da797a7a0b615fd9611cedb7c3b}{Encoding\+Type}}, typename Value\+Type\+::\+Allocator\+Type, stack\+Allocator $>$ \&document, Value\+Type \&value) const
+\begin{DoxyCompactList}\small\item\em Set a value in a document, with move semantics. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_generic_pointer_a8ed0a7ce95331b7433371df7150b84a9}\label{class_generic_pointer_a8ed0a7ce95331b7433371df7150b84a9}} 
+{\footnotesize template$<$typename stack\+Allocator $>$ }\\Value\+Type \& \mbox{\hyperlink{class_generic_pointer_a8ed0a7ce95331b7433371df7150b84a9}{Set}} (\mbox{\hyperlink{class_generic_document}{Generic\+Document}}$<$ \mbox{\hyperlink{class_generic_pointer_a4b802da797a7a0b615fd9611cedb7c3b}{Encoding\+Type}}, typename Value\+Type\+::\+Allocator\+Type, stack\+Allocator $>$ \&document, const Value\+Type \&value) const
+\begin{DoxyCompactList}\small\item\em Set a value in a document, with copy semantics. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_generic_pointer_abaa0cda4ed84a4435871d355279bab8e}\label{class_generic_pointer_abaa0cda4ed84a4435871d355279bab8e}} 
+{\footnotesize template$<$typename stack\+Allocator $>$ }\\Value\+Type \& \mbox{\hyperlink{class_generic_pointer_abaa0cda4ed84a4435871d355279bab8e}{Set}} (\mbox{\hyperlink{class_generic_document}{Generic\+Document}}$<$ \mbox{\hyperlink{class_generic_pointer_a4b802da797a7a0b615fd9611cedb7c3b}{Encoding\+Type}}, typename Value\+Type\+::\+Allocator\+Type, stack\+Allocator $>$ \&document, const \mbox{\hyperlink{class_generic_pointer_ab292356c11b4015c98d21b966b11f285}{Ch}} $\ast$value) const
+\begin{DoxyCompactList}\small\item\em Set a null-\/terminated string in a document. \end{DoxyCompactList}\item 
+{\footnotesize template$<$typename T , typename stack\+Allocator $>$ }\\\mbox{\hyperlink{class_generic_pointer_a1bb4a253f33687734e5b20795632a801}{RAPIDJSON\+\_\+\+DISABLEIF\+\_\+\+RETURN}} ((internal\+::\+Or\+Expr$<$ internal\+::\+Is\+Pointer$<$ T $>$, \mbox{\hyperlink{structinternal_1_1_is_generic_value}{internal\+::\+Is\+Generic\+Value}}$<$ T $>$ $>$),(Value\+Type \&)) \mbox{\hyperlink{class_generic_pointer_a71476d125a276b62a246990da1bd3468}{Set}}(\mbox{\hyperlink{class_generic_document}{Generic\+Document}}$<$ \mbox{\hyperlink{class_generic_pointer_a4b802da797a7a0b615fd9611cedb7c3b}{Encoding\+Type}}
+\begin{DoxyCompactList}\small\item\em Set a primitive value in a document. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Swap a value}
+\begin{DoxyCompactItemize}
+\item 
+Value\+Type \& \mbox{\hyperlink{class_generic_pointer_a3b40ad3e851640e295a4623b624af395}{Swap}} (Value\+Type \&root, Value\+Type \&value, typename Value\+Type\+::\+Allocator\+Type \&allocator) const
+\begin{DoxyCompactList}\small\item\em Swap a value with a value in a subtree. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_generic_pointer_aa84bc7e016c906436f464c8cbd858edb}\label{class_generic_pointer_aa84bc7e016c906436f464c8cbd858edb}} 
+{\footnotesize template$<$typename stack\+Allocator $>$ }\\Value\+Type \& \mbox{\hyperlink{class_generic_pointer_aa84bc7e016c906436f464c8cbd858edb}{Swap}} (\mbox{\hyperlink{class_generic_document}{Generic\+Document}}$<$ \mbox{\hyperlink{class_generic_pointer_a4b802da797a7a0b615fd9611cedb7c3b}{Encoding\+Type}}, typename Value\+Type\+::\+Allocator\+Type, stack\+Allocator $>$ \&document, Value\+Type \&value) const
+\begin{DoxyCompactList}\small\item\em Swap a value with a value in a document. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_generic_pointer_a759c07e81c9738e7a2a68b36d5c28643}{Erase}} (Value\+Type \&root) const
+\begin{DoxyCompactList}\small\item\em Erase a value in a subtree. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+\subsubsection*{template$<$typename Value\+Type, typename Allocator = Crt\+Allocator$>$\newline
+class Generic\+Pointer$<$ Value\+Type, Allocator $>$}
+
+Represents a JSON Pointer. Use Pointer for \mbox{\hyperlink{struct_u_t_f8}{UTF8}} encoding and default allocator. 
+
+\mbox{\hyperlink{class_this}{This}} class implements RFC 6901 \char`\"{}\+Java\+Script Object Notation (\+JSON) Pointer\char`\"{} (\href{https://tools.ietf.org/html/rfc6901}{\texttt{ https\+://tools.\+ietf.\+org/html/rfc6901}}).
+
+A JSON pointer is for identifying a specific value in a JSON document (\mbox{\hyperlink{class_generic_document}{Generic\+Document}}). It can simplify coding of DOM tree manipulation, because it can access multiple-\/level depth of DOM tree with single API call.
+
+After it parses a string representation (e.\+g. \char`\"{}/foo/0\char`\"{} or URI fragment representation (e.\+g. \char`\"{}\#/foo/0\char`\"{}) into its internal representation (tokens), it can be used to resolve a specific value in multiple documents, or sub-\/tree of documents.
+
+Contrary to \mbox{\hyperlink{class_generic_value}{Generic\+Value}}, Pointer can be copy constructed and copy assigned. Apart from assignment, a Pointer cannot be modified after construction.
+
+Although Pointer is very convenient, please aware that constructing Pointer involves parsing and dynamic memory allocation. A special constructor with user-\/ supplied tokens eliminates these.
+
+\mbox{\hyperlink{class_generic_pointer}{Generic\+Pointer}} depends on \mbox{\hyperlink{class_generic_document}{Generic\+Document}} and \mbox{\hyperlink{class_generic_value}{Generic\+Value}}.
+
+
+\begin{DoxyTemplParams}{Template Parameters}
+{\em Value\+Type} & The value type of the DOM tree. E.\+g. \mbox{\hyperlink{class_generic_value}{Generic\+Value}}$<$UTF8$<$$>$ $>$ \\
+\hline
+{\em Allocator} & The allocator type for allocating memory for internal representation.\\
+\hline
+\end{DoxyTemplParams}
+\begin{DoxyNote}{Note}
+\mbox{\hyperlink{class_generic_pointer}{Generic\+Pointer}} uses same encoding of Value\+Type. However, Allocator of \mbox{\hyperlink{class_generic_pointer}{Generic\+Pointer}} is independent of Allocator of Value. 
+\end{DoxyNote}
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_generic_pointer_a4ad549b8a826c3c2dedf03fcc07be9b0}\label{class_generic_pointer_a4ad549b8a826c3c2dedf03fcc07be9b0}} 
+\index{GenericPointer$<$ ValueType, Allocator $>$@{GenericPointer$<$ ValueType, Allocator $>$}!GenericPointer@{GenericPointer}}
+\index{GenericPointer@{GenericPointer}!GenericPointer$<$ ValueType, Allocator $>$@{GenericPointer$<$ ValueType, Allocator $>$}}
+\doxysubsubsection{\texorpdfstring{GenericPointer()}{GenericPointer()}\hspace{0.1cm}{\footnotesize\ttfamily [1/3]}}
+{\footnotesize\ttfamily template$<$typename Value\+Type , typename Allocator  = Crt\+Allocator$>$ \\
+\mbox{\hyperlink{class_generic_pointer}{Generic\+Pointer}}$<$ Value\+Type, \mbox{\hyperlink{classrapidjson_1_1_allocator}{Allocator}} $>$\+::\mbox{\hyperlink{class_generic_pointer}{Generic\+Pointer}} (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{class_generic_pointer_ab292356c11b4015c98d21b966b11f285}{Ch}} $\ast$}]{source,  }\item[{\mbox{\hyperlink{classrapidjson_1_1_allocator}{Allocator}} $\ast$}]{allocator = {\ttfamily 0} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [explicit]}}
+
+
+
+Constructor that parses a string or URI fragment representation. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em source} & A null-\/terminated, string or URI fragment representation of JSON pointer. \\
+\hline
+{\em allocator} & User supplied allocator for this pointer. If no allocator is provided, it creates a self-\/owned one. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_generic_pointer_a9c05684ea95306aac7626e70cb3946cc}\label{class_generic_pointer_a9c05684ea95306aac7626e70cb3946cc}} 
+\index{GenericPointer$<$ ValueType, Allocator $>$@{GenericPointer$<$ ValueType, Allocator $>$}!GenericPointer@{GenericPointer}}
+\index{GenericPointer@{GenericPointer}!GenericPointer$<$ ValueType, Allocator $>$@{GenericPointer$<$ ValueType, Allocator $>$}}
+\doxysubsubsection{\texorpdfstring{GenericPointer()}{GenericPointer()}\hspace{0.1cm}{\footnotesize\ttfamily [2/3]}}
+{\footnotesize\ttfamily template$<$typename Value\+Type , typename Allocator  = Crt\+Allocator$>$ \\
+\mbox{\hyperlink{class_generic_pointer}{Generic\+Pointer}}$<$ Value\+Type, \mbox{\hyperlink{classrapidjson_1_1_allocator}{Allocator}} $>$\+::\mbox{\hyperlink{class_generic_pointer}{Generic\+Pointer}} (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{class_generic_pointer_ab292356c11b4015c98d21b966b11f285}{Ch}} $\ast$}]{source,  }\item[{size\+\_\+t}]{length,  }\item[{\mbox{\hyperlink{classrapidjson_1_1_allocator}{Allocator}} $\ast$}]{allocator = {\ttfamily 0} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Constructor that parses a string or URI fragment representation, with length of the source string. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em source} & A string or URI fragment representation of JSON pointer. \\
+\hline
+{\em length} & Length of source. \\
+\hline
+{\em allocator} & User supplied allocator for this pointer. If no allocator is provided, it creates a self-\/owned one. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyNote}{Note}
+Slightly faster than the overload without length. 
+\end{DoxyNote}
+\mbox{\Hypertarget{class_generic_pointer_a524a9921eff68f389a817a20ca7f1d84}\label{class_generic_pointer_a524a9921eff68f389a817a20ca7f1d84}} 
+\index{GenericPointer$<$ ValueType, Allocator $>$@{GenericPointer$<$ ValueType, Allocator $>$}!GenericPointer@{GenericPointer}}
+\index{GenericPointer@{GenericPointer}!GenericPointer$<$ ValueType, Allocator $>$@{GenericPointer$<$ ValueType, Allocator $>$}}
+\doxysubsubsection{\texorpdfstring{GenericPointer()}{GenericPointer()}\hspace{0.1cm}{\footnotesize\ttfamily [3/3]}}
+{\footnotesize\ttfamily template$<$typename Value\+Type , typename Allocator  = Crt\+Allocator$>$ \\
+\mbox{\hyperlink{class_generic_pointer}{Generic\+Pointer}}$<$ Value\+Type, \mbox{\hyperlink{classrapidjson_1_1_allocator}{Allocator}} $>$\+::\mbox{\hyperlink{class_generic_pointer}{Generic\+Pointer}} (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{struct_generic_pointer_1_1_token}{Token}} $\ast$}]{tokens,  }\item[{size\+\_\+t}]{token\+Count }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Constructor with user-\/supplied tokens. 
+
+\mbox{\hyperlink{class_this}{This}} constructor let user supplies const array of tokens. \mbox{\hyperlink{class_this}{This}} prevents the parsing process and eliminates allocation. \mbox{\hyperlink{class_this}{This}} is preferred for memory constrained environments.
+
+
+\begin{DoxyParams}{Parameters}
+{\em tokens} & An constant array of tokens representing the JSON pointer. \\
+\hline
+{\em token\+Count} & Number of tokens.\\
+\hline
+\end{DoxyParams}
+{\bfseries{Example}} 
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\textcolor{preprocessor}{\#define NAME(s) \{ s, sizeof(s) / sizeof(s[0]) -\/ 1, kPointerInvalidIndex \}}}
+\DoxyCodeLine{\textcolor{preprocessor}{\#define INDEX(i) \{ \#i, sizeof(\#i) -\/ 1, i \}}}
+\DoxyCodeLine{}
+\DoxyCodeLine{\textcolor{keyword}{static} \textcolor{keyword}{const} \mbox{\hyperlink{struct_generic_pointer_1_1_token}{Pointer::Token}} kTokens[] = \{ NAME(\textcolor{stringliteral}{"{}foo"{}}), INDEX(123) \};}
+\DoxyCodeLine{\textcolor{keyword}{static} \textcolor{keyword}{const} \mbox{\hyperlink{class_generic_pointer}{Pointer}} p(kTokens, \textcolor{keyword}{sizeof}(kTokens) / \textcolor{keyword}{sizeof}(kTokens[0]));}
+\DoxyCodeLine{\textcolor{comment}{// Equivalent to static const Pointer p("{}/foo/123"{});}}
+\DoxyCodeLine{}
+\DoxyCodeLine{\textcolor{preprocessor}{\#undef NAME}}
+\DoxyCodeLine{\textcolor{preprocessor}{\#undef INDEX}}
+
+\end{DoxyCode}
+ 
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_generic_pointer_a9f8a1711f5b8e0d951c25c6c65326f77}\label{class_generic_pointer_a9f8a1711f5b8e0d951c25c6c65326f77}} 
+\index{GenericPointer$<$ ValueType, Allocator $>$@{GenericPointer$<$ ValueType, Allocator $>$}!Append@{Append}}
+\index{Append@{Append}!GenericPointer$<$ ValueType, Allocator $>$@{GenericPointer$<$ ValueType, Allocator $>$}}
+\doxysubsubsection{\texorpdfstring{Append()}{Append()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily template$<$typename Value\+Type , typename Allocator  = Crt\+Allocator$>$ \\
+\mbox{\hyperlink{class_generic_pointer}{Generic\+Pointer}} \mbox{\hyperlink{class_generic_pointer}{Generic\+Pointer}}$<$ Value\+Type, \mbox{\hyperlink{classrapidjson_1_1_allocator}{Allocator}} $>$\+::Append (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{class_generic_pointer_ab292356c11b4015c98d21b966b11f285}{Ch}} $\ast$}]{name,  }\item[{\mbox{\hyperlink{rapidjson_8h_a5ed6e6e67250fadbd041127e6386dcb5}{Size\+Type}}}]{length,  }\item[{\mbox{\hyperlink{classrapidjson_1_1_allocator}{Allocator}} $\ast$}]{allocator = {\ttfamily 0} }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Append a name token with length, and return a new Pointer. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em name} & Name to be appended. \\
+\hline
+{\em length} & Length of name. \\
+\hline
+{\em allocator} & Allocator for the newly return Pointer. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+A new Pointer with appended token. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_generic_pointer_aa8f86c0f330807f337351a95ae254b78}\label{class_generic_pointer_aa8f86c0f330807f337351a95ae254b78}} 
+\index{GenericPointer$<$ ValueType, Allocator $>$@{GenericPointer$<$ ValueType, Allocator $>$}!Append@{Append}}
+\index{Append@{Append}!GenericPointer$<$ ValueType, Allocator $>$@{GenericPointer$<$ ValueType, Allocator $>$}}
+\doxysubsubsection{\texorpdfstring{Append()}{Append()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily template$<$typename Value\+Type , typename Allocator  = Crt\+Allocator$>$ \\
+\mbox{\hyperlink{class_generic_pointer}{Generic\+Pointer}} \mbox{\hyperlink{class_generic_pointer}{Generic\+Pointer}}$<$ Value\+Type, \mbox{\hyperlink{classrapidjson_1_1_allocator}{Allocator}} $>$\+::Append (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{struct_generic_pointer_1_1_token}{Token}} \&}]{token,  }\item[{\mbox{\hyperlink{classrapidjson_1_1_allocator}{Allocator}} $\ast$}]{allocator = {\ttfamily 0} }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Append a token and return a new Pointer. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em token} & \mbox{\hyperlink{struct_generic_pointer_1_1_token}{Token}} to be appended. \\
+\hline
+{\em allocator} & Allocator for the newly return Pointer. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+A new Pointer with appended token. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_generic_pointer_a759c07e81c9738e7a2a68b36d5c28643}\label{class_generic_pointer_a759c07e81c9738e7a2a68b36d5c28643}} 
+\index{GenericPointer$<$ ValueType, Allocator $>$@{GenericPointer$<$ ValueType, Allocator $>$}!Erase@{Erase}}
+\index{Erase@{Erase}!GenericPointer$<$ ValueType, Allocator $>$@{GenericPointer$<$ ValueType, Allocator $>$}}
+\doxysubsubsection{\texorpdfstring{Erase()}{Erase()}}
+{\footnotesize\ttfamily template$<$typename Value\+Type , typename Allocator  = Crt\+Allocator$>$ \\
+bool \mbox{\hyperlink{class_generic_pointer}{Generic\+Pointer}}$<$ Value\+Type, \mbox{\hyperlink{classrapidjson_1_1_allocator}{Allocator}} $>$\+::Erase (\begin{DoxyParamCaption}\item[{Value\+Type \&}]{root }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Erase a value in a subtree. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em root} & Root value of a DOM sub-\/tree to be resolved. It can be any value other than document root. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Whether the resolved value is found and erased.
+\end{DoxyReturn}
+\begin{DoxyNote}{Note}
+Erasing with an empty pointer {\ttfamily Pointer}(\char`\"{}\char`\"{}), i.\+e. the root, always fail and return false. 
+\end{DoxyNote}
+\mbox{\Hypertarget{class_generic_pointer_aaf4d7d852098878d24188d134182d42f}\label{class_generic_pointer_aaf4d7d852098878d24188d134182d42f}} 
+\index{GenericPointer$<$ ValueType, Allocator $>$@{GenericPointer$<$ ValueType, Allocator $>$}!RAPIDJSON\_DISABLEIF\_RETURN@{RAPIDJSON\_DISABLEIF\_RETURN}}
+\index{RAPIDJSON\_DISABLEIF\_RETURN@{RAPIDJSON\_DISABLEIF\_RETURN}!GenericPointer$<$ ValueType, Allocator $>$@{GenericPointer$<$ ValueType, Allocator $>$}}
+\doxysubsubsection{\texorpdfstring{RAPIDJSON\_DISABLEIF\_RETURN()}{RAPIDJSON\_DISABLEIF\_RETURN()}\hspace{0.1cm}{\footnotesize\ttfamily [1/3]}}
+{\footnotesize\ttfamily template$<$typename Value\+Type , typename Allocator  = Crt\+Allocator$>$ \\
+template$<$typename T $>$ \\
+\mbox{\hyperlink{class_generic_pointer}{Generic\+Pointer}}$<$ Value\+Type, \mbox{\hyperlink{classrapidjson_1_1_allocator}{Allocator}} $>$\+::RAPIDJSON\+\_\+\+DISABLEIF\+\_\+\+RETURN (\begin{DoxyParamCaption}\item[{(internal\+::\+Not\+Expr$<$ internal\+::\+Is\+Same$<$ typename internal\+::\+Remove\+Const$<$ T $>$\+::\mbox{\hyperlink{rapidjson_8h_a1d1cfd8ffb84e947f82999c682b666a7}{Type}}, \mbox{\hyperlink{class_generic_pointer_ab292356c11b4015c98d21b966b11f285}{Ch}} $>$ $>$)}]{,  }\item[{(\mbox{\hyperlink{class_generic_pointer}{Generic\+Pointer}}$<$ Value\+Type, \mbox{\hyperlink{classrapidjson_1_1_allocator}{Allocator}} $>$)}]{ }\end{DoxyParamCaption})}
+
+
+
+Append a name token without length, and return a new Pointer. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em name} & Name (const Ch$\ast$) to be appended. \\
+\hline
+{\em allocator} & Allocator for the newly return Pointer. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+A new Pointer with appended token. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_generic_pointer_a1bb4a253f33687734e5b20795632a801}\label{class_generic_pointer_a1bb4a253f33687734e5b20795632a801}} 
+\index{GenericPointer$<$ ValueType, Allocator $>$@{GenericPointer$<$ ValueType, Allocator $>$}!RAPIDJSON\_DISABLEIF\_RETURN@{RAPIDJSON\_DISABLEIF\_RETURN}}
+\index{RAPIDJSON\_DISABLEIF\_RETURN@{RAPIDJSON\_DISABLEIF\_RETURN}!GenericPointer$<$ ValueType, Allocator $>$@{GenericPointer$<$ ValueType, Allocator $>$}}
+\doxysubsubsection{\texorpdfstring{RAPIDJSON\_DISABLEIF\_RETURN()}{RAPIDJSON\_DISABLEIF\_RETURN()}\hspace{0.1cm}{\footnotesize\ttfamily [2/3]}}
+{\footnotesize\ttfamily template$<$typename Value\+Type , typename Allocator  = Crt\+Allocator$>$ \\
+template$<$typename T , typename stack\+Allocator $>$ \\
+\mbox{\hyperlink{class_generic_pointer}{Generic\+Pointer}}$<$ Value\+Type, \mbox{\hyperlink{classrapidjson_1_1_allocator}{Allocator}} $>$\+::RAPIDJSON\+\_\+\+DISABLEIF\+\_\+\+RETURN (\begin{DoxyParamCaption}\item[{(internal\+::\+Or\+Expr$<$ internal\+::\+Is\+Pointer$<$ T $>$, \mbox{\hyperlink{structinternal_1_1_is_generic_value}{internal\+::\+Is\+Generic\+Value}}$<$ T $>$ $>$)}]{,  }\item[{(Value\+Type \&)}]{ }\end{DoxyParamCaption})}
+
+
+
+Set a primitive value in a document. 
+
+
+\begin{DoxyTemplParams}{Template Parameters}
+{\em T} & Either \mbox{\hyperlink{rapidjson_8h_a1d1cfd8ffb84e947f82999c682b666a7}{Type}}, {\ttfamily int}, {\ttfamily unsigned}, {\ttfamily int64\+\_\+t}, {\ttfamily uint64\+\_\+t}, {\ttfamily bool} \\
+\hline
+\end{DoxyTemplParams}
+\mbox{\Hypertarget{class_generic_pointer_a914bbdd96e2a248e035b8ebd68526369}\label{class_generic_pointer_a914bbdd96e2a248e035b8ebd68526369}} 
+\index{GenericPointer$<$ ValueType, Allocator $>$@{GenericPointer$<$ ValueType, Allocator $>$}!RAPIDJSON\_DISABLEIF\_RETURN@{RAPIDJSON\_DISABLEIF\_RETURN}}
+\index{RAPIDJSON\_DISABLEIF\_RETURN@{RAPIDJSON\_DISABLEIF\_RETURN}!GenericPointer$<$ ValueType, Allocator $>$@{GenericPointer$<$ ValueType, Allocator $>$}}
+\doxysubsubsection{\texorpdfstring{RAPIDJSON\_DISABLEIF\_RETURN()}{RAPIDJSON\_DISABLEIF\_RETURN()}\hspace{0.1cm}{\footnotesize\ttfamily [3/3]}}
+{\footnotesize\ttfamily template$<$typename Value\+Type , typename Allocator  = Crt\+Allocator$>$ \\
+template$<$typename T $>$ \\
+\mbox{\hyperlink{class_generic_pointer}{Generic\+Pointer}}$<$ Value\+Type, \mbox{\hyperlink{classrapidjson_1_1_allocator}{Allocator}} $>$\+::RAPIDJSON\+\_\+\+DISABLEIF\+\_\+\+RETURN (\begin{DoxyParamCaption}\item[{(internal\+::\+Or\+Expr$<$ internal\+::\+Is\+Pointer$<$ T $>$, \mbox{\hyperlink{structinternal_1_1_is_generic_value}{internal\+::\+Is\+Generic\+Value}}$<$ T $>$ $>$)}]{,  }\item[{(Value\+Type \&)}]{ }\end{DoxyParamCaption}) \&}
+
+
+
+Set a primitive value in a subtree. 
+
+
+\begin{DoxyTemplParams}{Template Parameters}
+{\em T} & Either \mbox{\hyperlink{rapidjson_8h_a1d1cfd8ffb84e947f82999c682b666a7}{Type}}, {\ttfamily int}, {\ttfamily unsigned}, {\ttfamily int64\+\_\+t}, {\ttfamily uint64\+\_\+t}, {\ttfamily bool} \\
+\hline
+\end{DoxyTemplParams}
+\mbox{\Hypertarget{class_generic_pointer_a71476d125a276b62a246990da1bd3468}\label{class_generic_pointer_a71476d125a276b62a246990da1bd3468}} 
+\index{GenericPointer$<$ ValueType, Allocator $>$@{GenericPointer$<$ ValueType, Allocator $>$}!Set@{Set}}
+\index{Set@{Set}!GenericPointer$<$ ValueType, Allocator $>$@{GenericPointer$<$ ValueType, Allocator $>$}}
+\doxysubsubsection{\texorpdfstring{Set()}{Set()}}
+{\footnotesize\ttfamily template$<$typename Value\+Type , typename Allocator  = Crt\+Allocator$>$ \\
+Value\+Type\& \mbox{\hyperlink{class_generic_pointer}{Generic\+Pointer}}$<$ Value\+Type, \mbox{\hyperlink{classrapidjson_1_1_allocator}{Allocator}} $>$\+::Set (\begin{DoxyParamCaption}\item[{Value\+Type \&}]{root,  }\item[{Value\+Type \&}]{value,  }\item[{typename Value\+Type\+::\+Allocator\+Type \&}]{allocator }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Set a value in a subtree, with move semantics. 
+
+It creates all parents if they are not exist or types are different to the tokens. So this function always succeeds but potentially remove existing values.
+
+
+\begin{DoxyParams}{Parameters}
+{\em root} & Root value of a DOM sub-\/tree to be resolved. It can be any value other than document root. \\
+\hline
+{\em value} & Value to be set. \\
+\hline
+{\em allocator} & Allocator for creating the values if the specified value or its parents are not exist. \\
+\hline
+\end{DoxyParams}
+\begin{DoxySeeAlso}{See also}
+Create() 
+\end{DoxySeeAlso}
+\mbox{\Hypertarget{class_generic_pointer_a3b40ad3e851640e295a4623b624af395}\label{class_generic_pointer_a3b40ad3e851640e295a4623b624af395}} 
+\index{GenericPointer$<$ ValueType, Allocator $>$@{GenericPointer$<$ ValueType, Allocator $>$}!Swap@{Swap}}
+\index{Swap@{Swap}!GenericPointer$<$ ValueType, Allocator $>$@{GenericPointer$<$ ValueType, Allocator $>$}}
+\doxysubsubsection{\texorpdfstring{Swap()}{Swap()}}
+{\footnotesize\ttfamily template$<$typename Value\+Type , typename Allocator  = Crt\+Allocator$>$ \\
+Value\+Type\& \mbox{\hyperlink{class_generic_pointer}{Generic\+Pointer}}$<$ Value\+Type, \mbox{\hyperlink{classrapidjson_1_1_allocator}{Allocator}} $>$\+::Swap (\begin{DoxyParamCaption}\item[{Value\+Type \&}]{root,  }\item[{Value\+Type \&}]{value,  }\item[{typename Value\+Type\+::\+Allocator\+Type \&}]{allocator }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Swap a value with a value in a subtree. 
+
+It creates all parents if they are not exist or types are different to the tokens. So this function always succeeds but potentially remove existing values.
+
+
+\begin{DoxyParams}{Parameters}
+{\em root} & Root value of a DOM sub-\/tree to be resolved. It can be any value other than document root. \\
+\hline
+{\em value} & Value to be swapped. \\
+\hline
+{\em allocator} & Allocator for creating the values if the specified value or its parents are not exist. \\
+\hline
+\end{DoxyParams}
+\begin{DoxySeeAlso}{See also}
+Create() 
+\end{DoxySeeAlso}
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{class_generic_pointer_ad6e06cd83cf52e045c7e07a67078e973}\label{class_generic_pointer_ad6e06cd83cf52e045c7e07a67078e973}} 
+\index{GenericPointer$<$ ValueType, Allocator $>$@{GenericPointer$<$ ValueType, Allocator $>$}!const@{const}}
+\index{const@{const}!GenericPointer$<$ ValueType, Allocator $>$@{GenericPointer$<$ ValueType, Allocator $>$}}
+\doxysubsubsection{\texorpdfstring{const}{const}\hspace{0.1cm}{\footnotesize\ttfamily [1/3]}}
+{\footnotesize\ttfamily template$<$typename Value\+Type , typename Allocator  = Crt\+Allocator$>$ \\
+\mbox{\hyperlink{classrapidjson_1_1_allocator}{Allocator}} stack\+Allocator stack\+Allocator T default\+Value \mbox{\hyperlink{class_generic_pointer}{Generic\+Pointer}}$<$ Value\+Type, \mbox{\hyperlink{classrapidjson_1_1_allocator}{Allocator}} $>$\+::const}
+
+{\bfseries Initial value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\{}
+\DoxyCodeLine{        \textcolor{keywordflow}{return} GetWithDefault(document, defaultValue, document.GetAllocator())}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{class_generic_pointer_ace82428d4ad958b05a52480d949b32fa}\label{class_generic_pointer_ace82428d4ad958b05a52480d949b32fa}} 
+\index{GenericPointer$<$ ValueType, Allocator $>$@{GenericPointer$<$ ValueType, Allocator $>$}!const@{const}}
+\index{const@{const}!GenericPointer$<$ ValueType, Allocator $>$@{GenericPointer$<$ ValueType, Allocator $>$}}
+\doxysubsubsection{\texorpdfstring{const}{const}\hspace{0.1cm}{\footnotesize\ttfamily [2/3]}}
+{\footnotesize\ttfamily template$<$typename Value\+Type , typename Allocator  = Crt\+Allocator$>$ \\
+T Value\+Type\+::\+Allocator\+Type\& allocator \mbox{\hyperlink{class_generic_pointer}{Generic\+Pointer}}$<$ Value\+Type, \mbox{\hyperlink{classrapidjson_1_1_allocator}{Allocator}} $>$\+::const}
+
+{\bfseries Initial value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\{}
+\DoxyCodeLine{        \textcolor{keywordflow}{return} Create(root, allocator) = ValueType(value).Move()}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{class_generic_pointer_abb1b141cfe93b7159842b5cad60d1be3}\label{class_generic_pointer_abb1b141cfe93b7159842b5cad60d1be3}} 
+\index{GenericPointer$<$ ValueType, Allocator $>$@{GenericPointer$<$ ValueType, Allocator $>$}!const@{const}}
+\index{const@{const}!GenericPointer$<$ ValueType, Allocator $>$@{GenericPointer$<$ ValueType, Allocator $>$}}
+\doxysubsubsection{\texorpdfstring{const}{const}\hspace{0.1cm}{\footnotesize\ttfamily [3/3]}}
+{\footnotesize\ttfamily template$<$typename Value\+Type , typename Allocator  = Crt\+Allocator$>$ \\
+stack\+Allocator T value \mbox{\hyperlink{class_generic_pointer}{Generic\+Pointer}}$<$ Value\+Type, \mbox{\hyperlink{classrapidjson_1_1_allocator}{Allocator}} $>$\+::const}
+
+{\bfseries Initial value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\{}
+\DoxyCodeLine{            \textcolor{keywordflow}{return} Create(document) = value}
+
+\end{DoxyCode}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+include/rapidjson/fwd.\+h\item 
+include/rapidjson/pointer.\+h\end{DoxyCompactItemize}

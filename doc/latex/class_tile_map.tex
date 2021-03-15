@@ -1,0 +1,144 @@
+\hypertarget{class_tile_map}{}\doxysection{Tile\+Map Class Reference}
+\label{class_tile_map}\index{TileMap@{TileMap}}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_tile_map_a3448728e45d6a43fff3a02d4c6d72e9d}{$\sim$\+Tile\+Map}} ()
+\item 
+void \mbox{\hyperlink{class_tile_map_a16f9ed159c1e43173257b5a84aa8cf2a}{Init}} (std\+::string const \&map\+\_\+name)
+\item 
+int \mbox{\hyperlink{class_tile_map_ad1534d35e1e8f9f1aead8cb2f8dd8097}{Get\+Tile\+Type}} (int column, int row)
+\item 
+void \mbox{\hyperlink{class_tile_map_a08c9d2d4b8a4c916b6a7651174b9f0d7}{Render}} (SDL\+\_\+\+Renderer $\ast$renderer, const \mbox{\hyperlink{class_camera}{Camera}} \&camera)
+\item 
+void \mbox{\hyperlink{class_tile_map_a265e161863487c9d1998f8e869949148}{Print\+Map}} ()
+\item 
+std\+::pair$<$ int, int $>$ \mbox{\hyperlink{class_tile_map_a98348d04cc8685a227c23224b0513af8}{Get\+Map\+Size\+In\+Tile}} ()
+\begin{DoxyCompactList}\small\item\em Gets the rows and columns of tiles of the map. \end{DoxyCompactList}\item 
+std\+::pair$<$ int, int $>$ \mbox{\hyperlink{class_tile_map_a96292d38e5542ce247f2741b61fccbf4}{Get\+Map\+Size\+In\+Pixel}} ()
+\begin{DoxyCompactList}\small\item\em Gets the width and height of the map in pixels. \end{DoxyCompactList}\item 
+std\+::pair$<$ int, int $>$ \mbox{\hyperlink{class_tile_map_a3967e05f55f9a6215f6380385511432e}{Get\+Tile\+Size}} ()
+\begin{DoxyCompactList}\small\item\em Gets the width and height of a tile in pixels. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_tile}{Tile}} \& \mbox{\hyperlink{class_tile_map_a190e53a119636ddde88094787544127a}{Get\+Tile}} (int row, int column)
+\begin{DoxyCompactList}\small\item\em Gets the tile specified by row and column. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_tile_map_a282e68267f5f54b1ea91489af94ab8d7}\label{class_tile_map_a282e68267f5f54b1ea91489af94ab8d7}} 
+void \mbox{\hyperlink{class_tile_map_a282e68267f5f54b1ea91489af94ab8d7}{Clear\+Map}} ()
+\begin{DoxyCompactList}\small\item\em Clear current map. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_tile_map_a3448728e45d6a43fff3a02d4c6d72e9d}\label{class_tile_map_a3448728e45d6a43fff3a02d4c6d72e9d}} 
+\index{TileMap@{TileMap}!````~TileMap@{$\sim$TileMap}}
+\index{````~TileMap@{$\sim$TileMap}!TileMap@{TileMap}}
+\doxysubsubsection{\texorpdfstring{$\sim$TileMap()}{~TileMap()}}
+{\footnotesize\ttfamily Tile\+Map\+::$\sim$\+Tile\+Map (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Destructor 
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_tile_map_a96292d38e5542ce247f2741b61fccbf4}\label{class_tile_map_a96292d38e5542ce247f2741b61fccbf4}} 
+\index{TileMap@{TileMap}!GetMapSizeInPixel@{GetMapSizeInPixel}}
+\index{GetMapSizeInPixel@{GetMapSizeInPixel}!TileMap@{TileMap}}
+\doxysubsubsection{\texorpdfstring{GetMapSizeInPixel()}{GetMapSizeInPixel()}}
+{\footnotesize\ttfamily std\+::pair$<$ int, int $>$ Tile\+Map\+::\+Get\+Map\+Size\+In\+Pixel (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Gets the width and height of the map in pixels. 
+
+\begin{DoxyReturn}{Returns}
+The map size in pixels 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_tile_map_a98348d04cc8685a227c23224b0513af8}\label{class_tile_map_a98348d04cc8685a227c23224b0513af8}} 
+\index{TileMap@{TileMap}!GetMapSizeInTile@{GetMapSizeInTile}}
+\index{GetMapSizeInTile@{GetMapSizeInTile}!TileMap@{TileMap}}
+\doxysubsubsection{\texorpdfstring{GetMapSizeInTile()}{GetMapSizeInTile()}}
+{\footnotesize\ttfamily std\+::pair$<$ int, int $>$ Tile\+Map\+::\+Get\+Map\+Size\+In\+Tile (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Gets the rows and columns of tiles of the map. 
+
+\begin{DoxyReturn}{Returns}
+The map size in tile 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_tile_map_a190e53a119636ddde88094787544127a}\label{class_tile_map_a190e53a119636ddde88094787544127a}} 
+\index{TileMap@{TileMap}!GetTile@{GetTile}}
+\index{GetTile@{GetTile}!TileMap@{TileMap}}
+\doxysubsubsection{\texorpdfstring{GetTile()}{GetTile()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_tile}{Tile}} \& Tile\+Map\+::\+Get\+Tile (\begin{DoxyParamCaption}\item[{int}]{row,  }\item[{int}]{column }\end{DoxyParamCaption})}
+
+
+
+Gets the tile specified by row and column. 
+
+\begin{DoxyReturn}{Returns}
+The specified tile 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_tile_map_a3967e05f55f9a6215f6380385511432e}\label{class_tile_map_a3967e05f55f9a6215f6380385511432e}} 
+\index{TileMap@{TileMap}!GetTileSize@{GetTileSize}}
+\index{GetTileSize@{GetTileSize}!TileMap@{TileMap}}
+\doxysubsubsection{\texorpdfstring{GetTileSize()}{GetTileSize()}}
+{\footnotesize\ttfamily std\+::pair$<$ int, int $>$ Tile\+Map\+::\+Get\+Tile\+Size (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Gets the width and height of a tile in pixels. 
+
+\begin{DoxyReturn}{Returns}
+The tile size in pixels 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_tile_map_ad1534d35e1e8f9f1aead8cb2f8dd8097}\label{class_tile_map_ad1534d35e1e8f9f1aead8cb2f8dd8097}} 
+\index{TileMap@{TileMap}!GetTileType@{GetTileType}}
+\index{GetTileType@{GetTileType}!TileMap@{TileMap}}
+\doxysubsubsection{\texorpdfstring{GetTileType()}{GetTileType()}}
+{\footnotesize\ttfamily int Tile\+Map\+::\+Get\+Tile\+Type (\begin{DoxyParamCaption}\item[{int}]{column,  }\item[{int}]{row }\end{DoxyParamCaption})}
+
+Get the tile type of given position
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em column} & x cor \\
+\hline
+\mbox{\texttt{ in}}  & {\em row} & y cor \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+tile type 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_tile_map_a16f9ed159c1e43173257b5a84aa8cf2a}\label{class_tile_map_a16f9ed159c1e43173257b5a84aa8cf2a}} 
+\index{TileMap@{TileMap}!Init@{Init}}
+\index{Init@{Init}!TileMap@{TileMap}}
+\doxysubsubsection{\texorpdfstring{Init()}{Init()}}
+{\footnotesize\ttfamily void Tile\+Map\+::\+Init (\begin{DoxyParamCaption}\item[{std\+::string const \&}]{map\+\_\+name }\end{DoxyParamCaption})}
+
+Load a map. 
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em map\+\_\+name} & path of the map \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_tile_map_a265e161863487c9d1998f8e869949148}\label{class_tile_map_a265e161863487c9d1998f8e869949148}} 
+\index{TileMap@{TileMap}!PrintMap@{PrintMap}}
+\index{PrintMap@{PrintMap}!TileMap@{TileMap}}
+\doxysubsubsection{\texorpdfstring{PrintMap()}{PrintMap()}}
+{\footnotesize\ttfamily void Tile\+Map\+::\+Print\+Map (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Print the map. \mbox{\Hypertarget{class_tile_map_a08c9d2d4b8a4c916b6a7651174b9f0d7}\label{class_tile_map_a08c9d2d4b8a4c916b6a7651174b9f0d7}} 
+\index{TileMap@{TileMap}!Render@{Render}}
+\index{Render@{Render}!TileMap@{TileMap}}
+\doxysubsubsection{\texorpdfstring{Render()}{Render()}}
+{\footnotesize\ttfamily void Tile\+Map\+::\+Render (\begin{DoxyParamCaption}\item[{SDL\+\_\+\+Renderer $\ast$}]{renderer,  }\item[{const \mbox{\hyperlink{class_camera}{Camera}} \&}]{camera }\end{DoxyParamCaption})}
+
+Render the map.
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em renderer} & SDL renderer \\
+\hline
+\end{DoxyParams}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+include/tile\+\_\+map.\+hpp\item 
+src/tile\+\_\+map.\+cpp\end{DoxyCompactItemize}

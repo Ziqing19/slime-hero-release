@@ -1,0 +1,371 @@
+\hypertarget{class_game_object}{}\doxysection{Game\+Object Class Reference}
+\label{class_game_object}\index{GameObject@{GameObject}}
+Inheritance diagram for Game\+Object\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=3.000000cm]{class_game_object}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_game_object_a0b91fb0d3479eac24383b57547081978}\label{class_game_object_a0b91fb0d3479eac24383b57547081978}} 
+enum class {\bfseries Object\+Type} \{ \newline
+{\bfseries Tile}
+, {\bfseries Sprite}
+, {\bfseries Hero}
+, {\bfseries Enemy}
+, \newline
+{\bfseries Flag}
+ \}
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_game_object_a49f0fc91c3048ec583044e7a1b9c2518}\label{class_game_object_a49f0fc91c3048ec583044e7a1b9c2518}} 
+\mbox{\hyperlink{class_game_object_a49f0fc91c3048ec583044e7a1b9c2518}{Game\+Object}} ()=default
+\begin{DoxyCompactList}\small\item\em Default constructor. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_game_object_ac22afeea662863978d8728b85f5af5da}{Game\+Object}} (const \mbox{\hyperlink{struct_vector2_d}{Vector2D}} \&position, const \mbox{\hyperlink{struct_vector2_d}{Vector2D}} \&velocity, int width, int height, const std\+::string \&texture)
+\begin{DoxyCompactList}\small\item\em Constructor. \end{DoxyCompactList}\item 
+virtual bool \mbox{\hyperlink{class_game_object_a8ba290adb7d33ef1bd85863f85709202}{Is\+Static}} ()=0
+\begin{DoxyCompactList}\small\item\em Returns if a game object is static. \end{DoxyCompactList}\item 
+virtual bool \mbox{\hyperlink{class_game_object_a5d521bf5582a2cda79a3b0c9bd1392c8}{Is\+Collidable}} ()=0
+\begin{DoxyCompactList}\small\item\em Returns if this object is collidable. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{class_game_object_ab013426388a171d6e5318704eb5ef2c8}{Render}} (SDL\+\_\+\+Renderer $\ast$renderer, const \mbox{\hyperlink{class_camera}{Camera}} \&camera)=0
+\begin{DoxyCompactList}\small\item\em Render the game object into renderer\textquotesingle{}s back buffer. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{struct_vector2_d}{Vector2D}} \& \mbox{\hyperlink{class_game_object_ab7814b3effcf8c13e6a06bd748f68ece}{Get\+Velocity}} ()
+\begin{DoxyCompactList}\small\item\em Gets the velocity of this game object. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{struct_vector2_d}{Vector2D}} \& \mbox{\hyperlink{class_game_object_a27a6ca385391c7e003095c49d703bce4}{Get\+Position}} ()
+\begin{DoxyCompactList}\small\item\em Gets the position of the game object. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{struct_vector2_d}{Vector2D}} \& \mbox{\hyperlink{class_game_object_af21668da783f818c89b290d13ea42573}{Get\+Last\+Position}} ()
+\begin{DoxyCompactList}\small\item\em Gets the position of the object in the last frame. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_game_object_acf7373d05e22279da853749f702b1486}{Set\+Last\+Position}} (const \mbox{\hyperlink{struct_vector2_d}{Vector2D}} \&last\+\_\+position)
+\begin{DoxyCompactList}\small\item\em Sets the position of the object in the last frame. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_game_object_a71e9fe489b7c5ef7e8e0368ec71fac6d}\label{class_game_object_a71e9fe489b7c5ef7e8e0368ec71fac6d}} 
+\mbox{\hyperlink{struct_vector2_d}{Vector2D}} {\bfseries Get\+Size} ()
+\item 
+\mbox{\Hypertarget{class_game_object_a500e15f55ed532123a20487b128ac3ab}\label{class_game_object_a500e15f55ed532123a20487b128ac3ab}} 
+void {\bfseries Set\+Size} (\mbox{\hyperlink{struct_vector2_d}{Vector2D}} vec)
+\item 
+\mbox{\hyperlink{struct_vector2_d}{Vector2D}} \& \mbox{\hyperlink{class_game_object_a689ca450012f304c7d674eca120cb3b2}{Get\+Last\+Velocity}} ()
+\begin{DoxyCompactList}\small\item\em Gets the velocity of the object in the last frame. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_game_object_a790bbff072ee0ee4de9013594b935df7}{Set\+Last\+Velocity}} (const \mbox{\hyperlink{struct_vector2_d}{Vector2D}} \&last\+\_\+velocity)
+\begin{DoxyCompactList}\small\item\em Sets the velocity of the object in the last frame. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_game_object_ac1433bf0366c999cbf5b544902507f2c}{Set\+Velocity}} (const \mbox{\hyperlink{struct_vector2_d}{Vector2D}} \&velocity)
+\begin{DoxyCompactList}\small\item\em Sets the velocity of the game object. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_game_object_a563c11e9fda02aadf020d1503167ed04}{Set\+Position}} (const \mbox{\hyperlink{struct_vector2_d}{Vector2D}} \&position)
+\begin{DoxyCompactList}\small\item\em Sets the position of the game object. \end{DoxyCompactList}\item 
+const SDL\+\_\+\+Rect \& \mbox{\hyperlink{class_game_object_a6f2c985b8983f87a5c2433db7e4f4202}{Get\+Bounding\+Box}} () const
+\begin{DoxyCompactList}\small\item\em Gets the bounding box of the game object. \end{DoxyCompactList}\item 
+uint32\+\_\+t \mbox{\hyperlink{class_game_object_a09c1e302193f64cf8238abc7bef41b4b}{Get\+Id}} () const
+\begin{DoxyCompactList}\small\item\em Returns the unique id of the object. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{struct_vector2_d}{Vector2D}} \mbox{\hyperlink{class_game_object_aab3045feff3a98821eab11aea1e0143c}{Get\+Center}} () const
+\begin{DoxyCompactList}\small\item\em Gets the center of the object. \end{DoxyCompactList}\item 
+virtual Object\+Type \mbox{\hyperlink{class_game_object_a59f50b3b97a1831c1ff770546d13a7f1}{Get\+Object\+Type}} () const =0
+\begin{DoxyCompactList}\small\item\em Returns the type information of the object. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_game_object_ac8bdbf74c1dc31b7314b2025ab3d355a}{Is\+Inside\+Viewport}} (const \mbox{\hyperlink{class_camera}{Camera}} \&camera)
+\end{DoxyCompactItemize}
+\doxysubsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_game_object_ae68e0d18d7be7dadf4309c7f781a125f}\label{class_game_object_ae68e0d18d7be7dadf4309c7f781a125f}} 
+uint32\+\_\+t {\bfseries id\+\_\+} \{\}
+\item 
+\mbox{\Hypertarget{class_game_object_a97ad321fd9674a3f6884f5fa661653a8}\label{class_game_object_a97ad321fd9674a3f6884f5fa661653a8}} 
+\mbox{\hyperlink{struct_vector2_d}{Vector2D}} {\bfseries position\+\_\+} \{\}
+\item 
+\mbox{\Hypertarget{class_game_object_a42843952bef388886412df78a290dc9b}\label{class_game_object_a42843952bef388886412df78a290dc9b}} 
+\mbox{\hyperlink{struct_vector2_d}{Vector2D}} {\bfseries last\+\_\+position\+\_\+} \{\}
+\item 
+\mbox{\Hypertarget{class_game_object_ab206b490fc56aee4e350a29203b478de}\label{class_game_object_ab206b490fc56aee4e350a29203b478de}} 
+\mbox{\hyperlink{struct_vector2_d}{Vector2D}} {\bfseries velocity\+\_\+} \{\}
+\item 
+\mbox{\Hypertarget{class_game_object_a974516bdd2c53bcbf8ec1e52dc1d6c21}\label{class_game_object_a974516bdd2c53bcbf8ec1e52dc1d6c21}} 
+\mbox{\hyperlink{struct_vector2_d}{Vector2D}} {\bfseries last\+\_\+velocity\+\_\+} \{\}
+\item 
+\mbox{\Hypertarget{class_game_object_a293f786d8298f58b719c43fb39377f72}\label{class_game_object_a293f786d8298f58b719c43fb39377f72}} 
+\mbox{\hyperlink{class_texture_atlas}{Texture\+Atlas}} $\ast$ {\bfseries texture\+\_\+atlas\+\_\+} = nullptr
+\item 
+\mbox{\Hypertarget{class_game_object_abe16fe47ba48824733f9b4c3609938cb}\label{class_game_object_abe16fe47ba48824733f9b4c3609938cb}} 
+SDL\+\_\+\+Rect {\bfseries src\+\_\+} \{\}
+\item 
+\mbox{\Hypertarget{class_game_object_a7dfa6a1801b1fb56c952ee5ebb927837}\label{class_game_object_a7dfa6a1801b1fb56c952ee5ebb927837}} 
+SDL\+\_\+\+Rect {\bfseries dst\+\_\+} \{\}
+\item 
+\mbox{\Hypertarget{class_game_object_a424969231dac5ad21f19109956a18c36}\label{class_game_object_a424969231dac5ad21f19109956a18c36}} 
+SDL\+\_\+\+Rect {\bfseries bounding\+\_\+box\+\_\+} \{\}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+minimum unit of the game. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_game_object_ac22afeea662863978d8728b85f5af5da}\label{class_game_object_ac22afeea662863978d8728b85f5af5da}} 
+\index{GameObject@{GameObject}!GameObject@{GameObject}}
+\index{GameObject@{GameObject}!GameObject@{GameObject}}
+\doxysubsubsection{\texorpdfstring{GameObject()}{GameObject()}}
+{\footnotesize\ttfamily Game\+Object\+::\+Game\+Object (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{struct_vector2_d}{Vector2D}} \&}]{position,  }\item[{const \mbox{\hyperlink{struct_vector2_d}{Vector2D}} \&}]{velocity,  }\item[{int}]{width,  }\item[{int}]{height,  }\item[{const std\+::string \&}]{texture }\end{DoxyParamCaption})}
+
+
+
+Constructor. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em position} & The position of the game object \\
+\hline
+\mbox{\texttt{ in}}  & {\em velocity} & The velocity of the game object \\
+\hline
+\mbox{\texttt{ in}}  & {\em texture} & The file name of the texture used by the game object \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_game_object_a6f2c985b8983f87a5c2433db7e4f4202}\label{class_game_object_a6f2c985b8983f87a5c2433db7e4f4202}} 
+\index{GameObject@{GameObject}!GetBoundingBox@{GetBoundingBox}}
+\index{GetBoundingBox@{GetBoundingBox}!GameObject@{GameObject}}
+\doxysubsubsection{\texorpdfstring{GetBoundingBox()}{GetBoundingBox()}}
+{\footnotesize\ttfamily const SDL\+\_\+\+Rect \& Game\+Object\+::\+Get\+Bounding\+Box (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Gets the bounding box of the game object. 
+
+A bounding box is a rectangle wrapping a game object and is used to detect collision. Since in this project every thing is a rectangle, the bounding box is the game object itself.
+
+\begin{DoxyReturn}{Returns}
+The bounding box of the game object. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_game_object_aab3045feff3a98821eab11aea1e0143c}\label{class_game_object_aab3045feff3a98821eab11aea1e0143c}} 
+\index{GameObject@{GameObject}!GetCenter@{GetCenter}}
+\index{GetCenter@{GetCenter}!GameObject@{GameObject}}
+\doxysubsubsection{\texorpdfstring{GetCenter()}{GetCenter()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{struct_vector2_d}{Vector2D}} Game\+Object\+::\+Get\+Center (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Gets the center of the object. 
+
+\begin{DoxyReturn}{Returns}
+center of the object 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_game_object_a09c1e302193f64cf8238abc7bef41b4b}\label{class_game_object_a09c1e302193f64cf8238abc7bef41b4b}} 
+\index{GameObject@{GameObject}!GetId@{GetId}}
+\index{GetId@{GetId}!GameObject@{GameObject}}
+\doxysubsubsection{\texorpdfstring{GetId()}{GetId()}}
+{\footnotesize\ttfamily uint32\+\_\+t Game\+Object\+::\+Get\+Id (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Returns the unique id of the object. 
+
+\begin{DoxyReturn}{Returns}
+id of the object 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_game_object_af21668da783f818c89b290d13ea42573}\label{class_game_object_af21668da783f818c89b290d13ea42573}} 
+\index{GameObject@{GameObject}!GetLastPosition@{GetLastPosition}}
+\index{GetLastPosition@{GetLastPosition}!GameObject@{GameObject}}
+\doxysubsubsection{\texorpdfstring{GetLastPosition()}{GetLastPosition()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{struct_vector2_d}{Vector2D}} \& Game\+Object\+::\+Get\+Last\+Position (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Gets the position of the object in the last frame. 
+
+\begin{DoxyReturn}{Returns}
+position in the last frame. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_game_object_a689ca450012f304c7d674eca120cb3b2}\label{class_game_object_a689ca450012f304c7d674eca120cb3b2}} 
+\index{GameObject@{GameObject}!GetLastVelocity@{GetLastVelocity}}
+\index{GetLastVelocity@{GetLastVelocity}!GameObject@{GameObject}}
+\doxysubsubsection{\texorpdfstring{GetLastVelocity()}{GetLastVelocity()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{struct_vector2_d}{Vector2D}} \& Game\+Object\+::\+Get\+Last\+Velocity (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Gets the velocity of the object in the last frame. 
+
+\begin{DoxyReturn}{Returns}
+velocity in the last frame. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_game_object_a59f50b3b97a1831c1ff770546d13a7f1}\label{class_game_object_a59f50b3b97a1831c1ff770546d13a7f1}} 
+\index{GameObject@{GameObject}!GetObjectType@{GetObjectType}}
+\index{GetObjectType@{GetObjectType}!GameObject@{GameObject}}
+\doxysubsubsection{\texorpdfstring{GetObjectType()}{GetObjectType()}}
+{\footnotesize\ttfamily virtual Object\+Type Game\+Object\+::\+Get\+Object\+Type (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Returns the type information of the object. 
+
+Each subclass should return a value from the enum Object\+Type. \begin{DoxyReturn}{Returns}
+type of the object 
+\end{DoxyReturn}
+
+
+Implemented in \mbox{\hyperlink{class_tile_a31789cb9a5174b37c503d5bcc44b58c2}{Tile}}, \mbox{\hyperlink{class_hero_af74b94a4d436cf900d79f72aa8e74c17}{Hero}}, \mbox{\hyperlink{class_flag_a699f59d591bf2264ede3d23c924b093f}{Flag}}, and \mbox{\hyperlink{class_enemy_abc4ae0d17285be004eeb2127cacfa2c6}{Enemy}}.
+
+\mbox{\Hypertarget{class_game_object_a27a6ca385391c7e003095c49d703bce4}\label{class_game_object_a27a6ca385391c7e003095c49d703bce4}} 
+\index{GameObject@{GameObject}!GetPosition@{GetPosition}}
+\index{GetPosition@{GetPosition}!GameObject@{GameObject}}
+\doxysubsubsection{\texorpdfstring{GetPosition()}{GetPosition()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{struct_vector2_d}{Vector2D}} \& Game\+Object\+::\+Get\+Position (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Gets the position of the game object. 
+
+\begin{DoxyReturn}{Returns}
+A reference to the position of the game object 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_game_object_ab7814b3effcf8c13e6a06bd748f68ece}\label{class_game_object_ab7814b3effcf8c13e6a06bd748f68ece}} 
+\index{GameObject@{GameObject}!GetVelocity@{GetVelocity}}
+\index{GetVelocity@{GetVelocity}!GameObject@{GameObject}}
+\doxysubsubsection{\texorpdfstring{GetVelocity()}{GetVelocity()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{struct_vector2_d}{Vector2D}} \& Game\+Object\+::\+Get\+Velocity (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Gets the velocity of this game object. 
+
+\begin{DoxyReturn}{Returns}
+A reference to the velocity of the game object 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_game_object_a5d521bf5582a2cda79a3b0c9bd1392c8}\label{class_game_object_a5d521bf5582a2cda79a3b0c9bd1392c8}} 
+\index{GameObject@{GameObject}!IsCollidable@{IsCollidable}}
+\index{IsCollidable@{IsCollidable}!GameObject@{GameObject}}
+\doxysubsubsection{\texorpdfstring{IsCollidable()}{IsCollidable()}}
+{\footnotesize\ttfamily virtual bool Game\+Object\+::\+Is\+Collidable (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Returns if this object is collidable. 
+
+A collidable object will be used to detect collision in physical engine.
+
+\begin{DoxyReturn}{Returns}
+If the game object is collideable 
+\end{DoxyReturn}
+
+
+Implemented in \mbox{\hyperlink{class_tile_abb4dbc9f977df654816e61f1c0a3c352}{Tile}}, and \mbox{\hyperlink{class_sprite_aa697e33dd224e8d5cd2028f8b5e0b214}{Sprite}}.
+
+\mbox{\Hypertarget{class_game_object_ac8bdbf74c1dc31b7314b2025ab3d355a}\label{class_game_object_ac8bdbf74c1dc31b7314b2025ab3d355a}} 
+\index{GameObject@{GameObject}!IsInsideViewport@{IsInsideViewport}}
+\index{IsInsideViewport@{IsInsideViewport}!GameObject@{GameObject}}
+\doxysubsubsection{\texorpdfstring{IsInsideViewport()}{IsInsideViewport()}}
+{\footnotesize\ttfamily bool Game\+Object\+::\+Is\+Inside\+Viewport (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{class_camera}{Camera}} \&}]{camera }\end{DoxyParamCaption})}
+
+Tell if the object is inside the viewport
+
+\begin{DoxyReturn}{Returns}
+if it is true 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_game_object_a8ba290adb7d33ef1bd85863f85709202}\label{class_game_object_a8ba290adb7d33ef1bd85863f85709202}} 
+\index{GameObject@{GameObject}!IsStatic@{IsStatic}}
+\index{IsStatic@{IsStatic}!GameObject@{GameObject}}
+\doxysubsubsection{\texorpdfstring{IsStatic()}{IsStatic()}}
+{\footnotesize\ttfamily virtual bool Game\+Object\+::\+Is\+Static (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Returns if a game object is static. 
+
+A static game object means its velocity is always 0 and its position will not be updated.
+
+\begin{DoxyReturn}{Returns}
+If the game object is static 
+\end{DoxyReturn}
+
+
+Implemented in \mbox{\hyperlink{class_tile_a903d7dc0724d7762531e16520e1a519d}{Tile}}, and \mbox{\hyperlink{class_sprite_ae21a1e6d8c7c9851daa43c37c15fa73f}{Sprite}}.
+
+\mbox{\Hypertarget{class_game_object_ab013426388a171d6e5318704eb5ef2c8}\label{class_game_object_ab013426388a171d6e5318704eb5ef2c8}} 
+\index{GameObject@{GameObject}!Render@{Render}}
+\index{Render@{Render}!GameObject@{GameObject}}
+\doxysubsubsection{\texorpdfstring{Render()}{Render()}}
+{\footnotesize\ttfamily virtual void Game\+Object\+::\+Render (\begin{DoxyParamCaption}\item[{SDL\+\_\+\+Renderer $\ast$}]{renderer,  }\item[{const \mbox{\hyperlink{class_camera}{Camera}} \&}]{camera }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Render the game object into renderer\textquotesingle{}s back buffer. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em renderer} & renderer \\
+\hline
+\mbox{\texttt{ in}}  & {\em camera} & camera \\
+\hline
+\end{DoxyParams}
+
+
+Implemented in \mbox{\hyperlink{class_tile_aa6238499fc524ec673b47929d6856028}{Tile}}, and \mbox{\hyperlink{class_sprite_ab4a07fa150b132b89fa17e7931b506aa}{Sprite}}.
+
+\mbox{\Hypertarget{class_game_object_acf7373d05e22279da853749f702b1486}\label{class_game_object_acf7373d05e22279da853749f702b1486}} 
+\index{GameObject@{GameObject}!SetLastPosition@{SetLastPosition}}
+\index{SetLastPosition@{SetLastPosition}!GameObject@{GameObject}}
+\doxysubsubsection{\texorpdfstring{SetLastPosition()}{SetLastPosition()}}
+{\footnotesize\ttfamily void Game\+Object\+::\+Set\+Last\+Position (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{struct_vector2_d}{Vector2D}} \&}]{last\+\_\+position }\end{DoxyParamCaption})}
+
+
+
+Sets the position of the object in the last frame. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em last\+\_\+position} & position in the last frame \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_game_object_a790bbff072ee0ee4de9013594b935df7}\label{class_game_object_a790bbff072ee0ee4de9013594b935df7}} 
+\index{GameObject@{GameObject}!SetLastVelocity@{SetLastVelocity}}
+\index{SetLastVelocity@{SetLastVelocity}!GameObject@{GameObject}}
+\doxysubsubsection{\texorpdfstring{SetLastVelocity()}{SetLastVelocity()}}
+{\footnotesize\ttfamily void Game\+Object\+::\+Set\+Last\+Velocity (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{struct_vector2_d}{Vector2D}} \&}]{last\+\_\+velocity }\end{DoxyParamCaption})}
+
+
+
+Sets the velocity of the object in the last frame. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em last\+\_\+velocity} & velocity in the last frame \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_game_object_a563c11e9fda02aadf020d1503167ed04}\label{class_game_object_a563c11e9fda02aadf020d1503167ed04}} 
+\index{GameObject@{GameObject}!SetPosition@{SetPosition}}
+\index{SetPosition@{SetPosition}!GameObject@{GameObject}}
+\doxysubsubsection{\texorpdfstring{SetPosition()}{SetPosition()}}
+{\footnotesize\ttfamily void Game\+Object\+::\+Set\+Position (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{struct_vector2_d}{Vector2D}} \&}]{position }\end{DoxyParamCaption})}
+
+
+
+Sets the position of the game object. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em position} & The position \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_game_object_ac1433bf0366c999cbf5b544902507f2c}\label{class_game_object_ac1433bf0366c999cbf5b544902507f2c}} 
+\index{GameObject@{GameObject}!SetVelocity@{SetVelocity}}
+\index{SetVelocity@{SetVelocity}!GameObject@{GameObject}}
+\doxysubsubsection{\texorpdfstring{SetVelocity()}{SetVelocity()}}
+{\footnotesize\ttfamily void Game\+Object\+::\+Set\+Velocity (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{struct_vector2_d}{Vector2D}} \&}]{velocity }\end{DoxyParamCaption})}
+
+
+
+Sets the velocity of the game object. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em velocity} & The velocity \\
+\hline
+\end{DoxyParams}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+include/game\+\_\+object.\+hpp\item 
+src/game\+\_\+object.\+cpp\end{DoxyCompactItemize}

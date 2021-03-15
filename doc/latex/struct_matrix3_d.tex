@@ -1,0 +1,185 @@
+\hypertarget{struct_matrix3_d}{}\doxysection{Matrix3D Struct Reference}
+\label{struct_matrix3_d}\index{Matrix3D@{Matrix3D}}
+
+
+Matrix 3D represents 3x3 matrices in Math.  
+
+
+
+
+{\ttfamily \#include $<$tiny\+\_\+math.\+hpp$>$}
+
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{struct_matrix3_d_a8449b2e2c8d5cac460175ed4b1b811a4}\label{struct_matrix3_d_a8449b2e2c8d5cac460175ed4b1b811a4}} 
+\mbox{\hyperlink{struct_matrix3_d_a8449b2e2c8d5cac460175ed4b1b811a4}{Matrix3D}} ()=default
+\begin{DoxyCompactList}\small\item\em Trivial constructor. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{struct_matrix3_d_a2456e868e08fc543ac0933a7e1457856}{Matrix3D}} (float n00, float n01, float n02, float n10, float n11, float n12, float n20, float n21, float n22)
+\begin{DoxyCompactList}\small\item\em Construct a matrix with given number. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{struct_matrix3_d_a1e319e164a50a609d623b210a6526162}{Matrix3D}} (const \mbox{\hyperlink{struct_vector3_d}{Vector3D}} \&a, const \mbox{\hyperlink{struct_vector3_d}{Vector3D}} \&b, const \mbox{\hyperlink{struct_vector3_d}{Vector3D}} \&c)
+\begin{DoxyCompactList}\small\item\em Construct a matrix from 3 vectors. \end{DoxyCompactList}\item 
+float \& \mbox{\hyperlink{struct_matrix3_d_ae44ce12f56a97fd58842e183d189227d}{operator()}} (int i, int j)
+\item 
+const float \& \mbox{\hyperlink{struct_matrix3_d_ad571200a0fa09b5b2cea2f86babd462d}{operator()}} (int i, int j) const
+\item 
+\mbox{\hyperlink{struct_vector3_d}{Vector3D}} \& \mbox{\hyperlink{struct_matrix3_d_a3b26c17e486abfb494e238cff7f1f439}{operator\mbox{[}$\,$\mbox{]}}} (int i)
+\begin{DoxyCompactList}\small\item\em return a row as vector \end{DoxyCompactList}\item 
+const \mbox{\hyperlink{struct_vector3_d}{Vector3D}} \& \mbox{\hyperlink{struct_matrix3_d_ad7a435b7b83ae2453c1895d232def191}{operator\mbox{[}$\,$\mbox{]}}} (int i) const
+\begin{DoxyCompactList}\small\item\em return a row as vector \end{DoxyCompactList}\item 
+\mbox{\hyperlink{struct_vector3_d}{Vector3D}} \mbox{\hyperlink{struct_matrix3_d_a3f5bb15d6541832e5362889ad953f19b}{get\+Column}} (const int j) const
+\begin{DoxyCompactList}\small\item\em return a column as vector \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Matrix 3D represents 3x3 matrices in Math. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{struct_matrix3_d_a2456e868e08fc543ac0933a7e1457856}\label{struct_matrix3_d_a2456e868e08fc543ac0933a7e1457856}} 
+\index{Matrix3D@{Matrix3D}!Matrix3D@{Matrix3D}}
+\index{Matrix3D@{Matrix3D}!Matrix3D@{Matrix3D}}
+\doxysubsubsection{\texorpdfstring{Matrix3D()}{Matrix3D()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily Matrix3\+D\+::\+Matrix3D (\begin{DoxyParamCaption}\item[{float}]{n00,  }\item[{float}]{n01,  }\item[{float}]{n02,  }\item[{float}]{n10,  }\item[{float}]{n11,  }\item[{float}]{n12,  }\item[{float}]{n20,  }\item[{float}]{n21,  }\item[{float}]{n22 }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Construct a matrix with given number. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em n00} & n00 \\
+\hline
+{\em n01} & n01 \\
+\hline
+{\em n02} & n02 \\
+\hline
+{\em n10} & n10 \\
+\hline
+{\em n11} & n11 \\
+\hline
+{\em n12} & n12 \\
+\hline
+{\em n20} & n20 \\
+\hline
+{\em n21} & n21 \\
+\hline
+{\em n22} & n22 \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{struct_matrix3_d_a1e319e164a50a609d623b210a6526162}\label{struct_matrix3_d_a1e319e164a50a609d623b210a6526162}} 
+\index{Matrix3D@{Matrix3D}!Matrix3D@{Matrix3D}}
+\index{Matrix3D@{Matrix3D}!Matrix3D@{Matrix3D}}
+\doxysubsubsection{\texorpdfstring{Matrix3D()}{Matrix3D()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily Matrix3\+D\+::\+Matrix3D (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{struct_vector3_d}{Vector3D}} \&}]{a,  }\item[{const \mbox{\hyperlink{struct_vector3_d}{Vector3D}} \&}]{b,  }\item[{const \mbox{\hyperlink{struct_vector3_d}{Vector3D}} \&}]{c }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Construct a matrix from 3 vectors. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em a} & v1 \\
+\hline
+{\em b} & v2 \\
+\hline
+{\em c} & v3 \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{struct_matrix3_d_a3f5bb15d6541832e5362889ad953f19b}\label{struct_matrix3_d_a3f5bb15d6541832e5362889ad953f19b}} 
+\index{Matrix3D@{Matrix3D}!getColumn@{getColumn}}
+\index{getColumn@{getColumn}!Matrix3D@{Matrix3D}}
+\doxysubsubsection{\texorpdfstring{getColumn()}{getColumn()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{struct_vector3_d}{Vector3D}} Matrix3\+D\+::get\+Column (\begin{DoxyParamCaption}\item[{const int}]{j }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+return a column as vector 
+
+
+\begin{DoxyParams}{Parameters}
+{\em i} & column \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+vector 
+\end{DoxyReturn}
+\mbox{\Hypertarget{struct_matrix3_d_ae44ce12f56a97fd58842e183d189227d}\label{struct_matrix3_d_ae44ce12f56a97fd58842e183d189227d}} 
+\index{Matrix3D@{Matrix3D}!operator()@{operator()}}
+\index{operator()@{operator()}!Matrix3D@{Matrix3D}}
+\doxysubsubsection{\texorpdfstring{operator()()}{operator()()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily float\& Matrix3\+D\+::operator() (\begin{DoxyParamCaption}\item[{int}]{i,  }\item[{int}]{j }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Index operator with two dimensions Example\+: M(1,1) returns row 1 and column 1 of matrix M.
+
+
+\begin{DoxyParams}{Parameters}
+{\em i} & col cor \\
+\hline
+{\em j} & row cor \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+data there 
+\end{DoxyReturn}
+\mbox{\Hypertarget{struct_matrix3_d_ad571200a0fa09b5b2cea2f86babd462d}\label{struct_matrix3_d_ad571200a0fa09b5b2cea2f86babd462d}} 
+\index{Matrix3D@{Matrix3D}!operator()@{operator()}}
+\index{operator()@{operator()}!Matrix3D@{Matrix3D}}
+\doxysubsubsection{\texorpdfstring{operator()()}{operator()()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily const float\& Matrix3\+D\+::operator() (\begin{DoxyParamCaption}\item[{int}]{i,  }\item[{int}]{j }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+Index operator with two dimensions Example\+: M(1,1) returns row 1 and column 1 of matrix M.
+
+
+\begin{DoxyParams}{Parameters}
+{\em i} & col cor \\
+\hline
+{\em j} & row cor \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+data there 
+\end{DoxyReturn}
+\mbox{\Hypertarget{struct_matrix3_d_a3b26c17e486abfb494e238cff7f1f439}\label{struct_matrix3_d_a3b26c17e486abfb494e238cff7f1f439}} 
+\index{Matrix3D@{Matrix3D}!operator\mbox{[}\mbox{]}@{operator[]}}
+\index{operator\mbox{[}\mbox{]}@{operator[]}!Matrix3D@{Matrix3D}}
+\doxysubsubsection{\texorpdfstring{operator[]()}{operator[]()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily \mbox{\hyperlink{struct_vector3_d}{Vector3D}}\& Matrix3\+D\+::operator\mbox{[}$\,$\mbox{]} (\begin{DoxyParamCaption}\item[{int}]{i }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+return a row as vector 
+
+
+\begin{DoxyParams}{Parameters}
+{\em i} & row \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+vector 
+\end{DoxyReturn}
+\mbox{\Hypertarget{struct_matrix3_d_ad7a435b7b83ae2453c1895d232def191}\label{struct_matrix3_d_ad7a435b7b83ae2453c1895d232def191}} 
+\index{Matrix3D@{Matrix3D}!operator\mbox{[}\mbox{]}@{operator[]}}
+\index{operator\mbox{[}\mbox{]}@{operator[]}!Matrix3D@{Matrix3D}}
+\doxysubsubsection{\texorpdfstring{operator[]()}{operator[]()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily const \mbox{\hyperlink{struct_vector3_d}{Vector3D}}\& Matrix3\+D\+::operator\mbox{[}$\,$\mbox{]} (\begin{DoxyParamCaption}\item[{int}]{i }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+return a row as vector 
+
+
+\begin{DoxyParams}{Parameters}
+{\em i} & row \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+vector 
+\end{DoxyReturn}
+
+
+The documentation for this struct was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+include/tiny\+\_\+math.\+hpp\end{DoxyCompactItemize}

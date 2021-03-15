@@ -1,0 +1,83 @@
+\hypertarget{class_enemy_factory}{}\doxysection{Enemy\+Factory Class Reference}
+\label{class_enemy_factory}\index{EnemyFactory@{EnemyFactory}}
+
+
+enemy\+Factory will be initialized after entering the camera.  
+
+
+
+
+{\ttfamily \#include $<$enemy\+Factory.\+hpp$>$}
+
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{class_enemy_factory_aa9b9ffbea1fccba9bd5b2beb800db868}{Init}} (\mbox{\hyperlink{class_tile_map}{Tile\+Map}} \&map, \mbox{\hyperlink{class_physics_engine}{Physics\+Engine}} \&physical\+\_\+engine)
+\item 
+void \mbox{\hyperlink{class_enemy_factory_a3736a94e01225b31629baf0c32a6fd54}{Update}} (float dt, \mbox{\hyperlink{class_camera}{Camera}} camera)
+\item 
+void \mbox{\hyperlink{class_enemy_factory_ab27e510cea7b5fb8e467b75d08e6c27a}{Render}} (SDL\+\_\+\+Renderer $\ast$renderer, \mbox{\hyperlink{class_camera}{Camera}} camera)
+\item 
+void \mbox{\hyperlink{class_enemy_factory_aed409a925e55ae8d60666ba48d2072ec}{AI}} (\mbox{\hyperlink{class_enemy}{Enemy}} \&enemy)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+enemy\+Factory will be initialized after entering the camera. 
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_enemy_factory_aed409a925e55ae8d60666ba48d2072ec}\label{class_enemy_factory_aed409a925e55ae8d60666ba48d2072ec}} 
+\index{EnemyFactory@{EnemyFactory}!AI@{AI}}
+\index{AI@{AI}!EnemyFactory@{EnemyFactory}}
+\doxysubsubsection{\texorpdfstring{AI()}{AI()}}
+{\footnotesize\ttfamily void Enemy\+Factory\+::\+AI (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_enemy}{Enemy}} \&}]{enemy }\end{DoxyParamCaption})}
+
+Control the behaviour of an enemy.
+
+
+\begin{DoxyParams}{Parameters}
+{\em an} & enemy object \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_enemy_factory_aa9b9ffbea1fccba9bd5b2beb800db868}\label{class_enemy_factory_aa9b9ffbea1fccba9bd5b2beb800db868}} 
+\index{EnemyFactory@{EnemyFactory}!Init@{Init}}
+\index{Init@{Init}!EnemyFactory@{EnemyFactory}}
+\doxysubsubsection{\texorpdfstring{Init()}{Init()}}
+{\footnotesize\ttfamily void Enemy\+Factory\+::\+Init (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_tile_map}{Tile\+Map}} \&}]{map,  }\item[{\mbox{\hyperlink{class_physics_engine}{Physics\+Engine}} \&}]{physical\+\_\+engine }\end{DoxyParamCaption})}
+
+Initialize the factory \mbox{\Hypertarget{class_enemy_factory_ab27e510cea7b5fb8e467b75d08e6c27a}\label{class_enemy_factory_ab27e510cea7b5fb8e467b75d08e6c27a}} 
+\index{EnemyFactory@{EnemyFactory}!Render@{Render}}
+\index{Render@{Render}!EnemyFactory@{EnemyFactory}}
+\doxysubsubsection{\texorpdfstring{Render()}{Render()}}
+{\footnotesize\ttfamily void Enemy\+Factory\+::\+Render (\begin{DoxyParamCaption}\item[{SDL\+\_\+\+Renderer $\ast$}]{renderer,  }\item[{\mbox{\hyperlink{class_camera}{Camera}}}]{camera }\end{DoxyParamCaption})}
+
+Render all enemies
+
+
+\begin{DoxyParams}{Parameters}
+{\em renderer} & SDL renderer \\
+\hline
+{\em camera} & the camera object \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_enemy_factory_a3736a94e01225b31629baf0c32a6fd54}\label{class_enemy_factory_a3736a94e01225b31629baf0c32a6fd54}} 
+\index{EnemyFactory@{EnemyFactory}!Update@{Update}}
+\index{Update@{Update}!EnemyFactory@{EnemyFactory}}
+\doxysubsubsection{\texorpdfstring{Update()}{Update()}}
+{\footnotesize\ttfamily void Enemy\+Factory\+::\+Update (\begin{DoxyParamCaption}\item[{float}]{dt,  }\item[{\mbox{\hyperlink{class_camera}{Camera}}}]{camera }\end{DoxyParamCaption})}
+
+Update all enemies
+
+
+\begin{DoxyParams}{Parameters}
+{\em dt} & time elapsed \\
+\hline
+{\em camera} & the camera object \\
+\hline
+\end{DoxyParams}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+include/enemy\+Factory.\+hpp\item 
+src/enemy\+Factory.\+cpp\end{DoxyCompactItemize}
